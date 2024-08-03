@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Pushpanathan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&display=swap');
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffffff;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+        .content {
+            text-align: left;
+            margin-right: 50px;
+        }
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #6E6E6E;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 30px;
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+        .links a:hover {
+            color: #6E6E6E;
+        }
+        .emoji {
+            font-size: 24px;
+            vertical-align: middle;
+        }
+        .hover-content {
+            text-align: center;
+            width: 250px;
+            height: 250px;
+        }
+        .hover-content img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+        .hover-text {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 20px;
+            color: #1a1a1a;
+            display: none;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="title">Charan Pushpanathan</div>
+            <div class="links">
+                <a href="about.html" onmouseover="showImage('img/_DSC5309.JPG')" onmouseout="hideContent()">about</a>
+                <a href="siw.html" onmouseover="showText('2 Articles')" onmouseout="hideContent()">sometime, I write</a>
+                <a href="#" onmouseover="showText('Yet to document')" onmouseout="hideContent()">opensources</a>
+                <a href="projects.html" onmouseover="showImage('/Users/charanpp/Desktop/Can we Make it/img/Post and Gather.png')" onmouseout="hideContent()">projects</a>
+                <a href="files/Academic_Charan.pdf" onmouseover="showText('My work might align with what youre looking for.')" onmouseout="hideContent()">resume</a>
+                <a href="https://www.linkedin.com/in/connectwithcharanpp/" onmouseover="showText('Mostly active')" onmouseout="hideContent()">linkedin</a>
+                <a href="#" onmouseover="showText('Currently working on a paper, yet to be published')" onmouseout="hideContent()">scholar</a>
+                <a href="https://x.com/Charan_16" onmouseover="showText('I don\'t tweet much')" onmouseout="hideContent()">twitter</a>
+            </div>
+        </div>
+        <div class="hover-content">
+            <img id="hover-image" alt="Hover Image">
+            <div class="hover-text" id="hover-text"></div>
+        </div>
+    </div>
+    <script>
+        function showImage(src) {
+            const img = document.getElementById('hover-image');
+            img.src = src;
+            img.style.display = 'block';
+            document.getElementById('hover-text').style.display = 'none';
+        }
+
+        function showText(text) {
+            const hoverText = document.getElementById('hover-text');
+            hoverText.innerText = text;
+            hoverText.style.display = 'block';
+            document.getElementById('hover-image').style.display = 'none';
+        }
+
+        function hideContent() {
+            document.getElementById('hover-image').style.display = 'none';
+            document.getElementById('hover-text').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
