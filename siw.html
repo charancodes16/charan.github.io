@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sometime, I write</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 4px;
+            position: relative;
+        }
+        .date {
+            color: #6E6E6E;
+            font-size: 14px;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        .links {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .links a {
+            display: inline-block;
+            margin: 0 10px 10px 0;
+            font-size: 18px;
+            text-decoration: none;
+            color: #6E6E6E;
+        }
+        .links a:hover {
+            color: #6E6E6E;
+        }
+        li a {
+            text-decoration: none;
+            color: inherit;
+            font-size: 28px;
+        }
+        li a:hover {
+            color: inherit;
+        }
+        .hover-image {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-left: 15px;
+            z-index: 10;
+            max-width: 600px; /* Set the maximum width */
+            max-height: 300px; /* Set the maximum height */
+            width: auto; /* Ensure proportional scaling */
+            height: auto; /* Ensure proportional scaling */
+        }
+        li:hover .hover-image {
+            display: block;
+        }
+        /* Add the following CSS */
+        li:hover a strong {
+            color: #6E6E6E;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <div class="links">
+            <a href="Home.html">/home</a>
+        </div>
+    </ul>
+    <h1>sometime, I write</h1>
+    <ul>
+        <li>
+            <a href="blogs/2023.html"><strong>Reflections and Learnings of 2023</strong></a>
+            <span class="date">December 22, 2023</span>
+            <img src="img/2023.webp" alt="Image for Reflections and Learnings of 2023" class="hover-image">
+        </li>
+        <li>
+            <a href="blogs/Hard truths.html"><strong>Hard Truths - Short Note</strong></a>
+            <span class="date">June 27, 2024</span>
+            <img src="img/ht.webp" alt="Image for Hard truths" class="hover-image">
+        </li>
+    </ul>
+</body>
+</html>
