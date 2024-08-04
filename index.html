@@ -18,13 +18,11 @@
         }
         .container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            text-align: center;
+            align-items: flex-start;
         }
         .content {
-            margin-bottom: 20px;
+            text-align: left;
+            margin-right: 50px;
         }
         .title {
             font-size: 22px;
@@ -37,7 +35,7 @@
         .links a {
             display: block;
             margin: 10px 0;
-            font-size: 18px;
+            font-size: 30px;
             text-decoration: none;
             color: #1a1a1a;
         }
@@ -49,9 +47,9 @@
             vertical-align: middle;
         }
         .hover-content {
-            width: 100%;
-            max-width: 400px;
             text-align: center;
+            width: 250px;
+            height: 250px;
         }
         .hover-content img {
             max-width: 100%;
@@ -60,29 +58,10 @@
         }
         .hover-text {
             font-family: 'IBM Plex Mono', monospace;
-            font-size: 18px;
+            font-size: 20px;
             color: #1a1a1a;
             display: none;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-            }
-            .content {
-                margin-right: 50px;
-                margin-bottom: 0;
-            }
-            .links a {
-                font-size: 24px;
-            }
-            .hover-text {
-                font-size: 20px;
-                text-align: left;
-            }
+            text-align: left;
         }
     </style>
 </head>
