@@ -32,31 +32,12 @@
         .links a {
             display: inline-block;
             margin: 0 10px 10px 0;
-            font-size: 18px;
+            font-size: 20px;
             text-decoration: none;
+            color: #5fa8d3; /* keep the /home link color as it is */
+        }
+        .links a:not([href="index.html"]) {
             color: #6E6E6E;
-        }
-        .links a:hover {
-            color: #6E6E6E;
-        }
-        .hover-container {
-            position: relative;
-            display: inline-block;
-        }
-        .hover-container a {
-            position: relative;
-        }
-        .hover-container:hover .hover-image {
-            display: block;
-        }
-        .hover-image {
-            display: none;
-            position: fixed;
-            width: auto; /* Adjust this value based on your image size */
-            height: auto;
-            z-index: 10;
-            border: none; /* Remove border */
-            padding: 0; /* Remove padding */
         }
         .about-content {
             line-height: 1.6;
@@ -93,15 +74,15 @@
                 <h3>currently</h3>
                 <ul>
                     <li>Student, Human Interface Designer, Researcher and Entrepreneurial - Minded</li>
-                    <li>Student Researcher, <span class="hover-container"><a href="https://cil.ist.psu.edu/">Collaboration Innovation Lab.</a><img src="your-image-url.jpg" alt="Collaboration Innovation Lab" class="hover-image"></span></li>
-                    <li id="reference-link">Graduate Student: <span class="hover-container"><a href="https://ist.psu.edu/">College of Information Science and Technology, Pennsylvania State University, University Park.</a><img src="img/IST.jpeg" alt="Penn State University" class="hover-image"></span></li>
+                    <li>Student Researcher, <a href="https://cil.ist.psu.edu/">Collaboration Innovation Lab.</a></li>
+                    <li id="reference-link">Graduate Student: <a href="https://ist.psu.edu/">College of Information Science and Technology, Pennsylvania State University, University Park.</a></li>
                 </ul>
                 
                 <h3>research</h3>
                 <ul>
                     <li>Currently a Graduate Student, Master of Science in Informatics at Penn State University-University Park, focusing on Human-Computer Interaction.</li>
                     <li>Research areas exploring Human-computer interaction, digital transformation, accessibility, qualitative research, ubiquitous and wearable computing, human-AI interaction, interactive computing, CSCW.</li>
-                    <li>Under my advisor <span class="hover-container"><a href="https://jcarroll.ist.psu.edu/">John M Carroll</a><img src="img/JC.jpg" alt="John M Carroll" class="hover-image"></span> I admire the most. I spent time as a student researcher at Collaboration Innovation Lab.</li>
+                    <li>Under my advisor <a href="https://jcarroll.ist.psu.edu/">John M Carroll</a> I admire the most. I spent time as a student researcher at Collaboration Innovation Lab.</li>
                 </ul>
                 
                 <h3>what</h3>
@@ -131,20 +112,5 @@
             </div>
         </div>
     </div>
-    <script>
-        const referenceLink = document.getElementById('reference-link');
-        const referenceRect = referenceLink.getBoundingClientRect();
-        
-        document.querySelectorAll('.hover-container').forEach(container => {
-            const link = container.querySelector('a');
-            const image = container.querySelector('.hover-image');
-            
-            link.addEventListener('mouseenter', () => {
-                const linkRect = link.getBoundingClientRect();
-                image.style.top = `${linkRect.top}px`;
-                image.style.left = `${referenceRect.right + 10}px`; // 10px is the space between the link and the image
-            });
-        });
-    </script>
 </body>
 </html>
