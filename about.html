@@ -3,111 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
+    <title>About</title>
     <style>
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.4;
-            font-size: 16px;
-            padding: 0 10px;
-            margin: 50px auto;
-            max-width: 600px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: none;
         }
+
         .container {
             max-width: 600px;
-            width: 100%;
+            margin: 50px auto;
+            padding: 20px;
         }
-        .content {
-            text-align: left;
-        }
-        .title {
-            font-size: 24px;
-            font-weight: bold;
+
+        header {
             margin-bottom: 20px;
         }
-        .links {
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-        .links a {
-            display: inline-block;
-            margin: 0 10px 10px 0;
-            font-size: 18px;
-            text-decoration: none;
-            color: #6E6E6E; /* change the /home link color to #6E6E6E */
-        }
-        .about-content {
-            line-height: 1.6;
-        }
-        h1 {
-            font-size: 24px;
-            padding-bottom: 10px;
-        }
-        h2, h3 {
-            margin-top: 24px;
-            margin-bottom: 10px;
-        }
-        ul {
+
+        header h1 {
+            font-size: 16px;
             margin: 0;
-            padding-left: 20px;
         }
-        a {
-            color: #007BFF;
+
+        header .updated {
+            font-size: 16px;
+            color: #6E6E6E;
+        }
+
+        main p {
+            line-height: 1.6;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        main a {
+            color: #0066cc;
             text-decoration: none;
-        }
-        a:hover {
-            color: inherit;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="links">
-            <a href="index.html">Home</a>
-        </div>
-        <div class="content">
-            <h1>about</h1>
-            <div class="about-content">
-                <h3>currently</h3>
-                <ul>
-                    <li>Student, Human Interface Designer, Researcher and Entrepreneurial - Minded</li>
-                    <li>Student Researcher, <a href="https://cil.ist.psu.edu/">Collaboration Innovation Lab.</a></li>
-                    <li id="reference-link">Graduate Student: <a href="https://ist.psu.edu/">College of Information Science and Technology, Pennsylvania State University, University Park.</a></li>
-                </ul>
-                
-                <h3>research</h3>
-                <ul>
-                    <li>Currently a Graduate Student, Master of Science in Informatics at Penn State University-University Park, focusing on Human-Computer Interaction.</li>
-                    <li>Research areas exploring Human-computer interaction, digital transformation, accessibility, qualitative research, ubiquitous and wearable computing, human-AI interaction, interactive computing, CSCW.</li>
-                    <li>Under my advisor <a href="https://jcarroll.ist.psu.edu/">John M Carroll</a> I admire the most. I spent time as a student researcher at Collaboration Innovation Lab.</li>
-                </ul>
-                
-                <h3>what</h3>
-                <ul>
-                    <li>I'm 22 & I grew up in Tamilnadu, India.</li>
-                    <li>I spent most of my childhood days on computers, Facebook, and the internet.</li>
-                    <li>I synced up with the digital world, basically a Dot Com guy.</li>
-                    <li>Dot com boom and computers put me into the attentive phase to study about Computers, Humans and Science.</li>
-                    <li>Went to Kumaraguru college of technology BE with a major in computer science.</li>
-                    <li>I worked at HDFC Bank [NSE: HDFCBANK], Freecharge backed by Axis bank [NSE: AXISBANK].</li>
-                    <li>I was a founding member for an angel startup in capital markets.</li>
-                </ul>
-                
-                <h3>things that connected me</h3>
-                <ul>
-                    <li>Internet. At age 13, exposure to Mark Zuckerberg and Steve Jobs online ignited my interest in technology.</li>
-                    <li>Influences. Mark Zuckerberg, Steve Jobs, Microsoft, Facebook, Social media, Computing, Internet, Stanford, Harvard, Silicon Valley.</li>
-                    <li>Computing. The 1984 Macintosh commercial opened my eyes to the future of computing.</li>
-                    <li>Influences. Xerox PARC, Apple, NEXT, IBM, Computing, Quantum concepts, Google, Macintosh Series, Product development, Phone interfaces, Interactive Computing.</li>
-                    <li>Understanding Humans. Increased interaction with the world led to a deeper understanding of human behavior.</li>
-                    <li>Passionate about travel, books, design, being idle, and being a good son, I cherish Macintosh 1984 and Facebook.</li>
-                    <li>These passions and interests shape my perspective and drive my endeavors in various aspects of life and technology.</li>
-                </ul>
-                
-                <h3>influence</h3>
-                <p>Alan Kay, Alan Turing, Albert Einstein, BJ Fogg, Brian Cheesky, Daniel Kahneman, Deepak Anniyappa, Douglas Engelbart, Jamie Dimon, Jef Raskin, John M Carroll, Kailash Nadh, Macintosh Team, Mark D Weiser, Mark Zuckerberg, Mike Matas, Nandan Nilekani, Nikhil Kamath, Nithin Kamath, Paul Graham, Ratan Tata, Richard Feynman, Steve Jobs, Stuart K Card, Terry Winograd, Tristan Harris.</p>
-            </div>
-        </div>
+        <header>
+            <h1>About</h1>
+            <p class="updated">Updated August 06, 2024</p>
+        </header>
+        <main>
+            <p>Student, Human Interface Designer, Researcher and Entrepreneurial - Minded</p>
+            <p>Student Researcher at <a href="https://cil.ist.psu.edu">Collaboration Innovation Lab</a>.</p>
+            <p>Graduate Student at <a href="https://ist.psu.edu">College of Information Science and Technology, Pennsylvania State University, University Park</a>.</p>
+            <p>I am currently a graduate student pursuing a Master of Science in Informatics at Penn State University-University Park, with a focus on Human-Computer Interaction. My research areas encompass a broad range of topics, including human-computer interaction, digital transformation, accessibility, qualitative research, ubiquitous and wearable computing, human-AI interaction, interactive computing, and computer-supported cooperative work (CSCW). Under the guidance of my esteemed advisor, <a href="https://jcarroll.ist.psu.edu" style="color: #0066cc;">Dr. John M. Carroll</a>, I have had the privilege of working as a student researcher at the Collaboration Innovation Lab, where I have deepened my expertise and passion for these fields.</p>
+            <p>I'm 22 & I grew up in Tamilnadu, India. I spent most of my childhood days on computers, Facebook, and the internet. I synced up with the digital world, basically a Dot Com guy. Dot com boom and computers put me into the attentive phase to study about Computers, Humans and Science. Went to Kumaraguru College of Technology BE with a major in computer science. I worked at HDFC Bank [NSE: HDFCBANK], Freecharge backed by Axis Bank [NSE: AXISBANK]. I was a founding member for an angel startup in capital markets.</p>
+            <p>Internet. At age 13, exposure to Mark Zuckerberg and Steve Jobs online ignited my interest in technology. Influences. Mark Zuckerberg, Steve Jobs, Microsoft, Facebook, Social media, Computing, Internet, Stanford, Harvard, Silicon Valley.</p>
+            <p>Computing. The 1984 Macintosh commercial opened my eyes to the future of computing. Influences. Xerox PARC, Apple, NEXT, IBM, Computing, Quantum concepts, Google, Macintosh Series, Product development, Phone interfaces, Interactive Computing.</p>
+            <p>Understanding Humans. Increased interaction with the world led to a deeper understanding of human behavior. Passionate about travel, books, design, being idle, and being a good son, I cherish Macintosh 1984 and Facebook. These passions and interests shape my perspective and drive my endeavors in various aspects of life and technology.</p>
+            <p>Alan Kay, Alan Turing, Albert Einstein, BJ Fogg, Brian Chesky, Daniel Kahneman, Deepak Anniyappa, Douglas Engelbart, Jamie Dimon, Jef Raskin, John M. Carroll, Kailash Nadh, Macintosh Team, Mark D. Weiser, Mark Zuckerberg, Mike Matas, Nandan Nilekani, Nikhil Kamath, Nithin Kamath, Paul Graham, Ratan Tata, Richard Feynman, Steve Jobs, Stuart K. Card, Terry Winograd, Tristan Harris.</p>
+        </main>
     </div>
 </body>
 </html>
