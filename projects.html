@@ -3,120 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>projects</title>
+    <title>Sometimes, I write</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: none;
-        }
-
-        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
             max-width: 600px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 10px;
+            color: #1a1a1a;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .follow-btn {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
         }
 
         h1 {
-            font-size: 16px;
-            margin: 0;
-            padding-bottom: 10px;
+            font-size: 20px;
+            font-weight: 600;
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        li {
-            margin-bottom: 10px;
-            position: relative;
+        th {
+            text-align: left;
+            padding: 10px 0;
+            color: #666;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .date {
-            color: #6E6E6E;
-            font-size: 14px;
+        th:hover {
+            color: #000;
         }
 
-        .icon {
-            margin-right: 5px;
+        td {
+            padding: 10px 0;
+            border-top: 1px solid #eeeeee;
         }
 
-        li a {
+        a {
+            color: #1a1a1a;
             text-decoration: none;
-            color: inherit;
-            font-size: 16px;
-        }
-
-        li a:hover {
-            color: #6E6E6E; /* Change color on hover */
-        }
-
-        .hover-image {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            margin-left: 15px;
-            z-index: 10;
-            max-width: 600px; /* Set the maximum width */
-            max-height: 300px; /* Set the maximum height */
-            width: auto; /* Ensure proportional scaling */
-            height: auto; /* Ensure proportional scaling */
-        }
-
-        li:hover .hover-image {
-            display: block;
-        }
-        .links {
-            margin-bottom: 20px;
-        }
-        .links a {
-            color: #4895ef;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        .links a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Projects & Archives</h1>
-        <div class="links">
-            <a href="index.html">Home</a><a href="siw.html">Sometime, I write</a><a href="opensource.html">Opensource</a><a href="projects.html">Projects</a><a href="files/Academic_Charan.pdf">CV</a>
-        <a href="https://www.linkedin.com/in/connectwithcharanpp/">LinkedIn</a><a href="#">Scholar</a><a href="https://x.com/Charan_16">Twitter</a>
+    <header>
+        <h1>Charan</h1>
+        <div class="header-right">
+            <a href="index.html" class="follow-btn">Home</a>
+            <a href="siw.html" class="follow-btn">Sometimes, I write</a>
+            <a href="/opensource.html" class="follow-btn">Opensources</a>
+            <a href="/projects.html" class="follow-btn">Projects</a>
+            <a href="/files/Academic_Charan.pdf" class="follow-btn">CV</a>
+            <a href="#" class="follow-btn">Scholar</a>
+            <a href="#" class="follow-btn">LinkedIn</a>
+            <a href="#" class="follow-btn">Twitter</a>
         </div>
-        <ul>
-            <li>
-                <a href="https://www.figma.com/slides/ko8seowUWCvwxhlkGp0rkx/Post-and-Gather?node-id=0-1&t=cjeYZr6HTjar6RID-1"><strong>Post and Gather</strong></a>
-                <span class="date">2024</span>
-                <img src="img/Post and Gather.png" alt="Image for Post and Gather" class="hover-image">
-            </li>
-            <li>
-                <a href="https://docs.google.com/presentation/d/1H2lLfP0zsrj1MEUXxjJ-qYe4L6r1T0DQpE-bNbJ9xdE/edit?usp=sharing"><strong>Instagram Pay</strong></a>
-                <span class="date">2023</span>
-                <img src="img/Instagram Pay.png" alt="Image for Instagram Pay" class="hover-image">
-            </li>
-            <li>
-                <a href="https://www.figma.com/proto/D9Bc8EqVgyj06NJP2O3nQl/Site-Stack?page-id=228%3A620&type=design&node-id=237-614&viewport=514%2C1164%2C0.23&t=2fMxkvcJ5DlqCQro-1&scaling=scale-down-width"><strong>Avacado</strong></a>
-                <span class="date">2023</span>
-                <img src="img/Avacado.png" alt="Image for Avacado" class="hover-image">
-            </li>
-            <li>
-                <a href="https://www.figma.com/proto/D9Bc8EqVgyj06NJP2O3nQl/Site-Stack?page-id=228%3A620&type=design&node-id=237-614&viewport=514%2C1164%2C0.23&t=2fMxkvcJ5DlqCQro-1&scaling=scale-down-width"><strong>Mercury</strong></a>
-                <span class="date">2023</span>
-                <img src="img/Mercury.png" alt="Image for Mercury" class="hover-image">
-            </li>
-            <li>
-                <a href="https://www.figma.com/proto/D9Bc8EqVgyj06NJP2O3nQl/Site-Stack?page-id=5%3A28&type=design&node-id=15-2&viewport=558%2C455%2C0.12&t=iqy8elx5cF9aAuCa-1&scaling=scale-down-width"><strong>Facebook</strong></a>
-                <span class="date">2023</span>
-                <img src="img/Facebook 2006.png" alt="Image for Facebook" class="hover-image">
-            </li>
-        </ul>
-    </div>
+    </header>
+    <h2>Sometimes, I write</h2>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">date</th>
+                <th onclick="sortTable(1)">title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024/td>
+                <td><a href="https://www.figma.com/slides/ko8seowUWCvwxhlkGp0rkx/Post-and-Gather?node-id=0-1&t=cjeYZr6HTjar6RID-1">Post and Gather</a></td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td><a href="https://docs.google.com/presentation/d/1H2lLfP0zsrj1MEUXxjJ-qYe4L6r1T0DQpE-bNbJ9xdE/edit?usp=sharing">Instagram Pay</a></td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td><a href="https://www.figma.com/proto/D9Bc8EqVgyj06NJP2O3nQl/Site-Stack?page-id=228%3A620&type=design&node-id=237-614&viewport=514%2C1164%2C0.23&t=2fMxkvcJ5DlqCQro-1&scaling=scale-down-width">Avacado</a></td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td><a href="https://www.figma.com/proto/D9Bc8EqVgyj06NJP2O3nQl/Site-Stack?page-id=228%3A620&type=design&node-id=237-614&viewport=514%2C1164%2C0.23&t=2fMxkvcJ5DlqCQro-1&scaling=scale-down-width">Mercury</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let sortDirections = ['asc', 'asc'];
+        
+        function sortTable(columnIndex) {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const headers = table.querySelectorAll('th');
+            
+            rows.sort((a, b) => {
+                let aValue = a.cells[columnIndex].textContent;
+                let bValue = b.cells[columnIndex].textContent;
+                
+                if (aValue < bValue) return sortDirections[columnIndex] === 'asc' ? -1 : 1;
+                if (aValue > bValue) return sortDirections[columnIndex] === 'asc' ? 1 : -1;
+                return 0;
+            });
+            
+            sortDirections[columnIndex] = sortDirections[columnIndex] === 'asc' ? 'desc' : 'asc';
+            headers.forEach((header, i) => {
+                header.textContent = header.textContent.replace(/[↑↓↕]/, '');
+                header.textContent += i === columnIndex 
+                    ? (sortDirections[i] === 'asc' ? ' ↑' : ' ↓')
+                    : ' ↕';
+            });
+            
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
 </body>
 </html>
