@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Charan</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -11,7 +11,7 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 10px;
-            color: #333;
+            color: #1a1a1a;
         }
 
         header {
@@ -49,44 +49,32 @@
             font-weight: 600;
         }
 
-        h2 {
-            font-size: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        h3 {
-            font-size: 12px;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            color: #8F8F8F; 
+        th {
+            text-align: left;
+            padding: 10px 0;
+            color: #666;
+            cursor: pointer;
+            user-select: none;
         }
 
-        p {
-            margin-bottom: 5px;
+        th:hover {
+            color: #000;
+        }
+
+        td {
+            padding: 10px 0;
+            border-top: 1px solid #eeeeee;
         }
 
         a {
-            color: #0366d6;
+            color: #1a1a1a;
             text-decoration: none;
         }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .contributions {
-            margin-top: 10px;
-        }
-
-        .contributions li {
-            margin-bottom: 20px;
-        }
-        
-        ul li {
-            margin-bottom: 1.8px;
-        }
-
     </style>
 </head>
 <body>
@@ -104,19 +92,53 @@
         </div>
     </header>
 
-    <main>
-        <section>
-            <h2>About</h2>
-            <h3>Upadated</h3>
-            <ul>
-                <li>Grew up in India</li>
-                <li>Went to Kumaraguru College of Technology for a Bachelor's in Computer Science</li>
-                <li>I'm a graduate student at Penn State University's College of Information Science and Technology, pursuing a Master of Science in Informatics with a focus on Human-Computer Interaction</li>
-                <li>Student researcher in the Collaboration Innovation Lab under Dr. John M. Carroll, exploring human-computer interaction, cooperative activity, active learning, and interfaces</li>
-                <li>Previous roles at HDFC Bank, Freecharge (backed by Axis Bank), and founder of an angel-backed startup in capital markets</li>
-                <li>Live in State College, PA</li>
-            </ul>              
-        </section>
-    </main>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">date</th>
+                <th onclick="sortTable(1)">title</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>December 02, 2023</td>
+                <td><a href="/blogs/2023.html">Reflections and Learnings of 2023</a></td>
+            </tr>
+            <tr>
+                <td>July 17, 2024</td>
+                <td><a href="/blogs/Hard truths.html">Hard Truths - Short Note</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        let sortDirections = ['asc', 'asc'];
+        
+        function sortTable(columnIndex) {
+            const table = document.querySelector('table');
+            const tbody = table.querySelector('tbody');
+            const rows = Array.from(tbody.querySelectorAll('tr'));
+            const headers = table.querySelectorAll('th');
+            
+            rows.sort((a, b) => {
+                let aValue = a.cells[columnIndex].textContent;
+                let bValue = b.cells[columnIndex].textContent;
+                
+                if (aValue < bValue) return sortDirections[columnIndex] === 'asc' ? -1 : 1;
+                if (aValue > bValue) return sortDirections[columnIndex] === 'asc' ? 1 : -1;
+                return 0;
+            });
+            
+            sortDirections[columnIndex] = sortDirections[columnIndex] === 'asc' ? 'desc' : 'asc';
+            headers.forEach((header, i) => {
+                header.textContent = header.textContent.replace(/[↑↓↕]/, '');
+                header.textContent += i === columnIndex 
+                    ? (sortDirections[i] === 'asc' ? ' ↑' : ' ↓')
+                    : ' ↕';
+            });
+            
+            rows.forEach(row => tbody.appendChild(row));
+        }
+    </script>
 </body>
 </html>
