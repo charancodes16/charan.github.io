@@ -3,82 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hard Truths - Short Note</title>
+    <title>Hard Truths - Short note</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            background: none;
-        }
-
-        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.4;
             max-width: 600px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 10px;
+            color: #333;
         }
 
         header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .theme-toggle {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .follow-btn {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
-        header h1 {
-            font-size: 16px;
-            margin: 0;
+        h3 {
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #8F8F8F; 
         }
 
-        header .updated {
-            font-size: 16px;
-            color: #6E6E6E;
-        }
-        main p {
-            line-height: 1.6;
-            margin: 10px 0;
-            font-size: 16px;
+        p {
+            margin-bottom: 5px;
         }
 
-        main a {
-            color: #0066cc;
+        a {
+            color: #0366d6;
             text-decoration: none;
         }
 
         a:hover {
             text-decoration: underline;
         }
-        .links {
-            margin-bottom: 20px;
+
+        ul li {
+            margin-bottom: 15px;
+            line-height: 1.6;
         }
-        .links a {
-            color: #4895ef;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-        .links a:hover {
-            text-decoration: underline;
+
+        .contact-info {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hard Truths - Short Note</h1>
-            <p class="updated">Written on 17 July, 2024 by Charan</p>
-        </header>
-        <div class="links">
-            <a href="index.html">Home</a><a href="siw.html">Sometime, I write</a><a href="opensource.html">Opensource</a><a href="projects.html">Projects</a><a href="files/Academic_Charan.pdf">CV</a>
-        <a href="https://www.linkedin.com/in/connectwithcharanpp/">LinkedIn</a><a href="#">Scholar</a><a href="https://x.com/Charan_16">Twitter</a>
+    <header>
+        <a href="index.html" class="follow-btn"><h1>Charan</h1></a>
+        <div class="header-right">
+            <a href="about.html" class="follow-btn">Home</a>
+            <a href="siw.html" class="follow-btn">Sometimes, I write</a>
+            <a href="/opensource.html" class="follow-btn">Opensources</a>
+            <a href="/projects.html" class="follow-btn">Projects</a>
+            <a href="/files/Academic_Charan.pdf" class="follow-btn">CV</a>
+            <a href="#" class="follow-btn">Scholar</a>
+            <a href="#" class="follow-btn">LinkedIn</a>
+            <a href="#" class="follow-btn">Twitter</a>
         </div>
-        <main>
+    </header>
+
+    <main>
+        <section>
+            <h2>Hard Truths - Short Notes</h2>
+            <h3>Written on 17 July, 2024 by Charan</h3>
             <ul>
                 <li>Have you ever contemplated missing an opportunity? Or considered that despite your best efforts, your talents may go unrecognized? Have you ever felt highly competent in certain areas, yet still been deemed unfit for an opportunity? These are the hard truths I have pondered regarding adaptability.</li>
                 <li>There are moments when self-doubt creeps in, even when you are certain you are doing the right things. However, with time and reflection, you come to realize that everything happens for a reason. This realization embodies the essence of adaptability. Out of a hundred individuals, ninety-nine may get an opportunity, but there is always that one person who is left out. Paradoxically, this individual might later emerge as a leader. Hard truths demand acceptance, as they often precede significant growth or breakthroughs.</li>
                 <li>Do not be disheartened if things do not go as planned; there is always a way to overcome the hard truths.</li>
             </ul>
-
-            <p>For e-mailing: <a href="mailto:charanpp1603@gmail.com">charanpp1603@gmail.com</a>, <a href="mailto:cjp6449@psu.edu">cjp6449@psu.edu</a></p>
-            <p>Website: <a href="https://charanpushpanathan.com/" target="_blank">https://charanpushpanathan.com/</a></p>
-        </main>
-    </div>
+            
+            <div class="contact-info">
+                <p>For e-mailing:</p>
+                <ul>
+                    <li><a href="mailto:charanpp1603@gmail.com">charanpp1603@gmail.com</a></li>
+                    <li><a href="mailto:cjp6449@psu.edu">cjp6449@psu.edu</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
