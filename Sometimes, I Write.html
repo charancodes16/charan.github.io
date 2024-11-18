@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sometimes, I Write</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #FFFFFF;
+            color: #1A1A1A;
+            line-height: 1.5;
+            letter-spacing: -0.43px;
+        }
+
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+
+        .nav-container {
+            width: 550px;
+            margin: 50px auto 0;
+        }
+
+        .title-separator {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0 0 3px;
+            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 20px;
+            color: rgba(60, 60, 67, 0.6);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 34px;
+            padding: 0;
+            width: 530px;
+        }
+
+        .nav-link {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
+
+        .nav-link.active {
+            color: rgba(60, 60, 67, 0.6);
+        }
+
+        .content {
+            width: 542px;
+            margin: 30px auto;
+        }
+
+        .about-title {
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 16px;  /* Same gap as between entries */
+        }
+
+        .update-date {
+            font-weight: 700;
+            font-size: 12px;
+            color: rgba(60, 60, 67, 0.6);
+            margin-bottom: 16px;  /* Consistent gap between entries */
+            display: block;
+        }
+
+        .about-content {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            color: #1A1A1A;
+        }
+
+        .about-content h3 {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #1A1A1A;
+        }
+
+        .about-content a {
+            color: inherit;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-container">
+            <div class="title-separator">
+                <h1 class="section-title">Charan Pushpanthan</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link" style="color: #1A1A1A;">About</a>
+                <a href="Sometimes, I Write.html" class="nav-link" style="color: rgba(60, 60, 67, 0.6);">Sometimes, I Write</a>
+                <a href="Opensource.html" class="nav-link">Opensource</a>
+                <a href="#" class="nav-link">Resume</a>
+                <a href="#" class="nav-link">Scholar</a>
+            </div>
+        </nav>
+
+        <main class="content">
+            <h2 class="about-title">Sometimes, I Write</h2>
+            <div class="about-content">
+                <h3><a href="/blogs/Hard Truths.html">Hard Truths - Short notes</a></h3>
+                <time class="update-date">07 July 2024</time>
+
+                <h3><a href="/blogs/Reflections and Learning 2023.html">Reflections & Learnings of 2023</a></h3>
+                <time class="update-date">02 December 2024</time>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
