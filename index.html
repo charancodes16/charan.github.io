@@ -3,156 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Charan</title>
+    <title>Charan Pushpanathan</title>
     <style>
-        * {
+        /* Base styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #1A1A1A;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
-
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.5;
-            letter-spacing: -0.43px;
-        }
-
+        
         .container {
-            max-width: 1440px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            position: relative;
+            padding: 2rem;
         }
-
-        .nav-container {
-            width: 550px;
-            margin: 50px auto 0;
-        }
-
+        
+        /* Header and Navigation */
         .title-separator {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 0 0 3px;
-            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-            margin-bottom: 16px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
         }
-
+        
         .section-title {
-            font-weight: 700;
-            font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 0 1rem;
         }
-
+        
         .nav-links {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 34px;
-            padding: 0;
-            width: 530px;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
-
+        
         .nav-link {
-            font-weight: 700;
-            font-size: 18px;
-            color: #1A1A1A;
             text-decoration: none;
+            color: #1A1A1A;
+            transition: color 0.2s;
         }
-
+        
+        .nav-link:hover {
+            color: #666;
+        }
+        
         .nav-link.active {
             color: rgba(60, 60, 67, 0.6);
         }
-
+        
+        /* Content */
         .content {
-            width: 542px;
-            margin: 30px auto;
+            margin-top: 2rem;
         }
-
+        
         .about-title {
-            font-weight: 700;
-            font-size: 30px;
-            margin-bottom: 16px;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
         }
-
-        .update-date {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-        }
-
+        
         .profile-image {
-            width: 550px;
-            height: 300px;
-            object-fit: cover;
-            margin-bottom: 8px;
-            object-position: center 85%
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 1rem 0;
         }
-
-        .image-caption {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-            text-align: center;
-        }
-
+        
         .about-content {
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
-            color: #1A1A1A;
+            margin-top: 2rem;
         }
-
+        
         .about-content ul {
-            list-style-type: none;
+            list-style: none;
+            padding: 0;
         }
-
+        
         .about-content li {
-            margin-bottom: 1em;
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
+            margin-bottom: 1rem;
         }
-
-        .about-content a {
-            color: inherit;
-            text-decoration: underline;
-        }
-
-        .footer {
-            width: 542px;
-            margin: 50px auto 20px;
-            padding-top: 10px;
-            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            text-align: left;
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
+        
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <nav class="nav-container">
-            <div class="title-separator">
-                <h1 class="section-title">Charan Pushpanathan</h1>
-            </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">About</a>
-                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-                <a href="files/Academic_Charan.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-            </div>
+        <div class="title-separator">
+            <h1 class="section-title">Charan Pushpanathan</h1>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link active">About</a>
+            <a href="Sometimes%2C%20I%20Write.html" class="nav-link">Sometimes, I Write</a>
+            <a href="files/Academic_Charan.pdf" class="nav-link">Resume</a>
+            <a href="#" class="nav-link">Scholar</a>
         </nav>
 
         <main class="content">
             <h2 class="about-title">About</h2>
-            <p class="update-date">Updated 30 October 2024</p>
+            
+            <p>Updated 30 October 2024</p>
+
             <img src="/img/1551EDF9-4DAE-4D08-B7AB-4364BA4A7E69_1_201_a.webp" alt="Profile Image" class="profile-image">
-            <p class="image-caption">This is me, When I visited Princeton University, For Richard Feynman</p>
+            
+            <p>This is me, When I visited Princeton University, For Richard Feynman</p>
+
             <div class="about-content">
                 <ul>
                     <li>Grew up in Tamilnadu, India</li>
@@ -164,9 +124,9 @@
             </div>
         </main>
 
-        <footer class="footer">
+        <footer>
             <p>© 2024 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603 at gmail dot com</p>
+            <p>For emailing: charanpp1603 at gmail dot com</p>
         </footer>
     </div>
 </body>
