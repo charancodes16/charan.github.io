@@ -18,7 +18,7 @@
                     document.getElementById('bookmarkList').innerHTML = bookmarks
                         .map(b => `
                             <div class="bookmark-item">
-                                <a href="${b.url}">${b.title}</a>
+                                <a href="${b.url}" target="_blank">${b.title}</a>
                                 <span>${b.date}</span>
                             </div>
                         `).join('');
