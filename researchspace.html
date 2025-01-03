@@ -2,21 +2,10 @@
 <html>
 <head>
     <title>Research Space</title>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
-</head>
-<body>
-    <div class="header">
-        <div class="nav-buttons">
-            <button class="active">Links</button>
-            <button>Papers</button>
-        </div>
-    </div>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 
-    <input type="text" class="search-box" placeholder="Search">
-    <div id="bookmarkList"></div>
-
-    <script>
         const firebaseConfig = {
             apiKey: "AIzaSyDfM1q2enn_Rf1INDK-JFwqnz5SVxZWoMs",
             authDomain: "research-bookmarker.firebaseapp.com",
@@ -27,17 +16,28 @@
             appId: "1:973304712595:web:3ce047d112823760136c66"
         };
 
-        firebase.initializeApp(firebaseConfig);
-        const dbRef = firebase.database().ref('bookmarks');
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const bookmarksRef = ref(db, 'bookmarks');
 
-        dbRef.on('value', (snapshot) => {
-            const bookmarks = snapshot.val();
-            displayBookmarks(bookmarks);
+        onValue(bookmarksRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                displayBookmarks(data);
+            }
         });
-
+    </script>
+    <style>
+        /* Add your existing CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="bookmarkList"></div>
+    <script>
         function displayBookmarks(bookmarks) {
             const bookmarkList = document.getElementById('bookmarkList');
-            bookmarkList.innerHTML = Object.values(bookmarks || {})
+            const bookmarkArray = Object.values(bookmarks);
+            bookmarkList.innerHTML = bookmarkArray
                 .map(bookmark => `
                     <div class="bookmark-item">
                         <a href="${bookmark.url}">${bookmark.title}</a>
