@@ -14,16 +14,27 @@
             .then(response => response.json())
             .then(data => {
                 if (data) {
-                    const bookmarks = Object.values(data);
+                    const bookmarks = Object.entries(data);
                     document.getElementById('bookmarkList').innerHTML = bookmarks
-                        .map(b => `
+                        .map(([key, b]) => `
                             <div class="bookmark-item">
                                 <a href="${b.url}" target="_blank">${b.title}</a>
-                                <span>${b.date}</span>
+                                <span>
+                                    ${b.date}
+                                    <button onclick="deleteBookmark('${key}')" style="margin-left: 10px; color: red;">×</button>
+                                </span>
                             </div>
                         `).join('');
                 }
             });
+    
+        function deleteBookmark(key) {
+            if (confirm('Delete this bookmark?')) {
+                fetch(`https://research-bookmarker-default-rtdb.firebaseio.com/bookmarks/${key}.json`, {
+                    method: 'DELETE'
+                }).then(() => location.reload());
+            }
+        }
     </script>
 </body>
 </html>
