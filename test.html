@@ -1,326 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Assorted</title>
-   <style>
-       * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-       }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Charan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-       body {
-           font-family: 'Times New Roman', Times, serif;
-           background: #FFFFFF;
-           color: #1A1A1A;
-           line-height: 1.5;
-           letter-spacing: -0.43px;
-       }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: #FFFFFF;
+            color: #1A1A1A;
+            line-height: 1.5;
+            letter-spacing: -0.48px;
+        }
 
-       .container {
-           max-width: 1440px;
-           margin: 0 auto;
-           padding: 20px;
-       }
+        .container {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
 
-       .nav-container {
-           width: 550px;
-           margin: 50px auto 0;
-       }
+        .nav-container {
+            width: 550px;
+            margin: 50px auto 0;
+        }
 
-       .title-separator {
-           display: flex;
-           flex-direction: row;
-           align-items: flex-start;
-           padding: 0 0 3px;
-           border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-           margin-bottom: 16px;
-       }
+        .title-separator {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 0 0 3px;
+            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+            margin-bottom: 16px;
+        }
 
-       .section-title {
-           font-weight: 700;
-           font-size: 20px;
-           color: rgba(60, 60, 67, 0.6);
-       }
+        .section-title {
+            font-weight: 400;
+            font-size: 20px;
+            color: rgba(60, 60, 67, 0.6);
+        }
 
-       .nav-links {
-           display: flex;
-           flex-direction: row;
-           align-items: center;
-           gap: 34px;
-           padding: 0;
-           width: 530px;
-       }
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 34px;
+            padding: 0;
+            width: 530px;
+        }
 
-       .nav-link {
-           font-weight: 700;
-           font-size: 18px;
-           color: #1A1A1A;
-           text-decoration: none;
-       }
+        .nav-link {
+            font-weight: 700;
+            font-size: 18px;
+            color: #1A1A1A;
+            text-decoration: none;
+        }
 
-       .nav-link.active {
-           color: rgba(60, 60, 67, 0.6);
-       }
+        .nav-link.active {
+            color: rgba(60, 60, 67, 0.6);
+        }
 
-       .content {
-           width: 542px;
-           margin: 30px auto;
-           gap: 4px;
-           display: flex;
-           flex-direction: column;
-       }
+        .content {
+            width: 550px;
+            margin: 30px auto;
+        }
 
-       .about-title {
-           font-weight: 700;
-           font-size: 30px;
-           margin-bottom: 16px;
-       }
+        .about-title {
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
 
-       .update-date {
-           font-weight: 700;
-           font-size: 12px;
-           color: rgba(60, 60, 67, 0.6);
-           margin-bottom: 16px;
-       }
+        .update-date {
+            font-weight: 700;
+            font-size: 11px;
+            color: rgba(60, 60, 67, 0.6);
+            margin-bottom: 16px;
+        }
 
-       .photo-grid {
-           display: flex;
-           gap: 4px;
-           margin: 0 0 0px 0;
-           width: 542px;
-           overflow-x: auto;
-           scroll-snap-type: x mandatory;
-           padding-bottom: 10px;
-       }
+        .profile-section {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
 
-       .photo-item {
-           flex: 0 0 auto;
-           width: calc((542px - 20px) / 6);
-           aspect-ratio: 1;
-           cursor: pointer;
-           overflow: hidden;
-           scroll-snap-align: start;
-       }
+        .profile-image-container {
+            flex-shrink: 0;
+        }
 
-       .photo-grid::-webkit-scrollbar {
-           display: none;
-       }
+        .profile-image {
+            width: 180px;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 8px;
+            object-position: center 85%
+        }
 
-       .photo-grid {
-           -ms-overflow-style: none;
-           scrollbar-width: none;
-       }
+        .image-caption {
+            font-weight: 700;
+            font-size: 12px;
+            color: rgba(60, 60, 67, 0.6);
+            margin-bottom: 16px;
+            text-align: left;
+            width: 200px;
+        }
 
-       .photo-item img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-           transition: transform 0.3s ease;
-       }
+        .about-content {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 1.2;
+            color: #1A1A1A;
+            flex-grow: 1;
+        }
 
-       .photo-item:hover img {
-           transform: scale(1.05);
-       }
+        .about-content ul {
+            list-style-type: none;
+        }
 
-       .preview-overlay {
-           display: none;
-           position: fixed;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: 100%;
-           background: rgba(0, 0, 0, 0.9);
-           z-index: 1000;
-           justify-content: center;
-           align-items: center;
-       }
+        .about-content li {
+            margin-bottom: 0.85em;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+        }
 
-       .preview-overlay.active {
-           display: flex;
-       }
+        .about-content a {
+            color: inherit;
+            text-decoration: underline;
+        }
 
-       .preview-content {
-           position: relative;
-           max-width: 90%;
-           max-height: 90vh;
-           text-align: center;
-       }
-
-       .preview-image {
-           max-width: 100%;
-           max-height: 80vh;
-           object-fit: contain;
-           margin-bottom: 20px;
-       }
-
-       .preview-caption {
-           color: white;
-           font-size: 18px;
-           padding: 0 20px;
-           line-height: 1.4;
-       }
-
-       .close-button {
-           position: absolute;
-           top: -40px;
-           right: 0;
-           color: white;
-           font-size: 40px;
-           background: none;
-           border: none;
-           cursor: pointer;
-       }
-
-       .footer {
-           width: 542px;
-           margin: 50px auto 20px;
-           padding-top: 10px;
-           border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-           text-align: left;
-           font-size: 16px;
-           color: rgba(60, 60, 67, 0.6);
-       }
-   </style>
+        .footer {
+            width: 550px;
+            margin: 50px auto 20px;
+            padding-top: 10px;
+            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
+            text-align: left;
+            font-size: 16px;
+            color: rgba(60, 60, 67, 0.6);
+        }
+    </style>
 </head>
 <body>
-   <div class="container">
-       <nav class="nav-container">
-           <div class="title-separator">
-               <h1 class="section-title">Assorted</h1>
-           </div>
-           <div class="nav-links">
-               <a href="../charan.github.io/index.html" class="nav-link active" style="color: #1A1A1A;">About</a>
-               <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-               <a href="../charan.github.io/files/Academic_Charan.pdf" class="nav-link">Resume</a>
-               <a href="#" class="nav-link">Scholar</a>
-               <a href="/research.html" class="nav-link">Research</a>
-               <a href="#" class="nav-link" style="color: rgba(60, 60, 67, 0.6);">Assorted</a>
-           </div>
-       </nav>
+    <div class="container">
+        <nav class="nav-container">
+            <div class="title-separator">
+                <h1 class="section-title">Charan Pushpanathan</h1>
+            </div>
+            <div class="nav-links">
+                <a href="../charan.github.io/index.html" class="nav-link active">About</a>
+                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
+                <a href="/files/Charan_Pushpanathan_Prabavathi_Resume.pdf" class="nav-link">Resume</a>
+                <a href="#" class="nav-link">Scholar</a>
+                <a href="/research.html" class="nav-link">Research</a>
+                <a href="/assorted.html" class="nav-link">Assorted</a>
+            </div>
+        </nav>
 
-       <main class="content">
-           <h2 class="about-title">Assorted</h2>
-           <p class="update-date">Updated 30 October 2024</p>
-           
-           <div class="photo-grid">
-               <!-- Row 1 -->
-               <div class="photo-item">
-                   <img src="image1.jpg" alt="Image 1">
-               </div>
-               <div class="photo-item">
-                   <img src="image2.jpg" alt="Image 2">
-               </div>
-               <div class="photo-item">
-                   <img src="image3.jpg" alt="Image 3">
-               </div>
-               <div class="photo-item">
-                   <img src="image4.jpg" alt="Image 4">
-               </div>
-               <div class="photo-item">
-                   <img src="image5.jpg" alt="Image 5">
-               </div>
-               <div class="photo-item">
-                   <img src="image6.jpg" alt="Image 6">
-               </div>
-           </div>
+        <main class="content">
+            <h2 class="about-title">About</h2>
+            <p class="update-date">Updated 30 October 2024</p>
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img src="/img/1551EDF9-4DAE-4D08-B7AB-4364BA4A7E69_1_201_a.webp" alt="Profile Image" class="profile-image">
+                    <p class="image-caption">This is me when I visited Princeton University for Richard Feynman</p>
+                </div>
+                <div class="about-content">
+                    <ul>
+                        <li>Grew up in Tamilnadu, India</li>
+                        <li>Currently a graduate student at Penn State University's College of Information Sciences and Technology, pursuing a Master of Science in Informatics with a focus on Human-Computer Interaction. I am a graduate researcher in the Collaboration Innovation Lab, working under <a href="https://jcarroll.ist.psu.edu">Dr. John M. Carroll</a> as his advisee. My research explores human-computer interaction, cooperative activity, synergies, learning to use, and interface design.</li>
+                        <li>Went to Kumaraguru College of Technology for a Bachelor's in Computer Science and Engineering.</li>
+                        <li>Previous roles at <a href="https://g.co/kgs/mx4kXAJ">HDFC Bank</a>, <a href="https://www.freecharge.in">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac">Axis Bank</a>), and founding member and designer of an angel-backed startup in capital markets (closed). Where I focused on user testing, research and interfaces.</li>
+                        <li>Live in State College, PA</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
 
-           <div class="photo-grid">
-               <!-- Row 2 -->
-               <div class="photo-item">
-                   <img src="image7.jpg" alt="Image 7">
-               </div>
-               <div class="photo-item">
-                   <img src="image8.jpg" alt="Image 8">
-               </div>
-               <div class="photo-item">
-                   <img src="image9.jpg" alt="Image 9">
-               </div>
-               <div class="photo-item">
-                   <img src="image10.jpg" alt="Image 10">
-               </div>
-               <div class="photo-item">
-                   <img src="image11.jpg" alt="Image 11">
-               </div>
-               <div class="photo-item">
-                   <img src="image12.jpg" alt="Image 12">
-               </div>
-           </div>
-
-           <div class="photo-grid">
-               <!-- Row 3 -->
-               <div class="photo-item">
-                   <img src="image13.jpg" alt="Image 13">
-               </div>
-               <div class="photo-item">
-                   <img src="image14.jpg" alt="Image 14">
-               </div>
-               <div class="photo-item">
-                   <img src="image15.jpg" alt="Image 15">
-               </div>
-               <div class="photo-item">
-                   <img src="image16.jpg" alt="Image 16">
-               </div>
-               <div class="photo-item">
-                   <img src="image17.jpg" alt="Image 17">
-               </div>
-               <div class="photo-item">
-                   <img src="/img/Penn State.jpeg" alt="Penn State, Fall'2023">
-               </div>
-           </div>
-       </main>
-
-       <footer class="footer">
-           <p>© 2024 Charan Pushpanathan</p>
-           <p style="margin-top: 8px;">For emailing: charanpp1603 at gmail dot com</p>
-       </footer>
-
-       <div class="preview-overlay" id="previewOverlay">
-           <div class="preview-content">
-               <button class="close-button" id="closeButton">×</button>
-               <img class="preview-image" id="previewImage" src="" alt="">
-               <p class="preview-caption" id="previewCaption"></p>
-           </div>
-       </div>
-   </div>
-
-   <script>
-       const photoItems = document.querySelectorAll('.photo-item');
-       const previewOverlay = document.getElementById('previewOverlay');
-       const previewImage = document.getElementById('previewImage');
-       const previewCaption = document.getElementById('previewCaption');
-       const closeButton = document.getElementById('closeButton');
-
-       photoItems.forEach(item => {
-           item.addEventListener('click', () => {
-               const img = item.querySelector('img');
-               previewImage.src = img.src;
-               previewCaption.textContent = img.alt;
-               previewOverlay.classList.add('active');
-               document.body.style.overflow = 'hidden';
-           });
-       });
-
-       function closePreview() {
-           previewOverlay.classList.remove('active');
-           document.body.style.overflow = '';
-       }
-
-       closeButton.addEventListener('click', closePreview);
-
-       previewOverlay.addEventListener('click', (e) => {
-           if (e.target === previewOverlay) {
-               closePreview();
-           }
-       });
-
-       document.addEventListener('keydown', (e) => {
-           if (e.key === 'Escape' && previewOverlay.classList.contains('active')) {
-               closePreview();
-           }
-       });
-   </script>
+        <footer class="footer">
+            <p>© 2024 Charan Pushpanathan</p>
+            <p style="margin-top: 8px;">For emailing: charanpp1603 at gmail dot com</p>
+        </footer>
+    </div>
 </body>
 </html>
