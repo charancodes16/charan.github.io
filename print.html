@@ -12,9 +12,9 @@
         }
 
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Canela', serif;
             background: #FFFFFF;
-            color: #1A1A1A;
+            color: #333333;
             line-height: 1.5;
             letter-spacing: -0.48px;
         }
@@ -43,7 +43,7 @@
         .section-title {
             font-weight: 400;
             font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
+            color: #FF6600; /* Orange color for Charan Pushpanathan */
         }
 
         .nav-links {
@@ -58,7 +58,7 @@
         .nav-link {
             font-weight: 700;
             font-size: 18px;
-            color: #1A1A1A;
+            color: #333333;
             text-decoration: none;
         }
 
@@ -75,6 +75,7 @@
             font-weight: 700;
             font-size: 30px;
             margin-bottom: 16px;
+            color: #333333;
         }
 
         .update-date {
@@ -111,11 +112,20 @@
             width: 200px;
         }
 
+        .contact-info {
+            font-weight: 200;
+            font-size: 15px;
+            color: rgba(60, 60, 67, 0.6);
+            margin-bottom: 16px;
+            text-align: left;
+            width: 200px;
+        }
+
         .about-content {
             font-weight: 200;
             font-size: 15px;
             line-height: 1.2;
-            color: #1A1A1A;
+            color: #333333;
             flex-grow: 1;
         }
 
@@ -145,6 +155,16 @@
             color: rgba(60, 60, 67, 0.6);
             font-weight: 200;
         }
+
+        .footer p {
+            margin-bottom: 8px;
+        }
+
+        .footer .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -169,7 +189,7 @@
                         <li>Grew up in Tamilnadu, IND</li>
                         <li>Early interactions with Apple INC's Macintosh, Pulled me to studying about Human, Computing (Artificial Intelligence, Personal and Ubiqtious) and Science.</li>
                         <li>Now, moving forward with research in AI and HCI—exploring questions like <i>"Can machines dream?"</i> and <i>"Augmenting human intellect with machine intelligence!"</i> Starting my PhD in Computer Science at</li>
-                        <li>I went to Penn State University's College of Information Sciences and Technology to study under <a href="https://jcarroll.ist.psu.edu">Dr. John M. Carroll</a> (He commands more of my respect). As a graduate researcher in his Collaboration Innovation Laboratory, I conducted studies on human-computer interaction, cooperative activity, synergies, learning to use, and interface design. As a class of 2025, I earned my Master of Science in Informatics, concentration in Human-Computer Interaction.</li>
+                        <li>I went to Penn State University's College of Information Sciences and Technology to study under <a href="https://jcarroll.ist.psu.edu">Dr. John M. Carroll</a> (He commands more of my respect). Luck to have Dr. John M Carroll aka Jack Carroll (One of the founding fathers in HCI). And belong to idealistic environment where I met and worked with Dr. Frank Ritter (Allen Newell Student), Luke Zhang, Kenneth Huang and among others. As a graduate researcher in his Collaboration Innovation Laboratory, I conducted studies on human-computer interaction, cooperative activity, synergies, learning to use, and interface design. As a class of 2025, I earned my Master of Science in Informatics, concentration in Human-Computer Interaction.</li>
                         <li>Graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering as a class of 2023.</li>
                         <li>Previous roles at <a href="https://g.co/kgs/mx4kXAJ">HDFC Bank</a>, <a href="https://www.freecharge.in">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac">Axis Bank</a>), and founding member and designer of an angel-backed startup in capital markets (closed). Where I focused on user testing, research and interfaces.</li>
                         <li>Lived in State College, PA. Soon moving to</li>
@@ -180,10 +200,9 @@
 
         <footer class="footer">
             <p>© 2024 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">Contact me:</p>
-            <p>Personal: <b>charanpp1603@gmail.com</b></p>
-            <p>Graduate School: <b>cjp6449@psu.edu</b></p>
-            <p>Site: <b>charanpushpanathan.com</b></p>
+            <div class="contact-info">
+                <p>Contact me: Personal: <b>charanpp1603@gmail.com</b>, Graduate School: <b>cjp6449@psu.edu</b>, Site: <b>charanpushpanathan.com</b></p>
+            </div>
         </footer>
     </div>
 </body>
