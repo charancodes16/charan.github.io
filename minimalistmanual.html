@@ -403,8 +403,8 @@
         <p><a href="#" class="nav-link" data-section="about">About</a></p>
         <p><a href="#" class="nav-link" data-section="cs1">Case Study 1</a></p>
         <p><a href="#" class="nav-link" data-section="cs2">Case Study 2</a></p>
-        <p><a href="Charan_Resume.pdf" class="nav-link">Resume</a></p>
-        <p><a href="https://www.figma.com/deck/WTPDcSkQLkV0W6Ir0OCbLN/Charan's-Portfolio-%2F-Detailed-Version?node-id=44-113&viewport=-90%2C224%2C0.06&t=Zm9M0b8gNfw4355Z-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="nav-link">Threaded Portfolio</a></p>
+        <p><a href="Charan_Resume.pdf" class="nav-link" target="_blank">Resume</a></p>
+        <p><a href="https://www.figma.com/deck/WTPDcSkQLkV0W6Ir0OCbLN/Charan's-Portfolio-%2F-Detailed-Version?node-id=44-113&viewport=-90%2C224%2C0.06&t=Zm9M0b8gNfw4355Z-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="nav-link" target="_blank">Threaded Portfolio</a></p>
     </div>
 
     <!-- Home Section -->
@@ -425,7 +425,7 @@
 
             <!-- Floppy Disk -->
             <p class="image-caption home-floppy-caption">You're seeing the right fit</p>
-            <div href="Charan_Resume.pdf" class="home-floppy-disk"></div>
+            <a href="Charan_Resume.pdf" target="_blank" class="home-floppy-disk"></a>
         </div>
     </div>
 
@@ -460,7 +460,7 @@
             <h1>Technology Design for New Parent Couples</h1>
             <p>User Research</p>
             <p>2025</p>
-            <a href="https://www.figma.com/deck/pB2vGMyibOyMsIogmCUxAj/Case-Study-1?node-id=1-117&p=f&viewport=-7111%2C-14%2C0.28&t=tNHJu3TX39h3rSKD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="detailed-view-button">Detailed view</a>
+            <a href="https://www.figma.com/deck/pB2vGMyibOyMsIogmCUxAj/Case-Study-1?node-id=1-117&p=f&viewport=-7111%2C-14%2C0.28&t=tNHJu3TX39h3rSKD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="detailed-view-button" target="_blank">Detailed view</a>
         </div>
 
         <!-- Contributors Section -->
@@ -491,7 +491,7 @@
             <h1>Event Aggregator: Post and Gather; Your Penn State Happenings</h1>
             <p>User Research & Interface</p>
             <p>2024</p>
-            <a href="https://www.figma.com/deck/jnPgZ1iPsDZL9t6ClVaaqA/Case-Study-2?node-id=1-119&p=f&viewport=972%2C514%2C0.08&t=H8YvOCrHsbzmwLgt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="detailed-view-button">Detailed view</a>
+            <a href="https://www.figma.com/deck/jnPgZ1iPsDZL9t6ClVaaqA/Case-Study-2?node-id=1-119&p=f&viewport=972%2C514%2C0.08&t=H8YvOCrHsbzmwLgt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="detailed-view-button" target="_blank">Detailed view</a>
         </div>
 
         <!-- Contributors Section -->
@@ -529,15 +529,17 @@
             
             // Set up navigation links
             document.querySelectorAll('.nav-link').forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    document.body.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        showSection(`${link.dataset.section}-section`);
-                        document.body.style.opacity = '1';
-                    }, 500);
-                });
+                if (link.dataset.section) {  // Only apply to section navigation links
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        document.body.style.opacity = '0';
+                        
+                        setTimeout(() => {
+                            showSection(`${link.dataset.section}-section`);
+                            document.body.style.opacity = '1';
+                        }, 500);
+                    });
+                }
             });
             
             // Home link
@@ -572,14 +574,6 @@
                 document.body.style.opacity = '0';
                 setTimeout(() => {
                     showSection('cs2-section');
-                    document.body.style.opacity = '1';
-                }, 500);
-            });
-            
-            document.querySelector('.home-floppy-disk').addEventListener('click', () => {
-                document.body.style.opacity = '0';
-                setTimeout(() => {
-                    showSection('resume-section');
                     document.body.style.opacity = '1';
                 }, 500);
             });
