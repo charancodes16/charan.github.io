@@ -65,7 +65,7 @@
         .navigation p:nth-child(2) { top: 145px; }
         .navigation p:nth-child(3) { top: 170px; }
         .navigation p:nth-child(4) { top: 195px; }
-        .navigation p:nth-child(5) { top: 220px; }    
+        .navigation p:nth-child(5) { top: 220px; }
 
         /* Navigation Links */
         .nav-link {
@@ -99,7 +99,9 @@
             background-size: cover;
             border: 8px solid #FFFFFF;
             cursor: pointer; /* Change cursor to pointer */
-            transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Smart animate effect */
+
+            /* Added shared transition so it moves smoothly on hover */
+            transition: transform 0.3s ease; 
         }
 
         .home-phone-left {
@@ -111,6 +113,9 @@
             background: url(/src/parenting.png);
             background-size: cover;
             cursor: pointer;
+
+            /* Added shared transition so it moves smoothly on hover */
+            transition: transform 0.3s ease; 
         }
 
         .home-phone-right {
@@ -122,6 +127,9 @@
             background: url(/src/event.png);
             background-size: cover;
             cursor: pointer;
+
+            /* Added shared transition so it moves smoothly on hover */
+            transition: transform 0.3s ease; 
         }
 
         .home-floppy-disk {
@@ -133,6 +141,9 @@
             background: url(/src/Figma\ Floppy\ Disk\ Front.png);
             background-size: cover;
             cursor: pointer;
+
+            /* Added shared transition so it moves smoothly on hover */
+            transition: transform 0.3s ease; 
         }
 
         /* Image Captions */
@@ -311,7 +322,7 @@
         }
 
         .contributors p:nth-child(1) { bottom: 160px; }
-        .contributors p:nth-child(2) { bottom: 136px; } 
+        .contributors p:nth-child(2) { bottom: 136px; }
         .contributors p:nth-child(3) { bottom: 112px; }
         .contributors p:nth-child(4) { bottom: 88px; }
         .contributors p:nth-child(5) { bottom: 64px; }
@@ -331,7 +342,7 @@
             line-height: auto;
             color: #808080;
         }
-        
+
         /* Resume Styles */
         .resume-content {
             position: absolute;
@@ -345,13 +356,13 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        
+
         .resume-header {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-        
+
         .resume-pdf-icon {
             background-color: #f44336;
             color: white;
@@ -362,23 +373,23 @@
             width: 50px;
             text-align: center;
         }
-        
+
         .resume-title {
             margin: 0;
             font-size: 28px;
         }
-        
+
         .resume-subtitle {
             margin: 5px 0;
             color: #666;
         }
-        
+
         .resume-version {
             text-align: right;
             margin-top: 100px;
             color: #666;
         }
-        
+
         .resume-format {
             margin-top: 100px;
             text-align: center;
@@ -439,7 +450,7 @@
 
         <!-- Overview Section -->
         <div class="about-overview">
-            <p><b>About. </b>Charan is a Master's student in Informatics (Human-Computer Interaction) at Pennsylvania State University's College of IST, advised by Dr. Jack Carroll. At the Collaboration Innovation Laboratory, he researches cooperative activity, synergies, and interface design. He has collaborated with Dr. Frank Ritter, Luke Zhang, and Kenneth Huang. His work is targeted for publication in HCI venues like DIS and MobileHCI. Previously, Charan earned his Bachelor's in Computer Science from Kumaraguru College of Technology (2023) and gained industry experience through internships at HDFC Bank, Freecharge, and as a founding designer at an angel-backed fintech startup.</p>
+            <p><b>About. </b>Charan is a Master's student in Informatics (Human-Computer Interaction) at Pennsylvania State University's College of IST, advised by <b>Dr. John M. Carroll</b> aka Jack Carroll (One of the founding fathers in HCI) At the Collaboration Innovation Laboratory, he researches cooperative activity, synergies, and interface design. He has collaborated with Dr. Frank Ritter, Luke Zhang, and Kenneth Huang. His work is targeted for publication in HCI venues like DIS and MobileHCI. Previously, Charan earned his Bachelor's in Computer Science from Kumaraguru College of Technology (class of 2023) and gained industry experience through banking and fintech internships at HDFC Bank, Freecharge, and as a founding designer at an angel-backed fintech startup.</p>
         </div>
     </div>
 
@@ -576,6 +587,28 @@
                     showSection('cs2-section');
                     document.body.style.opacity = '1';
                 }, 500);
+            });
+
+            /*
+              Hover behavior for all four elements:
+              - Photo (home-photo)
+              - Phone left (home-phone-left)
+              - Phone right (home-phone-right)
+              - Floppy disk (home-floppy-disk)
+              
+              On mouseenter, translate upward by 15px
+              On mouseleave, return to original position
+            */
+            const hoverElements = document.querySelectorAll(
+                '.home-photo, .home-phone-left, .home-phone-right, .home-floppy-disk'
+            );
+            hoverElements.forEach(elem => {
+                elem.addEventListener('mouseenter', () => {
+                    elem.style.transform = 'translateY(-15px)';
+                });
+                elem.addEventListener('mouseleave', () => {
+                    elem.style.transform = 'translateY(0)';
+                });
             });
         });
     </script>
