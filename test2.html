@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study 1</title>
+    <title>Case Study 2</title>
     <style>
         /* Connect SF Pro Font */
         @font-face {
@@ -151,7 +151,7 @@
             left: 50%;
             bottom: 60px;
             transform: translateX(-50%);
-            background: url(/src/parenting.png);
+            background: url(/src/event.png);
             background-size: contain;
             background-repeat: no-repeat;
         }
@@ -184,12 +184,12 @@
             color: #808080;
         }
 
-        .landing-contributors p:nth-child(1) { bottom: 160px; } /* Charan Pushpanathan Prabavathi */
-        .landing-contributors p:nth-child(2) { bottom: 136px; } /* Ya-Fang Lin */
-        .landing-contributors p:nth-child(3) { bottom: 112px; } /* Xiaotian Li */
-        .landing-contributors p:nth-child(4) { bottom: 88px; } /* Wan - Husan Huang */
-        .landing-contributors p:nth-child(5) { bottom: 64px; } /* Jie Cai */
-        .landing-contributors p:nth-child(6) { bottom: 40px; } /* John M Carroll */
+        .landing-contributors p:nth-child(1) { bottom: 160px; } /* Contributors */
+        .landing-contributors p:nth-child(2) { bottom: 136px; }
+        .landing-contributors p:nth-child(3) { bottom: 112px; }
+        .landing-contributors p:nth-child(4) { bottom: 88px; }
+        .landing-contributors p:nth-child(5) { bottom: 64px; }
+        .landing-contributors p:nth-child(6) { bottom: 40px; }
 
         /* Detailed Content Styles */
         .detailed-content {
@@ -386,7 +386,7 @@
             width: auto;
             height: auto;
             left: 950px;
-            top: 600px;
+            top: 740px;
             background: none;
             color: #0084ff; /* Blue text */
             font-family: 'SF Pro', sans-serif;
@@ -490,7 +490,7 @@
 
         <!-- Information Section -->
         <div class="information">
-            <h1>Technology Design for New Parent Couples</h1>
+            <h1>Event Aggregator - Centralized Campus Events</h1>
             <p>User Research</p>
             <p>2025</p>
             <a href="#detailed-content" class="detailed-view-button" id="view-detailed">Preview</a>
@@ -499,20 +499,15 @@
         <!-- Contributors Section -->
         <div class="landing-contributors">
             <p>Charan Pushpanathan Prabavathi</p>
-            <p>Ya-Fang Lin</p>
-            <p>Xiaotian Li</p>
-            <p>Wan - Husan Huang</p>
-            <p>Jie Cai</p>
-            <p>John M Carroll</p>
         </div>
 
         <!-- Overview Section -->
         <div class="overview">
-            <p><b>Overview.</b> New parents experience decreased relationship closeness while managing childcare demands, with existing technologies primarily supporting logistics rather than emotional connection. Through co-design sessions with 10 Taiwanese couples with young children, we explored current technology use and brainstormed solutions, revealing that technology can foster parental closeness by supporting both interdependence (competence-building, task-sharing) and positive emotional experiences (validation, appreciation, shared joy). Our solution, ParentTogether, is a collaborative parenting platform that integrates practical coordination with relationship-nurturing features to help maintain couple closeness during early parenthood.</p>
+            <p><b>Overview.</b> Information about campus events at Penn State University is scattered across multiple platforms, making discovery difficult for students. This research project focused on designing a centralized event platform with two components: Gather, a mobile app for attendees to discover events, and Post, a web tool for event organizers to create and publish events. Through user interviews and iterative design, we created a solution that addresses the fragmentation of event information and enhances the campus event experience for both attendees and organizers.</p>
         </div>
 
         <!-- Documentation Button -->
-        <a href="https://www.figma.com/deck/pB2vGMyibOyMsIogmCUxAj/Case-Study-1?node-id=1-117&p=f&viewport=-7111%2C-14%2C0.28&t=tNHJu3TX39h3rSKD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="documentation-button">Documentation</a>
+        <a href="https://www.figma.com/deck/jnPgZ1iPsDZL9t6ClVaaqA/Case-Study-2?node-id=1-119&p=f&viewport=972%2C514%2C0.08&t=H8YvOCrHsbzmwLgt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="documentation-button">Prototype</a>
     </div>
 
     <!-- Back to top button -->
@@ -523,7 +518,7 @@
         <div class="content-container">
             <!-- Research Meta Information -->
             <div class="research-meta">
-                <p>Exploring how technology can support closeness between new parents while they collaborate on childcare. UX Research, Design Methodologies, Interface. 10 cohabiting Taiwanese couples (first child < 4 years old).</p>
+                <p>Designing a centralized platform for campus event discovery and management. UX Research, Design Methodologies, Interface. 5 event organizers and 4 event attendees at Penn State University.</p>
             </div>
 
             <!-- Problem and Research Questions in one row -->
@@ -532,17 +527,18 @@
                     <div>
                         <h2><span class="emoji">🔍</span>Problem</h2>
                         <p>
-                            While couples navigate the demands of early parenthood, their <span class="highlight">closeness often decreases</span>. 
-                            Existing technologies primarily support <span class="highlight">logistics</span>, rather than 
-                            <span class="highlight">relationship maintenance</span>.
+                            Information about campus events at Penn State University is <span class="highlight">scattered across multiple platforms</span>, 
+                            making discovery difficult for students and creating challenges for event organizers to 
+                            <span class="highlight">reach their target audience</span>.
                         </p>
                     </div>
                     
                     <div>
                         <h2><span class="emoji">✏️</span>Research Questions</h2>
                         <ul>
-                            <li>How do couples currently use technology in parental collaboration?</li>
-                            <li>How can technologies be designed or reimagined to support <span class="highlight">closeness in co-parenting</span>?</li>
+                            <li>How do students currently discover and engage with campus events?</li>
+                            <li>What challenges do event organizers face in promoting their events?</li>
+                            <li>How can a centralized platform improve the <span class="highlight">event ecosystem</span>?</li>
                         </ul>
                     </div>
                 </div>
@@ -554,115 +550,79 @@
                     <div>
                         <h2><span class="emoji">🧭</span>Approach & Method</h2>
                         <ul>
-                            <li><span class="highlight">Semi-structured interviews</span> about current technology use</li>
-                            <li><span class="highlight">Co-design activities</span> to envision new technology solutions</li>
-                            <li><span class="highlight">Scenario-based brainstorming</span> using design probes</li>
-                            <li><span class="highlight">Qualitative methodology</span></li>
+                            <li><span class="highlight">15-minute in-depth interviews</span> with event organizers and attendees</li>
+                            <li><span class="highlight">Hierarchical Task Analysis</span> to understand existing workflows</li>
+                            <li><span class="highlight">Synthesis & Requirements</span> gathering</li>
+                            <li><span class="highlight">Iterative design and prototyping</span> in Figma</li>
                         </ul>
                     </div>
                     
                     <div>
                         <h2><span class="emoji">👥</span>Participant Profile</h2>
                         <ul>
-                            <li>10 cohabiting Taiwanese couples</li>
-                            <li>First child younger than 4 years old</li>
-                            <li>5 couples practiced equal caregiving; 5 had the mother as primary caregiver</li>
+                            <li>1 event organizer from student clubs</li>
+                            <li>4 Penn State students who attend campus events</li>
+                            <li>Diverse representation across academic departments</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Understanding Closeness Section -->
+            <!-- Event Organizer Insights Section -->
             <div class="section">
-                <h2><span class="emoji">💞</span>Understanding Closeness</h2>
+                <h2><span class="emoji">🎯</span>Event Organizer Insights</h2>
                 
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Components of Closeness</h3>
-                        <ul>
-                            <li>Shared experiences (spending time together)</li>
-                            <li>Interdependence (relying on each other)</li>
-                            <li>Intimacy (self-disclosure and responsiveness)</li>
-                        </ul>
+                        <h3>Venue Coordination Issues</h3>
+                        <p>"We really get frustrated when the place changes... it feels like we spread misinformation to everybody."</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Barriers to Closeness</h3>
-                        <ul>
-                            <li>Sleep deprivation and exhaustion</li>
-                            <li>Imbalanced childcare responsibilities</li>
-                            <li>Lack of time for couple activities</li>
-                            <li>Communication challenges</li>
-                        </ul>
+                        <h3>Complex Event Creation Workflow</h3>
+                        <p>"We're a team of six members... we brainstorm ideas first, then plan logistics like budget and venue, get approvals, and finally disseminate information across multiple channels."</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Limited Feedback Diversity</h3>
+                        <p>"Since we all know each other, they hesitate to say disappointments or complain because we are friends... So we just hear feedback from the same people every time."</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Reaching Broader Audiences</h3>
+                        <p>"Even after we send out the posters to everybody, sometimes the place changes. It's challenging to update everyone across all the platforms we use."</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Technology Use Section -->
+            <!-- Event Attendee Insights Section -->
             <div class="section">
-                <h2><span class="emoji">📱</span>Participant Technology Use</h2>
-                
-                <div class="card-grid">
-                    <div class="card">
-                        <h3>Photo Sharing</h3>
-                        <ul>
-                            <li>Baby photo collections, sharing with family</li>
-                            <li>Limited couple-focused memory creation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>To-Do Lists</h3>
-                        <ul>
-                            <li>Household/childcare task management</li>
-                            <li>Focused on efficiency, lacks recognition</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Messaging Apps</h3>
-                        <ul>
-                            <li>Childcare coordination</li>
-                            <li>Sharing baby info, but no emotional facilitation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Calendars</h3>
-                        <ul>
-                            <li>Scheduling and coordination</li>
-                            <li>No emotional well-being integration</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="card">
-                        <h3>Baby Activity Tracking Apps</h3>
-                        <ul>
-                            <li>Track feeding, sleep, milestones</li>
-                            <li>Single-user design, limited sharing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Key Findings Section -->
-            <div class="section">
-                <h2><span class="emoji">🔍</span>Key Findings</h2>
+                <h2><span class="emoji">👁️</span>Event Attendee Insights</h2>
                 
                 <div class="card-grid">
                     <div class="card" id="info-tasks-card">
-                        <h3>1. Information and Tasks</h3>
-                        <p>Existing tools focus on efficiency and logistics, but miss opportunities to build emotional connection through shared responsibility.</p>
+                        <h3>Information Fragmentation</h3>
+                        <p>"I get outlook mails sometimes, and sometimes my friends just call me for an event happening that's around. I get it by word." – User A</p>
                     </div>
                     
                     <div class="card">
-                        <h3>2. Emotional Awareness</h3>
-                        <p>Few technologies help couples share feelings or recognize signs of stress and exhaustion in their partners during the parenting journey.</p>
+                        <h3>Verification Needs</h3>
+                        <p>"I have missed a research talk due to a lack of clear location information. I couldn't find where it was happening." – User C</p>
                     </div>
                     
                     <div class="card">
-                        <h3>3. Positive Experiences</h3>
-                        <p>Technologies rarely create opportunities for positive shared experiences or celebration of co-parenting achievements.</p>
+                        <h3>Discovery Limitations</h3>
+                        <p>"I think a different platform or a different place where we can look at all the events, like the symplicity app I have for career fairs. Something like that." – User B</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Interest Matching</h3>
+                        <p>"I struggle to find events that cater to my specific interests, particularly within niche areas of computer science." – User D</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Social Validation</h3>
+                        <p>"I prioritize events my friends are attending. If they're going, I'm more likely to attend too." – User D</p>
                     </div>
                 </div>
             </div>
@@ -680,90 +640,164 @@
                 </div>
             </div>
 
-            <!-- Design Frameworks Section -->
+            <!-- Solution Overview Section -->
             <div class="section">
-                <h2><span class="emoji">🧱</span>Design Frameworks</h2>
+                <h2><span class="emoji">💡</span>Solution</h2>
                 
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Interdependence</h3>
-                        <p>Design approaches that encourage mutual reliance between partners, highlighting shared goals and complementary strengths in parenting.</p>
+                        <h3>Gather Mobile App</h3>
+                        <p>A comprehensive mobile application designed specifically for Penn State University students to discover campus events in one centralized platform.</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Positive Emotions</h3>
-                        <p>Features that deliberately foster appreciation, validation, and shared joy in the parenting journey to strengthen emotional bonds.</p>
+                        <h3>Post Web Platform</h3>
+                        <p>A specialized web platform designed for Penn State University event organizers (clubs, departments, faculty) to create, manage, and publish events directly to the Gather ecosystem.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Design Rationale Section -->
+            <!-- Gather Features Section -->
             <div class="section">
-                <h2><span class="emoji">💡</span>Design Rationale</h2>
+                <h2><span class="emoji">📱</span>Gather Features</h2>
                 
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Task Exchange</h3>
-                        <ul>
-                            <li>Flexible system for negotiating childcare responsibilities</li>
-                            <li>Acknowledges completed tasks for appreciation and recognition</li>
-                        </ul>
+                        <h3>PSU Authentication</h3>
+                        <p>Secure login using Penn State credentials ensures verified community access</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Connect Prompts</h3>
-                        <ul>
-                            <li>Contextual suggestions for couple activities</li>
-                            <li>Creates opportunities for playful interaction</li>
-                        </ul>
+                        <h3>Personalized Discovery</h3>
+                        <p>Interest-based event recommendations based on user preferences</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Emotion Check-In</h3>
-                        <ul>
-                            <li>Discreet mood tracking</li>
-                            <li>Offers tailored emotional support suggestions</li>
-                        </ul>
+                        <h3>Top 3 Events Showcase</h3>
+                        <p>Highlighting highly-rated daily events for quick discovery</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Parenting Memory Wall</h3>
-                        <ul>
-                            <li>Digital repository of parenting milestones</li>
-                            <li>Transforms routines into meaningful memories</li>
-                        </ul>
+                        <h3>Event Details Hub</h3>
+                        <p>Complete information including locations, times, and amenities</p>
                     </div>
                     
                     <div class="card">
-                        <h3>Shared Dashboard</h3>
-                        <ul>
-                            <li>Real-time baby tracking with equal editing access</li>
-                            <li>Visualizes both parents' contributions</li>
-                        </ul>
+                        <h3>Tag System</h3>
+                        <p>Quick visual indicators for event features (refreshments, networking, speakers)</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>One-Click Sharing</h3>
+                        <p>Easy distribution of event details via WhatsApp and other platforms</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>RSVP Functionality</h3>
+                        <p>Streamlined attendance confirmation and updates</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Location Guidance</h3>
+                        <p>Integrated maps with directions to event venues</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Design Implications Section -->
+            <!-- Post Features Section -->
             <div class="section">
-                <h2><span class="emoji">🧩</span>Design Implications</h2>
+                <h2><span class="emoji">💻</span>Post Features</h2>
                 
                 <div class="card-grid">
                     <div class="card">
-                        <h3>For Technology Designers</h3>
+                        <h3>Collaborative Workspace</h3>
+                        <p>Team-based environment enabling multiple organizers to work together</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Streamlined Event Creation</h3>
+                        <p>Intuitive form with structured fields for complete event information</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Image Upload</h3>
+                        <p>Simple drag-and-drop interface for event promotional materials</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>AI-Assisted Content</h3>
+                        <p>Intelligent help with generating concise event descriptions</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Location Integration</h3>
+                        <p>Easy venue selection with automatic mapping</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Tagging System</h3>
+                        <p>Standardized event categorization for improved discoverability</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Real-Time Updates</h3>
+                        <p>Changes immediately sync to the Gather app, even after publication</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Penn State Authentication</h3>
+                        <p>Secure access limited to verified university organizers</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Design Process Section -->
+            <div class="section">
+                <h2><span class="emoji">🔄</span>Design Process</h2>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Problem Discovery</h3>
                         <ul>
-                            <li>Consider both logistical and emotional needs</li>
-                            <li>Design for equal participation of both parents</li>
-                            <li>Integrate closeness-building features into tools</li>
+                            <li>Literature review on event discovery platforms</li>
+                            <li>Observed campus announcement methods across 5+ channels</li>
+                            <li>Identified key problems affecting Penn State event ecosystem</li>
                         </ul>
                     </div>
                     
                     <div class="card">
-                        <h3>For Family Support Systems</h3>
+                        <h3>User Interviews</h3>
                         <ul>
-                            <li>Recognize technology's role in family relationships</li>
-                            <li>Consider cultural contexts in design</li>
-                            <li>Address both practical and relational co-parenting needs</li>
+                            <li>Conducted 15-minute in-depth interviews with 1 event organizer and 4 attendees</li>
+                            <li>Documented pain points, current workflow, and desired solutions</li>
+                            <li>Collected qualitative data on discovery patterns and engagement motivation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Synthesis & Requirements</h3>
+                        <ul>
+                            <li>Transformed user insights into actionable design requirements</li>
+                            <li>Prioritized features based on user needs frequency and impact</li>
+                            <li>Created user personas representing event organizers and attendees</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Hierarchical Task Analysis</h3>
+                        <ul>
+                            <li>Mapped 10 complex tasks users perform when interacting with events</li>
+                            <li>Analyzed steps required to complete key activities (filtering, sharing, RSVP)</li>
+                            <li>Identified unnecessary complexity and failure points in current systems</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Design & Prototyping</h3>
+                        <ul>
+                            <li>Developed low and high-fidelity prototypes in Figma</li>
+                            <li>Followed Apple Human Interface Guidelines for consistency</li>
+                            <li>Created two tailored solutions: Gather (mobile app) and Post (web platform)</li>
                         </ul>
                     </div>
                 </div>
@@ -775,19 +809,29 @@
                 
                 <div class="card-grid">
                     <div class="card">
-                        <h3>Design Refinement</h3>
+                        <h3>User Testing</h3>
                         <ul>
-                            <li>Prototype development with user testing</li>
-                            <li>Longitudinal study on couple closeness impact</li>
+                            <li>Conduct usability testing with target users</li>
+                            <li>Refine interfaces based on feedback</li>
+                            <li>Implement A/B testing for key features</li>
                         </ul>
                     </div>
                     
                     <div class="card">
-                        <h3>Research Extensions</h3>
+                        <h3>Feature Expansion</h3>
                         <ul>
-                            <li>Include diverse family structures (same-sex, non-cohabiting)</li>
-                            <li>Cross-cultural comparisons</li>
-                            <li>Integration with extended family caregiving networks</li>
+                            <li>Integration with university calendar systems</li>
+                            <li>Mobile notifications and reminders</li>
+                            <li>Enhanced analytics for event organizers</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Implementation Strategy</h3>
+                        <ul>
+                            <li>Partner with Penn State IT department</li>
+                            <li>Phased rollout across academic departments</li>
+                            <li>Training sessions for student organizations</li>
                         </ul>
                     </div>
                 </div>
@@ -887,6 +931,3 @@
                 });
             }
         });
-    </script>
-</body>
-</html>
