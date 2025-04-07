@@ -29,10 +29,10 @@
             height: 58px;
             left: 120px;
             top: 120px;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 29px;
-            color: #000000;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 1.2;
+            color: #1d1d1f;
         }
 
         .header p {
@@ -55,8 +55,8 @@
             left: 730px;
             font-family: 'IBM Plex Mono', monospace; /* Use IBM Plex Mono font */
             font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 17px;
+            line-height: 1.3;
             text-align: right;
             color: #888888; /* Updated color */
         }
@@ -71,11 +71,12 @@
         .nav-link {
             text-decoration: none; /* Remove underline */
             color: #888888; /* Updated color */
-            transition: color 0.3s ease; /* Smooth transition */
+            transition: color 0.2s ease cubic-bezier(0.25, 0.1, 0.25, 1); /* Smooth transition */
         }
 
         .nav-link:hover {
-            color: #000000; /* Change to black on hover */
+            color: #1d1d1f; /* Change to black on hover */
+            opacity: 0.8;
         }
 
         /* Page display control */
@@ -101,7 +102,7 @@
             cursor: pointer; /* Change cursor to pointer */
 
             /* Added shared transition so it moves smoothly on hover */
-            transition: transform 0.3s ease; 
+             transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1); 
         }
 
         .home-phone-left {
@@ -115,7 +116,7 @@
             cursor: pointer;
 
             /* Added shared transition so it moves smoothly on hover */
-            transition: transform 0.3s ease; 
+             transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1); 
         }
 
         .home-phone-right {
@@ -129,7 +130,7 @@
             cursor: pointer;
 
             /* Added shared transition so it moves smoothly on hover */
-            transition: transform 0.3s ease; 
+             transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1); 
         }
 
         .home-floppy-disk {
@@ -143,7 +144,7 @@
             cursor: pointer;
 
             /* Added shared transition so it moves smoothly on hover */
-            transition: transform 0.3s ease; 
+             transition: transform 0.2s cubic-bezier(0.25, 0.1, 0.25, 1); 
         }
 
         /* Image Captions */
@@ -154,7 +155,7 @@
             font-weight: 400;
             font-size: 14px;
             line-height: 20px;
-            color: #000000; /* Black text */
+            color: #1d1d1f; /* Black text */
             text-align: left; /* Align text to the left */
         }
 
@@ -206,7 +207,7 @@
             font-size: 14px;
             line-height: 20px;
             text-align: left;
-            color: #000000; /* Black text */
+            color: #1d1d1f; /* Black text */
         }
 
         .about-overview p {
@@ -217,10 +218,10 @@
             top: 310px; /* Aligns with the top of the image */
             font-family: 'SF Pro', sans-serif;
             font-style: normal;
-            font-weight: 200;
-            font-size: 16px;
-            line-height: 24px;
-            color: #000000;
+            font-weight: 400; /* Increased from 200 to 400 for better readability */
+            font-size: 15px; /* Slightly reduced from 16px to match Apple's standard body text size */
+            line-height: 1.5; /* Improved line height for better readability */
+            color: #333333; /* Slightly darker for better contrast */
         }
 
         /* ----------------------------------------- */
@@ -246,7 +247,7 @@
             font-weight: 400;
             font-size: 18px;
             line-height: auto;
-            color: #000000;
+            color: #1d1d1f;
         }
 
         .information p {
@@ -321,16 +322,16 @@
         /* Overview Section */
         .overview p {
             position: absolute;
-            width: 305px;
-            height: 24px;
-            left: 950px;
+            width: 305px; /* Increase from 305px to 400px */
+            height: auto; /* Allow text to expand as needed */
+            left: 955px; /* Adjust to keep right alignment with wider width */
             top: 300px;
             font-family: 'SF Pro', sans-serif;
             font-style: normal;
-            font-weight: 200;
-            font-size: 14px;
-            line-height: auto;
-            color: #888888; /* Updated color */
+            font-weight: 400; /* Change from 200 to 400 for better readability */
+            font-size: 15px; /* Increase from 14px to 15px */
+            line-height: 1.5; /* Increase line height for better spacing */
+            color: #666666; /* Slightly darker than current #888888 */
         }
 
         /* Landing Contributors Section */
@@ -375,17 +376,18 @@
 
         /* Section Styling */
         .section {
-            margin-bottom: 60px;
+            margin-bottom: 48px;
             width: 100%;
         }
 
         .section h2 {
-            font-size: 28px;
-            font-weight: 400;
+            font-size: 24px;
+            font-weight: 500;
             margin-bottom: 25px;
-            color: #000000;
+            color: #1d1d1f;
             display: flex;
             align-items: center;
+            line-height: 1.2;
         }
 
         .section h2 .emoji {
@@ -394,15 +396,15 @@
         }
 
         .section h3 {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 17px;
+            font-weight: 500;
             margin: 25px 0 15px;
-            color: #000000;
+            color: #1d1d1f;
         }
 
         .section p {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 15px;
+            line-height: 1.5;
             margin-bottom: 20px;
             font-weight: 400;
             color: #888888;
@@ -429,10 +431,10 @@
 
         .section li {
             margin-bottom: 10px;
-            line-height: 1.4;
+            line-height: 1.5;
             font-weight: 400;
             color: #888888;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         /* Card Styling */
@@ -444,19 +446,20 @@
         }
 
         .card {
-            background: #F5F5F5; /* Updated background color */
+            background: #F5F5F7; /* Updated background color */
             border-radius: 12px;
             padding: 24px;
         }
 
         .card h3 {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 17px;
+            font-weight: 500;
             margin-top: 0;
             margin-bottom: 15px;
-            color: #000000;
+            color: #1d1d1f;
             border-bottom: 1px solid #F5F5F5;
             padding-bottom: 10px;
+            line-height: 1.3;
         }
 
         .card ul {
@@ -465,14 +468,15 @@
         }
 
         .card li {
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 10px;
             color: #888888;
+            line-height: 1.5;
         }
 
         .card p {
             margin: 0;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.5;
             color: #888888;
         }
@@ -486,13 +490,14 @@
         }
 
         .feature-card h3 {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 17px;
+            font-weight: 500;
             margin-top: 0;
             margin-bottom: 15px;
-            color: #000000;
+            color: #1d1d1f;
             border-bottom: 1px solid #e5e5e5;
             padding-bottom: 10px;
+            line-height: 1.3;
         }
 
         .feature-card ul {
@@ -501,15 +506,16 @@
         }
 
         .feature-card li {
-            font-size: 16px;
+            font-size: 15px;
             margin-bottom: 10px;
             color: #888888;
+            line-height: 1.5;
         }
 
         /* Highlight Text */
         .highlight {
             font-weight: 500;
-            color: #000000;
+            color: #1d1d1f;
         }
 
         /* Main image styling */
@@ -529,7 +535,7 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #000000;
+            background: #1d1d1f;
             color: #ffffff;
             border-radius: 50%;
             display: flex;
@@ -549,30 +555,92 @@
         }
 
         /* Documentation Button */
-        .documentation-button {
+        /* Detailed View Button */
+        .detailed-view-button {
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
+            padding: 4px 10px;
+            gap: 3px;
             position: absolute;
-            width: auto;
-            height: auto;
-            left: 950px;
-            top: 740px;
-            background: none;
-            color: #0084ff; /* Blue text */
+            width: 66px;
+            height: 28px;
+            left: 200px;
+            top: 470px;
+            background: #007AFF;
+            border-radius: 40px;
+            color: #FFFFFF;
             font-family: 'SF Pro', sans-serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: -0.23px;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        /* Documentation Button */
+        .documentation-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 10px;
+            gap: 3px;
+            position: absolute;
+            width: 100px;
+            height: 28px;
+            left: 950px;
+            top: 700px;
+            background: rgba(120, 120, 128, 0.12);
+            border-radius: 40px;
+            color: rgba(60, 60, 67, 0.6);
+            font-family: 'SF Pro', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: -0.23px;
             text-align: center;
             text-decoration: none;
             cursor: pointer;
             z-index: 100;
         }
 
-        .documentation-button:hover {
-            color: #000000; /* Black text on hover */
+        /* Prototype Button */
+        .prototype-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 4px 10px;
+            gap: 3px;
+            position: absolute;
+            width: 80px;
+            height: 28px;
+            left: 950px;
+            top: 700px;
+            background: rgba(120, 120, 128, 0.12);
+            border-radius: 40px;
+            color: rgba(60, 60, 67, 0.6);
+            font-family: 'SF Pro', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            letter-spacing: -0.23px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .documentation-button:hover, .prototype-button:hover {
+            color: #1d1d1f;
+            transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+            opacity: 0.8;
         }
 
         /* Hidden Image Styling */
@@ -629,7 +697,7 @@
             right: 10px;
             font-size: 24px;
             font-weight: bold;
-            color: #000000;
+            color: #1d1d1f;
             cursor: pointer;
         }
 
@@ -704,7 +772,7 @@
         <p><a href="#" class="nav-link" data-section="about">About</a></p>
         <p><a href="#" class="nav-link" data-section="cs1">Case Study 1</a></p>
         <p><a href="#" class="nav-link" data-section="cs2">Case Study 2</a></p>
-        <p><a href="Charan_Resume.pdf" class="nav-link" target="_blank">Resume</a></p>
+        <p><a href="Charan Pushpanathan_Resume.pdf" class="nav-link" target="_blank">Resume</a></p>
         <p><a href="https://www.figma.com/deck/WTPDcSkQLkV0W6Ir0OCbLN/Charan's-Portfolio-%2F-Detailed-Version?node-id=44-113&viewport=-90%2C224%2C0.06&t=Zm9M0b8gNfw4355Z-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="nav-link" target="_blank">Threaded Portfolio</a></p>
     </div>
 
@@ -726,7 +794,7 @@
 
             <!-- Floppy Disk -->
             <p class="image-caption home-floppy-caption">You're seeing the right fit</p>
-            <a href="Charan_Resume.pdf" target="_blank" class="home-floppy-disk"></a>
+            <a href="Charan Pushpanathan_Resume.pdf" target="_blank" class="home-floppy-disk"></a>
         </div>
     </div>
 
@@ -748,7 +816,7 @@
     <div id="cs1-section">
         <!-- Overview Text -->
         <div class="overview">
-            <p><b>Overview.</b> New parents experience decreased relationship closeness while managing childcare demands, with existing technologies primarily supporting logistics rather than emotional connection. Through co-design sessions with 10 Taiwanese couples with young children, we explored current technology use and brainstormed solutions, revealing that technology can foster parental closeness by supporting both interdependence (competence-building, task-sharing) and positive emotional experiences (validation, appreciation, shared joy). Our solution, ParentTogether, is a collaborative parenting platform that integrates practical coordination with relationship-nurturing features to help maintain couple closeness during early parenthood.</p>
+            <p><b>Overview.</b> Early parenthood often strains couple closeness as existing technologies focus on logistics over emotional connection. Through co-design with 10 Taiwanese couples, we developed ParentTogether, a platform that combines task-sharing with features fostering appreciation and shared joy to support both collaboration and relationship closeness.</p>
         </div>
 
         <!-- Information Section -->
@@ -1066,7 +1134,7 @@
     <div id="cs2-section">
         <!-- Overview Text -->
         <div class="overview">
-            <p><b>Overview.</b> Penn State University students faced significant challenges discovering campus events due to information being scattered across multiple platforms (department websites, social media, emails, and physical posters), leading to missed opportunities and frustration. Our solution, Event Aggregator, addresses this problem through two integrated platforms: Gather, a mobile app for attendees that centralizes event discovery with personalized recommendations based on interests, and Post, a web tool for organizers that streamlines event creation and updates. Our research process involved in-depth interviews with event organizers and attendees, hierarchical task analysis of existing workflows, synthesis of user requirements, and iterative design of solutions tailored to specific user needs—ultimately creating a comprehensive ecosystem that enhances campus engagement by connecting event organizers with their intended audiences more effectively.</p>
+            <p><b>Overview.</b> Penn State students struggle to discover campus events due to scattered information across platforms. Event Aggregator solves this with Gather, a mobile app for personalized event discovery, and Post, a web tool for streamlined event creation. Through interviews, task analysis, and iterative design, we developed a cohesive ecosystem connecting organizers and attendees, enhancing campus engagement.</p>
         </div>
 
         <!-- Information Section -->
@@ -1088,7 +1156,7 @@
         </div>
 
         <!-- Documentation Button -->
-        <a href="https://www.figma.com/deck/jnPgZ1iPsDZL9t6ClVaaqA/Case-Study-2?node-id=1-119&p=f&viewport=972%2C514%2C0.08&t=H8YvOCrHsbzmwLgt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="documentation-button" target="_blank">Prototype</a>
+        <a href="https://www.figma.com/deck/jnPgZ1iPsDZL9t6ClVaaqA/Case-Study-2?node-id=1-119&p=f&viewport=972%2C514%2C0.08&t=H8YvOCrHsbzmwLgt-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="prototype-button" target="_blank">Prototype</a>
 
         <!-- Detailed Content -->
         <div class="detailed-content" id="detailed-content-cs2" style="display: none;">
@@ -1152,22 +1220,22 @@
                     <div class="card-grid">
                         <div class="card">
                             <h3>Venue Coordination Issues</h3>
-                            <p>"We really get frustrated when the place changes... it feels like we spread misinformation to everybody."</p>
+                            <p><i>"We really get frustrated when the place changes... it feels like we spread misinformation to everybody."</i></p>
                         </div>
                         
                         <div class="card">
                             <h3>Complex Event Creation Workflow</h3>
-                            <p>"We're a team of six members... we brainstorm ideas first, then plan logistics like budget and venue, get approvals, and finally disseminate information across multiple channels."</p>
+                            <p><i>"We're a team of six members... we brainstorm ideas first, then plan logistics like budget and venue, get approvals, and finally disseminate information across multiple channels."</i></p>
                         </div>
                         
                         <div class="card">
                             <h3>Limited Feedback Diversity</h3>
-                            <p>"Since we all know each other, they hesitate to say disappointments or complain because we are friends... So we just hear feedback from the same people every time."</p>
+                            <p><i>"Since we all know each other, they hesitate to say disappointments or complain because we are friends... So we just hear feedback from the same people every time."</i></p>
                         </div>
                         
                         <div class="card">
                             <h3>Reaching Broader Audiences</h3>
-                            <p>"Even after we send out the posters to everybody, sometimes the place changes. It's challenging to update everyone across all the platforms we use."</p>
+                            <p><i>"Even after we send out the posters to everybody, sometimes the place changes. It's challenging to update everyone across all the platforms we use."</i></p>
                         </div>
                     </div>
                 </div>
@@ -1179,27 +1247,27 @@
                     <div class="card-grid">
                         <div class="card" id="info-tasks-card">
                             <h3>Information Fragmentation</h3>
-                            <p>"I get outlook mails sometimes, and sometimes my friends just call me for an event happening that's around. I get it by word." – User A</p>
+                            <p><i>"I get outlook mails sometimes, and sometimes my friends just call me for an event happening that's around. I get it by word."</i> – User A</p>
                         </div>
                         
                         <div class="card">
                             <h3>Verification Needs</h3>
-                            <p>"I have missed a research talk due to a lack of clear location information. I couldn't find where it was happening." – User C</p>
+                            <p><i>"I have missed a research talk due to a lack of clear location information. I couldn't find where it was happening."</i> – User C</p>
                         </div>
                         
                         <div class="card">
                             <h3>Discovery Limitations</h3>
-                            <p>"I think a different platform or a different place where we can look at all the events, like the symplicity app I have for career fairs. Something like that." – User B</p>
+                            <p><i>"I think a different platform or a different place where we can look at all the events, like the symplicity app I have for career fairs. Something like that."</i> – User B</p>
                         </div>
                         
                         <div class="card">
                             <h3>Interest Matching</h3>
-                            <p>"I struggle to find events that cater to my specific interests, particularly within niche areas of computer science." – User D</p>
+                            <p><i>"I struggle to find events that cater to my specific interests, particularly within niche areas of computer science."</i> – User D</p>
                         </div>
                         
                         <div class="card">
                             <h3>Social Validation</h3>
-                            <p>"I prioritize events my friends are attending. If they're going, I'm more likely to attend too." – User D</p>
+                            <p><i>"I prioritize events my friends are attending. If they're going, I'm more likely to attend too."</i> – User D</p>
                         </div>
                     </div>
                 </div>
@@ -1440,7 +1508,7 @@
                 // Update navigation highlighting
                 document.querySelectorAll('.nav-link').forEach(link => {
                     if (link.dataset.section === sectionId.replace('-section', '')) {
-                        link.style.color = '#000000';
+                        link.style.color = '#1d1d1f';
                         link.style.fontWeight = 'bold';
                     } else {
                         link.style.color = '#808080';
