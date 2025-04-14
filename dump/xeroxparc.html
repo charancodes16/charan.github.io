@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xerox PARC</title>
+    <title>Xerox PARC - Charan</title>
     <style>
         * {
             margin: 0;
@@ -16,48 +16,43 @@
             background: #FFFFFF;
             color: #1A1A1A;
             line-height: 1.5;
-            letter-spacing: -0.43px;
+            letter-spacing: -0.48px;
+            scroll-behavior: smooth;
         }
 
         .container {
             max-width: 1440px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
         }
 
         .nav-container {
             width: 550px;
             margin: 50px auto 0;
+            padding: 0 10px;
         }
 
         .title-separator {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            padding: 0 0 3px;
             border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
             margin-bottom: 16px;
         }
 
         .section-title {
-            font-weight: 700;
+            font-weight: 400;
             font-size: 20px;
             color: rgba(60, 60, 67, 0.6);
         }
 
         .nav-links {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 34px;
-            padding: 0;
-            width: 530px;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 10px;
         }
 
         .nav-link {
             font-weight: 700;
-            font-size: 18px;
+            font-size: 16px;
             color: #1A1A1A;
             text-decoration: none;
         }
@@ -67,27 +62,28 @@
         }
 
         .content {
-            width: 542px;
+            width: 550px;
             margin: 30px auto;
+            padding: 0 10px;
         }
 
         .about-title {
             font-weight: 700;
-            font-size: 30px;
+            font-size: 28px;
             margin-bottom: 16px;
         }
 
         .section-heading {
             font-weight: 700;
-            font-size: 24px;
-            margin: 24px 0 12px 0;
+            font-size: 22px;
+            margin: 30px 0 16px 0;
             color: #1A1A1A;
         }
 
         .sub-heading {
             font-weight: 700;
-            font-size: 20px;
-            margin: 16px 0 8px 0;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
             color: rgba(60, 60, 67, 0.8);
         }
 
@@ -100,15 +96,18 @@
 
         .about-content {
             font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 15px;
+            line-height: 1.4;
             color: #1A1A1A;
         }
 
         .about-content p {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             padding-left: 20px;
             position: relative;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
         }
 
         .about-content p:before {
@@ -120,20 +119,64 @@
         .intro-text {
             margin-bottom: 16px;
             padding-left: 0 !important;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
         }
 
         .intro-text:before {
             content: none !important;
         }
 
+        .about-content ul {
+            list-style-type: none;
+            margin-bottom: 12px;
+        }
+
+        .about-content ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            text-align: justify;
+            text-justify: inter-word;
+            hyphens: auto;
+        }
+
+        .about-content ul li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        .about-content a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        .about-content i {
+            font-style: italic;
+        }
+
+        .about-content b {
+            font-weight: 700;
+        }
+
         .footer {
-            width: 542px;
+            width: 550px;
             margin: 50px auto 20px;
-            padding-top: 10px;
+            padding: 10px 10px 0;
             border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            text-align: left;
             font-size: 16px;
             color: rgba(60, 60, 67, 0.6);
+        }
+
+        @media (max-width: 600px) {
+            .nav-container,
+            .content,
+            .footer {
+                width: 100%;
+                padding: 0 16px;
+            }
         }
     </style>
 </head>
@@ -144,12 +187,12 @@
                 <h1 class="section-title">Charan Pushpanathan</h1>
             </div>
             <div class="nav-links">
-                <a href="../index.html" class="nav-link" style="color: #1A1A1A;">About</a>
-                <a href="/Sometimes, I Write.html" class="nav-link" style="color: rgba(60, 60, 67, 0.6);">Sometimes, I Write</a>
+                <a href="../index.html" class="nav-link">About</a>
+                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
                 <a href="../files/Academic_Charan.pdf" class="nav-link">Resume</a>
                 <a href="#" class="nav-link">Scholar</a>
                 <a href="/research.html" class="nav-link">Research</a>
-                <a href="/assorted.html" class="nav-link">Assorted</a>
+                <a href="/assorted.html" class="nav-link active">Assorted</a>
             </div>
         </nav>
 
@@ -213,7 +256,7 @@
                 </ul>
                 <p>First commercial laser printer: IBM 3800 (1975).</p>
 
-                <h4 class="sub-heading">Hardware Systems</h4>
+                <h4 class="sub-heading">Software Systems</h4>
                 <p>Smalltalk: First complete object-oriented programming environment; influenced modern programming languages; real object-oriented programming (distinct from contemporary OOP).</p>
                 <p>Mesa Programming Language: Used in the Xerox 8000 network system; advanced programming language features.</p>
                 <p>WYSIWYG Text Editors (Bravo and Gypsy): Influenced modern word processors.</p>
@@ -223,7 +266,7 @@
                 <p>Xerox Star 8010 (1981): $17,000; complete office setups over $50,000; ~25,000 units sold.</p>
                 <p>HP LaserJet (1984): $3,500 (equivalent to $8,500 today).</p>
 
-                <h3 class="section-heading"> Early Television Exposure</h3>
+                <h3 class="section-heading">Early Television Exposure</h3>
                 <p>1979: PARC created a television commercial for the Alto showcasing email and printing.</p>
                 <p>Filmed in PARC's lobby using actual employees.</p>
 
@@ -293,8 +336,8 @@
         </main>
 
         <footer class="footer">
-            <p>© 2024 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603 at gmail dot com</p>
+            <p>© 2025 Charan Pushpanathan</p>
+            <p style="margin-top: 8px;">For emailing: charanpp1603@gmail.com</p>
         </footer>
     </div>
 </body>
