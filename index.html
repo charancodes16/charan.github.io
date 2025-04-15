@@ -12,12 +12,58 @@
         }
 
         body {
+            /* Restored original font styles */
             font-family: 'Times New Roman', Times, serif;
             background: #FFFFFF;
             color: #1A1A1A;
             line-height: 1.5;
             letter-spacing: -0.48px;
+            /* Keep animation properties */
+            opacity: 0; /* Start body hidden for fade-in effect */
+            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
         }
+
+        /* --- Animation Setup (Kept from previous version) --- */
+        /* Keyframes for overall body fade-in */
+        @keyframes bodyFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for fade-in and slide-up effect */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px); /* Start slightly lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at normal position */
+            }
+        }
+
+        /* Base style for elements that will animate in */
+        .nav-container,
+        .content,
+        .footer {
+            opacity: 0; /* Start hidden */
+            /* Apply animation - 'forwards' keeps the end state */
+            animation: fadeInSlideUp 0.6s ease-out forwards;
+        }
+
+        /* Stagger the animations */
+        .nav-container {
+            animation-delay: 0.2s; /* Nav appears first */
+        }
+        .content {
+            animation-delay: 0.4s; /* Main content appears next */
+        }
+        .footer {
+            animation-delay: 0.6s; /* Footer appears last */
+        }
+        /* --- End Animation Setup --- */
+
 
         .container {
             max-width: 1440px;
@@ -54,10 +100,20 @@
             font-size: 16px;
             color: #1A1A1A;
             text-decoration: none;
+            /* Keep transition only for color */
+            transition: color 0.3s ease-out;
+            /* Removed opacity: 0.8; */
+        }
+
+        .nav-link:hover {
+             color: #007AFF; /* Keep Apple blue on hover */
+             /* Removed opacity: 1; */
         }
 
         .nav-link.active {
             color: rgba(60, 60, 67, 0.6);
+            /* Removed opacity: 1; */
+            pointer-events: none; /* Keep disabling hover effect for active link */
         }
 
         .content {
@@ -72,12 +128,7 @@
             margin-bottom: 16px;
         }
 
-        .update-date {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-        }
+        /* Removed .update-date class as it wasn't in the final HTML structure provided */
 
         .profile-section {
             display: flex;
@@ -96,7 +147,11 @@
             object-fit: cover;
             margin-bottom: 8px;
             object-position: center 85%;
+            /* Removed border-radius: 8px; */
+            display: block; /* Prevents potential bottom space */
+            /* Removed transition */
         }
+        /* Removed optional image hover effect */
 
         .image-caption {
             font-weight: 700;
@@ -104,68 +159,84 @@
             color: rgba(60, 60, 67, 0.6);
             margin-bottom: 16px;
             text-align: left;
-            width: 200px;
+            width: 200px; /* Restored original width */
         }
 
         .about-content {
             font-weight: 400;
             font-size: 15px;
-            line-height: 1.2;
+            line-height: 1.2; /* Restored original line-height */
             color: #1A1A1A;
             flex-grow: 1;
         }
 
         .about-content ul {
-            list-style-type: none;
+            list-style-type: none; /* Already set */
         }
 
         .about-content li {
-            margin-bottom: 0.85em;
+            margin-bottom: 0.85em; /* Restored original margin */
             text-align: justify;
             text-justify: inter-word;
             hyphens: auto;
         }
 
         .about-content a {
-            color: inherit;
-            text-decoration: underline;
+            color: #007AFF;
+            text-decoration: none;
+            /* Removed transition and hover opacity/underline styles */
         }
+        /* Removed .about-content a:hover */
+
 
         .footer {
             width: 550px;
             margin: 50px auto 20px;
-            padding: 10px 10px 0;
+            padding: 10px 10px 0; /* Restored original padding */
             border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
+            font-size: 16px; /* Restored original font size */
+            color: rgba(60, 60, 67, 0.6); /* Restored original color */
         }
 
+        /* Reverted mobile styles closer to original intent where applicable */
         @media (max-width: 600px) {
             .nav-container,
             .content,
             .footer {
                 width: 100%;
-                padding: 0 16px;
+                padding: 0 16px; /* Keep consistent padding */
             }
 
             .profile-section {
-                display: block;
+                display: block; /* Keep stacking */
             }
 
             .profile-image-container {
                 margin-bottom: 16px;
+                /* Removed centering styles */
+                /* Removed max-width */
             }
 
             .profile-image {
-                width: 100%;
-                max-width: 100%;
-                height: auto;
+                width: 100%; /* Keep full width */
+                max-width: 100%; /* Keep max-width */
+                height: auto; /* Keep auto height */
             }
+
+            .image-caption {
+                 width: 200px; /* Restore fixed width even on mobile as per original desktop */
+                 text-align: left; /* Restore left align */
+            }
+
+             .about-title {
+                 font-size: 28px; /* Restore original desktop size */
+             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+
         <nav class="nav-container">
             <div class="title-separator">
                 <h1 class="section-title">Charan Pushpanathan</h1>
@@ -184,16 +255,18 @@
             <h2 class="about-title">About</h2>
             <div class="profile-section">
                 <div class="profile-image-container">
-                    <img src="/img/1551EDF9-4DAE-4D08-B7AB-4364BA4A7E69_1_201_a.webp" alt="Profile Image" class="profile-image">
-                    <p class="image-caption">This is me when I visited Princeton University for Richard Feynman</p>
-                </div>
+                    <img src="/img/1551EDF9-4DAE-4D08-B7AB-4364BA4A7E69_1_201_a.webp"
+                         alt="Profile Image of Charan Pushpanathan"
+                         class="profile-image"
+                         onerror="this.onerror=null; this.src='https://placehold.co/180x250/EFEFEF/AAAAAA?text=Charan';">
+                    <p class="image-caption">Visited Princeton University for Richard Feynman</p> </div>
                 <div class="about-content">
                     <ul>
-                        <li>Grew up in Tamilnadu, India</li>
-                        <li>Currently a graduate student at Penn State University's College of Information Sciences and Technology, pursuing a Master of Science in Informatics with a focus on Human-Computer Interaction. I am a graduate researcher in the Collaboration Innovation Lab, working under <a href="https://jcarroll.ist.psu.edu">Dr. John M. Carroll</a> as his advisee. My research explores human-computer interaction, cooperative activity, synergies, learning to use, and interface design.</li>
-                        <li>Went to Kumaraguru College of Technology for a Bachelor's in Computer Science and Engineering.</li>
-                        <li>Previous roles at <a href="https://g.co/kgs/mx4kXAJ">HDFC Bank</a>, <a href="https://www.freecharge.in">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac">Axis Bank</a>), and founding member and designer of an angel-backed startup in capital markets (closed). Where I focused on user testing, research and interfaces.</li>
-                        <li>Live in State College, PA</li>
+                        <li>Grew up in Tamilnadu, India.</li>
+                        <li>Currently a graduate student at Penn State University's College of Information Sciences and Technology, pursuing a Master of Science in Informatics with a focus on Human-Computer Interaction. I am a graduate researcher in the Collaboration Innovation Lab, working under <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Dr. John M. Carroll</a> as his advisee. My research explores human-computer interaction, cooperative activity, synergies, learning to use, and interface design.</li>
+                        <li>Graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering.</li>
+                        <li>Previous roles involved user testing, research, and interface design at <a href="https://g.co/kgs/mx4kXAJ" target="_blank" rel="noopener noreferrer">HDFC Bank</a>, <a href="https://www.freecharge.in" target="_blank" rel="noopener noreferrer">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac" target="_blank" rel="noopener noreferrer">Axis Bank</a>), and as a founding member/designer at an angel-backed capital markets startup (now closed).</li>
+                        <li>Live in State College, PA.</li>
                     </ul>
                 </div>
             </div>
@@ -201,8 +274,8 @@
 
         <footer class="footer">
             <p>© 2025 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603@gmail.com</p>
+            <p style="margin-top: 8px;">Email: charanpp1603@gmail.com</p>
         </footer>
-    </div>
-</body>
+
+    </div> </body>
 </html>

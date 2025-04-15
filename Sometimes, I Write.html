@@ -12,12 +12,58 @@
         }
 
         body {
+            /* Original font styles */
             font-family: 'Times New Roman', Times, serif;
             background: #FFFFFF;
             color: #1A1A1A;
             line-height: 1.5;
-            letter-spacing: -0.43px;
+            letter-spacing: -0.43px; /* Original letter-spacing */
+            /* Animation properties added */
+            opacity: 0; /* Start body hidden for fade-in effect */
+            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
         }
+
+        /* --- Animation Setup (Copied from previous example) --- */
+        /* Keyframes for overall body fade-in */
+        @keyframes bodyFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for fade-in and slide-up effect */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px); /* Start slightly lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at normal position */
+            }
+        }
+
+        /* Base style for elements that will animate in */
+        .nav-container,
+        .content,
+        .footer {
+            opacity: 0; /* Start hidden */
+            /* Apply animation - 'forwards' keeps the end state */
+            animation: fadeInSlideUp 0.6s ease-out forwards;
+        }
+
+        /* Stagger the animations */
+        .nav-container {
+            animation-delay: 0.2s; /* Nav appears first */
+        }
+        .content {
+            animation-delay: 0.4s; /* Main content appears next */
+        }
+        .footer {
+            animation-delay: 0.6s; /* Footer appears last */
+        }
+        /* --- End Animation Setup --- */
+
 
         .container {
             max-width: 1440px;
@@ -54,10 +100,19 @@
             font-size: 16px;
             color: #1A1A1A;
             text-decoration: none;
+            /* Added transition for color hover effect */
+            transition: color 0.3s ease-out;
+        }
+
+        .nav-link:hover {
+             /* Added hover color */
+             color: #007AFF;
         }
 
         .nav-link.active {
             color: rgba(60, 60, 67, 0.6);
+             /* Added pointer-events to prevent hover on active link */
+            pointer-events: none;
         }
 
         .content {
@@ -66,24 +121,24 @@
             padding: 0 10px;
         }
 
-        .about-title {
+        .about-title { /* Note: Class name is 'about-title' in the HTML */
             font-weight: 700;
             font-size: 28px;
             margin-bottom: 16px;
         }
 
-        .update-date {
+        .update-date { /* Note: Class name is 'update-date' in the HTML */
             font-weight: 700;
             font-size: 12px;
             color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
+            margin-bottom: 16px; /* Original margin */
             display: block;
         }
 
-        .about-content {
+        .about-content { /* Note: Class name is 'about-content' in the HTML */
             font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 18px; /* Original font size */
+            line-height: 21px; /* Original line height */
             color: #1A1A1A;
         }
 
@@ -92,21 +147,36 @@
             font-size: 18px;
             margin-bottom: 8px;
             color: #1A1A1A;
+            /* Optional: Add transition if you want hover effects on blog titles */
+            /* transition: color 0.3s ease-out; */
         }
+        /* Optional: Hover effect for blog titles */
+        /* .about-content h3:hover {
+             color: #007AFF;
+        } */
+
 
         .about-content a {
-            color: inherit;
-            text-decoration: none;
+            color: inherit; /* Original color */
+            text-decoration: none; /* Original text-decoration */
+            /* Optional: Add transition if you want hover effects on blog links specifically */
+             /* transition: color 0.3s ease-out, opacity 0.3s ease-out; */
         }
+        /* Optional: Hover effect for blog links */
+        /* .about-content a:hover {
+            color: #007AFF;
+            opacity: 0.8;
+        } */
+
 
         .footer {
             width: 550px;
             margin: 50px auto 20px;
-            padding-top: 10px;
+            padding-top: 10px; /* Original padding */
             border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            text-align: left;
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
+            text-align: left; /* Original text-align */
+            font-size: 16px; /* Original font size */
+            color: rgba(60, 60, 67, 0.6); /* Original color */
         }
 
         @media (max-width: 600px) {
@@ -114,8 +184,9 @@
             .content,
             .footer {
                 width: 100%;
-                padding: 0 16px;
+                padding: 0 16px; /* Original padding */
             }
+            /* No other specific mobile styles were in the original HTML provided for this page */
         }
     </style>
 </head>
@@ -129,8 +200,7 @@
                 <a href="/index.html" class="nav-link">About</a>
                 <a href="/Sometimes, I Write.html" class="nav-link active">Sometimes, I Write</a>
                 <a href="/files/Charan_Pushpanathan_Prabavathi_Resume.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-                <a href="/research.html" class="nav-link">Research</a>
+                <a href="#" class="nav-link">Scholar</a> <a href="/research.html" class="nav-link">Research</a>
                 <a href="/assorted.html" class="nav-link">Assorted</a>
             </div>
         </nav>
@@ -156,6 +226,5 @@
             <p>© 2024 Charan Pushpanathan</p>
             <p style="margin-top: 8px;">For emailing: charanpp1603 at gmail dot com</p>
         </footer>
-    </div>
-</body>
+    </div> </body>
 </html>

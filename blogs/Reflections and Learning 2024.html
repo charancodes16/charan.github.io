@@ -17,7 +17,51 @@
             color: #1A1A1A;
             line-height: 1.5;
             letter-spacing: -0.48px;
+            /* Animation properties added */
+            opacity: 0; /* Start body hidden for fade-in effect */
+            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
         }
+
+        /* --- Animation Setup --- */
+        /* Keyframes for overall body fade-in */
+        @keyframes bodyFadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Keyframes for fade-in and slide-up effect */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px); /* Start slightly lower */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* End at normal position */
+            }
+        }
+
+        /* Base style for elements that will animate in */
+        .nav-container,
+        .content,
+        .footer {
+            opacity: 0; /* Start hidden */
+            /* Apply animation - 'forwards' keeps the end state */
+            animation: fadeInSlideUp 0.6s ease-out forwards;
+        }
+
+        /* Stagger the animations */
+        .nav-container {
+            animation-delay: 0.2s; /* Nav appears first */
+        }
+        .content {
+            animation-delay: 0.4s; /* Main content appears next */
+        }
+        .footer {
+            animation-delay: 0.6s; /* Footer appears last */
+        }
+        /* --- End Animation Setup --- */
 
         .container {
             max-width: 1440px;
@@ -54,10 +98,19 @@
             font-size: 16px;
             color: #1A1A1A;
             text-decoration: none;
+            /* Added transition for color hover effect */
+            transition: color 0.3s ease-out;
+        }
+
+        .nav-link:hover {
+             /* Added hover color */
+             color: #007AFF;
         }
 
         .nav-link.active {
             color: rgba(60, 60, 67, 0.6);
+             /* Added pointer-events to prevent hover on active link */
+            pointer-events: none;
         }
 
         .content {
@@ -96,17 +149,43 @@
             text-align: justify;
             text-justify: inter-word;
             hyphens: auto;
+            /* Add subtle animation for list items */
+            opacity: 0;
+            animation: fadeInSlideUp 0.5s ease-out forwards;
         }
+
+        /* Stagger the list item animations */
+        .about-content li:nth-child(1) { animation-delay: 0.5s; }
+        .about-content li:nth-child(2) { animation-delay: 0.55s; }
+        .about-content li:nth-child(3) { animation-delay: 0.6s; }
+        .about-content li:nth-child(4) { animation-delay: 0.65s; }
+        .about-content li:nth-child(5) { animation-delay: 0.7s; }
+        .about-content li:nth-child(6) { animation-delay: 0.75s; }
+        .about-content li:nth-child(7) { animation-delay: 0.8s; }
+        .about-content li:nth-child(8) { animation-delay: 0.85s; }
+        .about-content li:nth-child(9) { animation-delay: 0.9s; }
+        .about-content li:nth-child(10) { animation-delay: 0.95s; }
 
         .about-content a {
             color: inherit;
             text-decoration: underline;
+            /* Added transition for link hover */
+            transition: color 0.3s ease-out, opacity 0.3s ease-out;
+        }
+
+        .about-content a:hover {
+            color: #007AFF;
+            opacity: 0.8;
         }
 
         .author-email {
             margin-top: 20px;
             font-size: 14px;
             color: rgba(60, 60, 67, 0.8);
+            /* Add subtle animation */
+            opacity: 0;
+            animation: fadeInSlideUp 0.5s ease-out forwards;
+            animation-delay: 1s;
         }
 
         .footer {
@@ -136,7 +215,7 @@
             </div>
             <div class="nav-links">
                 <a href="../index.html" class="nav-link">About</a>
-                <a href="/Sometimes, I Write.html" class="nav-link active">Sometimes, I Write</a>
+                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
                 <a href="../files/Academic_Charan.pdf" class="nav-link">Resume</a>
                 <a href="#" class="nav-link">Scholar</a>
                 <a href="/research.html" class="nav-link">Research</a>
