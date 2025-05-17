@@ -1,300 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vision as a Cat Toy - Charan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <title>Vision as a Cat Toy: Why Great Ideas Should Never Be Caught</title>
+  <meta name="description" content="Vision as a Cat Toy: Why Great Ideas Should Never Be Caught - Charan Pushpanathan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.5;
-            letter-spacing: -0.48px;
-            scroll-behavior: smooth;
-            /* Animation properties added */
-            opacity: 0; /* Start body hidden for fade-in effect */
-            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
-        }
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://charanpushpanathan.com/vision-as-cat-toy">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Vision as a Cat Toy: Why Great Ideas Should Never Be Caught">
+  <meta property="og:description" content="A reflection on balancing immediate, achievable goals with larger transformative visions.">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@charanpushpanathan">
+  <meta property="twitter:domain" content="Charan Pushpanathan">
+  <meta property="twitter:url" content="https://charanpushpanathan.com/vision-as-cat-toy">
+  <meta name="twitter:title" content="Vision as a Cat Toy">
+  <meta name="twitter:description" content="A reflection on balancing immediate, achievable goals with larger transformative visions.">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
 
-        /* --- Animation Setup --- */
-        /* Keyframes for overall body fade-in */
-        @keyframes bodyFadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+  <style>
+body { 
+  line-height: 1.4;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 50px auto;
+  max-width: 650px;
+}
 
-        /* Keyframes for fade-in and slide-up effect */
-        @keyframes fadeInSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(15px); /* Start slightly lower */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* End at normal position */
-            }
-        }
+#maincontent {
+  max-width: 42em;
+  margin: 15px auto;
+}
 
-        /* Base style for elements that will animate in */
-        .nav-container,
-        .content,
-        .footer {
-            opacity: 0; /* Start hidden */
-            /* Apply animation - 'forwards' keeps the end state */
-            animation: fadeInSlideUp 0.6s ease-out forwards;
-        }
+.title-separator {
+  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+  margin-bottom: 16px;
+}
 
-        /* Stagger the animations */
-        .nav-container {
-            animation-delay: 0.2s; /* Nav appears first */
-        }
-        .content {
-            animation-delay: 0.4s; /* Main content appears next */
-        }
-        .footer {
-            animation-delay: 0.6s; /* Footer appears last */
-        }
-        /* --- End Animation Setup --- */
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(60, 60, 67, 0.6);
+}
 
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+/* Profile photo styles */
+.profile-thumbnail {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;  /* Less rounded corners */
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: text-bottom;  /* Align with the bottom of the text */
+  margin-left: 2px;  /* Reduced gap */
+  margin-bottom: 4px;  /* Adjust downward */
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s ease;
+}
 
-        .nav-container {
-            width: 550px;
-            margin: 50px auto 0;
-            padding: 0 10px;
-        }
+.profile-thumbnail:hover {
+  border-color: #1a0dab;
+}
 
-        .title-separator {
-            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-            margin-bottom: 16px;
-        }
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;  /* Reduced from 20px to 10px */
+  margin-bottom: 10px;  /* Reduced from 20px to 10px */
+}
 
-        .section-title {
-            font-weight: 400;
-            font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
-        }
+/* Adjust paragraph margins to reduce vertical spacing */
+#maincontent p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 10px;
-        }
+/* Adjust list margins to reduce vertical spacing */
+#maincontent ol, #maincontent ul {
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
 
-        .nav-link {
-            font-weight: 700;
-            font-size: 16px;
-            color: #1A1A1A;
-            text-decoration: none;
-            /* Added transition for color hover effect */
-            transition: color 0.3s ease-out;
-        }
+.content-column {
+  flex: 1;
+}
 
-        .nav-link:hover {
-             /* Added hover color */
-             color: #007AFF;
-        }
+.photo-column {
+  display: none;
+  width: 200px;
+  text-align: center;
+}
 
-        .nav-link.active {
-            color: rgba(60, 60, 67, 0.6);
-             /* Added pointer-events to prevent hover on active link */
-            pointer-events: none;
-        }
+.photo-column.visible {
+  display: block;
+}
 
-        .content {
-            width: 550px;
-            margin: 30px auto;
-            padding: 0 10px;
-        }
+.photo-column img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 0;  /* Sharp corners */
+  margin-bottom: 8px;
+}
 
-        .about-title {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
+.photo-caption {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
 
-        .update-date {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-        }
+.article-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
 
-        .about-content {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 1.4;
-            color: #1A1A1A;
-        }
+.update-date {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(60, 60, 67, 0.6);
+  margin-bottom: 16px;
+  font-style: italic;
+}
 
-        .about-content p {
-            margin-bottom: 1em;
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-            /* Add subtle animation for paragraphs */
-            opacity: 0;
-            animation: fadeInSlideUp 0.5s ease-out forwards;
-        }
+.references {
+  margin-top: 16px;
+  font-size: 14px;
+  border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
+  padding-top: 16px;
+}
 
-        /* Stagger the paragraph animations */
-        .about-content p:nth-child(1) { animation-delay: 0.5s; }
-        .about-content p:nth-child(2) { animation-delay: 0.55s; }
-        .about-content p:nth-child(3) { animation-delay: 0.6s; }
-        .about-content p:nth-child(4) { animation-delay: 0.65s; }
-        .about-content p:nth-child(5) { animation-delay: 0.7s; }
-        .about-content p:nth-child(6) { animation-delay: 0.75s; }
-        .about-content p:nth-child(7) { animation-delay: 0.8s; }
-        .about-content p:nth-child(8) { animation-delay: 0.85s; }
-        .about-content p:nth-child(9) { animation-delay: 0.9s; }
-
-        .about-content h3 {
-            font-weight: 700;
-            font-size: 18px;
-            margin: 24px 0 16px;
-            /* Add subtle animation for headings */
-            opacity: 0;
-            animation: fadeInSlideUp 0.5s ease-out forwards;
-            animation-delay: 0.95s;
-        }
-
-        .about-content sup {
-            font-size: 10px;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline;
-            top: -0.5em;
-        }
-
-        .about-content sup a {
-            color: inherit;
-            text-decoration: none;
-            /* Add transition for hover effect */
-            transition: color 0.3s ease-out;
-        }
-
-        .about-content sup a:hover {
-            color: #007AFF;
-        }
-
-        .about-content b {
-            font-weight: 700;
-        }
-
-        .references {
-            margin-top: 16px;
-            font-size: 14px;
-            scroll-margin-top: 2em;
-            /* Add subtle animation for references */
-            opacity: 0;
-            animation: fadeInSlideUp 0.5s ease-out forwards;
-            animation-delay: 1s;
-        }
-
-        .references p {
-            margin-bottom: 0.5em;
-            /* Override the staggered paragraph animations */
-            opacity: 1;
-            animation: none;
-        }
-
-        .references a {
-            color: inherit;
-            text-decoration: underline;
-            /* Add transition for hover effect */
-            transition: color 0.3s ease-out, opacity 0.3s ease-out;
-        }
-
-        .references a:hover {
-            color: #007AFF;
-            opacity: 0.8;
-        }
-
-        .footer {
-            width: 550px;
-            margin: 50px auto 20px;
-            padding: 10px 10px 0;
-            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
-        }
-
-        @media (max-width: 600px) {
-            .nav-container,
-            .content,
-            .footer {
-                width: 100%;
-                padding: 0 16px;
-            }
-        }
-    </style>
+/* Media queries for responsive design */
+@media (max-width: 650px) {
+  .content-with-photo {
+    flex-direction: column;
+  }
+  
+  .photo-column {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-column img {
+    max-width: 180px;
+  }
+}
+</style>	
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-container">
-            <div class="title-separator">
-                <h1 class="section-title">Charan Pushpanathan</h1>
-            </div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link">About</a>
-                <a href="../Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-                <a href="../files/Academic_Charan.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-                <a href="/research.html" class="nav-link">Research</a>
-                <a href="/assorted.html" class="nav-link">Assorted</a>
-            </div>
-        </nav>
+<div>
+    <a href="index.html">
+        <h1 class="section-title">Charan Pushpanathan</h1>
+    </a>
+    <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
+        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+            charanp2@illinois.edu
+        </a>
+    </p>
 
-        <main class="content">
-            <h2 class="about-title">Vision as a Cat Toy: Why Great Ideas Should Never Be Caught</h2>
-            <p class="update-date">Written 30 November 2024; by Charan Pushpanathan</p>
-            <div class="about-content">
-                <p><b>TLDR:</b> A reflection on balancing immediate, achievable goals with larger transformative visions, using the metaphor of a cat toy to illustrate how inspiring ideas keep us moving forward even without a definite endpoint. Involves few insights from Alan Kay and Xerox PARC.</p>
-
-                <p>The metaphor "Great visions are not goals, but the ultimate cat toy" means that great visions are not rigid, specific endpoints (like goals) but rather engaging, dynamic, and inspiring ideas that spark curiosity, exploration, and continuous effort.</p>
-
-                <p>Just as a cat toy captivates a cat and keeps it chasing and playing, a great vision captivates people, driving them to think creatively, experiment, and move forward, even if they never "catch" or fully achieve the vision. The metaphor highlights the playful and aspirational nature of a vision, implying it's about the journey and the possibilities it opens up, rather than a concrete finish line.</p>
-
-                <p>From my constructivism, I will discuss the power of long term and short term goals, I'm biased about it depends on the situational awareness. Sometimes a force triggers you to continue or exit for both goals.</p>
-
-                <p><b>Short term.</b> It often ends soon, taking a shortcut and fastest tunnel. The bounties are high here and often looks like a dopamine rush. For example, from the perspective of HCI researcher, if you want to build a word processor or an alien computing, you can easily build those things. It has an existence and sources from how to build from minus one to n. As Kay<sup><a href="#ref1">[1]</a></sup> noted about Microsoft Word's development at Xerox PARC<sup><a href="#ref2">[2]</a></sup>, it made "Microsoft many many billions of dollars when it was released 15 years later"<sup><a href="#ref3">[3]</a></sup> - this represents the short-term, commercially-focused thinking.</p>
-
-                <p>In the <b>long term,</b> it takes long process. You need to keep on chasing and learning what you can. It's a never-ending goal. As well, you will get lots of criticism but do not lose your faith when you take a long term goal. Coming back to the word processor analogy, as Kay emphasized: "We want you to steal the ideas but for Christ's sake steal the whole idea don't steal a protest caricature."<sup><a href="#ref3">[3]</a></sup> The long-term view isn't just about building a word processor - it's about understanding the deeper principles of human-computer interaction, augmenting human intellect (as Engelbart envisioned), and creating systems that fundamentally enhance how humans think and work.</p>
-
-                <p>This connects to Kay's broader point that "better is the enemy of what is actually needed."<sup><a href="#ref3">[3]</a></sup> The short-term goal might be to make a better word processor, but the long-term goal should be to fundamentally rethink how humans interact with text and ideas. As Kay noted about Xerox PARC's approach, they built "flexible supercomputer time machines" to live and work in the future - this represents true long-term thinking.</p>
-
-                <p>Kay's talk also reminds us that "Visions are not the same as goals." Short-term goals are specific and achievable, while long-term visions, like Licklider's vision<sup><a href="#ref4">[4]</a></sup> of "computers becoming interactive intellectual amplifiers for everyone universally networked worldwide," guide us toward larger possibilities, even if we don't know exactly how to get there.</p>
-
-                <p>The key is recognizing when each approach is appropriate: short-term goals for immediate practical needs, and long-term visions for fundamental advancement of the field. As Kay demonstrated through PARC's history, both can coexist - you can build practical tools while pursuing deeper insights and transformative change.</p>
-
-                <h3>References</h3>
-                <div class="references">
-                    <p id="ref1">[1] <a href="https://amturing.acm.org/award_winners/kay_3972189.cfm">ACM A.M. Turing Award - Alan Kay</a></p>
-                    <p id="ref2">[2] <a href="https://spectrum.ieee.org/xerox-parc">The Story of Xerox PARC</a></p>
-                    <p id="ref3">[3] Kay, A. (2024, February 21). <em>Alan Kay's talk at UCLA</em> [Video]. YouTube. https://youtu.be/dZQ7x0-MZcI</p>
-                    <p id="ref4">[4] Licklider, J. C. (1960). Man-computer symbiosis. IRE transactions on human factors in electronics, (1), 4-11.</p>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>© 2025 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603@gmail.com</p>
-        </footer>
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
+    <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
+    <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
+    <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
     </div>
+</div>
+
+<div id="maincontent" style="margin-top:10px">
+
+<h2 class="article-title">Vision as a Cat Toy: Why Great Ideas Should Never Be Caught</h2>
+<p class="update-date">Written 30 November 2024; by Charan Pushpanathan</p>
+
+<p><b>TLDR:</b> A reflection on balancing immediate, achievable goals with larger transformative visions, using the metaphor of a cat toy to illustrate how inspiring ideas keep us moving forward even without a definite endpoint. Involves few insights from Alan Kay and Xerox PARC.</p>
+
+<p>The metaphor "Great visions are not goals, but the ultimate cat toy" means that great visions are not rigid, specific endpoints (like goals) but rather engaging, dynamic, and inspiring ideas that spark curiosity, exploration, and continuous effort.</p>
+
+<p>Just as a cat toy captivates a cat and keeps it chasing and playing, a great vision captivates people, driving them to think creatively, experiment, and move forward, even if they never "catch" or fully achieve the vision. The metaphor highlights the playful and aspirational nature of a vision, implying it's about the journey and the possibilities it opens up, rather than a concrete finish line.</p>
+
+<p>From my constructivism, I will discuss the power of long term and short term goals, I'm biased about it depends on the situational awareness. Sometimes a force triggers you to continue or exit for both goals.</p>
+
+<p><b>Short term.</b> It often ends soon, taking a shortcut and fastest tunnel. The bounties are high here and often looks like a dopamine rush. For example, from the perspective of HCI researcher, if you want to build a word processor or an alien computing, you can easily build those things. It has an existence and sources from how to build from minus one to n. As Kay<sup><a href="#ref1">[1]</a></sup> noted about Microsoft Word's development at Xerox PARC<sup><a href="#ref2">[2]</a></sup>, it made "Microsoft many many billions of dollars when it was released 15 years later"<sup><a href="#ref3">[3]</a></sup> - this represents the short-term, commercially-focused thinking.</p>
+
+<p>In the <b>long term,</b> it takes long process. You need to keep on chasing and learning what you can. It's a never-ending goal. As well, you will get lots of criticism but do not lose your faith when you take a long term goal. Coming back to the word processor analogy, as Kay emphasized: "We want you to steal the ideas but for Christ's sake steal the whole idea don't steal a protest caricature."<sup><a href="#ref3">[3]</a></sup> The long-term view isn't just about building a word processor - it's about understanding the deeper principles of human-computer interaction, augmenting human intellect (as Engelbart envisioned), and creating systems that fundamentally enhance how humans think and work.</p>
+
+<p>This connects to Kay's broader point that "better is the enemy of what is actually needed."<sup><a href="#ref3">[3]</a></sup> The short-term goal might be to make a better word processor, but the long-term goal should be to fundamentally rethink how humans interact with text and ideas. As Kay noted about Xerox PARC's approach, they built "flexible supercomputer time machines" to live and work in the future - this represents true long-term thinking.</p>
+
+<p>Kay's talk also reminds us that "Visions are not the same as goals." Short-term goals are specific and achievable, while long-term visions, like Licklider's vision<sup><a href="#ref4">[4]</a></sup> of "computers becoming interactive intellectual amplifiers for everyone universally networked worldwide," guide us toward larger possibilities, even if we don't know exactly how to get there.</p>
+
+<p>The key is recognizing when each approach is appropriate: short-term goals for immediate practical needs, and long-term visions for fundamental advancement of the field. As Kay demonstrated through PARC's history, both can coexist - you can build practical tools while pursuing deeper insights and transformative change.</p>
+
+<h3>References</h3>
+<div class="references">
+    <p id="ref1">[1] <a href="https://amturing.acm.org/award_winners/kay_3972189.cfm">ACM A.M. Turing Award - Alan Kay</a></p>
+    <p id="ref2">[2] <a href="https://spectrum.ieee.org/xerox-parc">The Story of Xerox PARC</a></p>
+    <p id="ref3">[3] Kay, A. (2024, February 21). <em>Alan Kay's talk at UCLA</em> [Video]. YouTube. https://youtu.be/dZQ7x0-MZcI</p>
+    <p id="ref4">[4] Licklider, J. C. (1960). Man-computer symbiosis. IRE transactions on human factors in electronics, (1), 4-11.</p>
+</div>
+
+<footer>
+    <p>© 2025 Charan Pushpanathan</p>
+    <p>Last updated: May 16, 2025</p>
+    <div style="margin: 20px 0;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
+    <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
+    <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
+    <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
+    </div>
+</div>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add any JavaScript functionality here if needed
+});
+</script>
 </body>
 </html>

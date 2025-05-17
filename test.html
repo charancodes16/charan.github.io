@@ -1,414 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Charan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<html><head>
+  <meta charset="UTF-8">
+  <title>Bo's Website</title>
+  <meta name="description" content="Bo's website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            /* Restored original font styles */
-            font-family: 'Times New Roman', Times, serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.5;
-            letter-spacing: -0.48px;
-            /* Keep animation properties */
-            opacity: 0; /* Start body hidden for fade-in effect */
-            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
-        }
+  <style>
+body { 
+  line-height: 1.4;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 50px auto;
+  max-width: 650px;
+}
 
-        /* --- Animation Setup (Kept from previous version) --- */
-        /* Keyframes for overall body fade-in */
-        @keyframes bodyFadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+#maincontent {
+  max-width: 42em;
+  margin: 15px auto;
+}
 
-        /* Keyframes for fade-in and slide-up effect */
-        @keyframes fadeInSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(15px); /* Start slightly lower */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* End at normal position */
-            }
-        }
+.title-separator {
+  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+  margin-bottom: 16px;
+}
 
-        /* Base style for elements that will animate in */
-        .nav-container,
-        .content,
-        .footer {
-            opacity: 0; /* Start hidden */
-            /* Apply animation - 'forwards' keeps the end state */
-            animation: fadeInSlideUp 0.6s ease-out forwards;
-        }
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(60, 60, 67, 0.6);
+}
 
-        /* Stagger the animations */
-        .nav-container {
-            animation-delay: 0.2s; /* Nav appears first */
-        }
-        .content {
-            animation-delay: 0.4s; /* Main content appears next */
-        }
-        .footer {
-            animation-delay: 0.6s; /* Footer appears last */
-        }
-        /* --- End Animation Setup --- */
+/* Profile photo styles */
+.profile-thumbnail {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;  /* Less rounded corners */
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: text-bottom;  /* Align with the bottom of the text */
+  margin-left: 2px;  /* Reduced gap */
+  margin-bottom: 4px;  /* Adjust downward */
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s ease;
+}
 
+.profile-thumbnail:hover {
+  border-color: #1a0dab;
+}
 
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;  /* Reduced from 20px to 10px */
+  margin-bottom: 10px;  /* Reduced from 20px to 10px */
+}
 
-        .nav-container {
-            width: 550px;
-            margin: 50px auto 0;
-            padding: 0 10px;
-        }
+/* Adjust paragraph margins to reduce vertical spacing */
+#maincontent p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-        .title-separator {
-            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-            margin-bottom: 16px;
-        }
+/* Adjust list margins to reduce vertical spacing */
+#maincontent ol {
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
 
-        .section-title {
-            font-weight: 400;
-            font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
-        }
+.content-column {
+  flex: 1;
+}
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 10px;
-        }
+.photo-column {
+  display: none;
+  width: 200px;
+  text-align: center;
+}
 
-        .nav-link {
-            font-weight: 700;
-            font-size: 16px;
-            color: #1A1A1A;
-            text-decoration: none;
-            /* Keep transition only for color */
-            transition: color 0.3s ease-out;
-            /* Removed opacity: 0.8; */
-        }
+.photo-column.visible {
+  display: block;
+}
 
-        .nav-link:hover {
-             color: #007AFF; /* Keep Apple blue on hover */
-             /* Removed opacity: 1; */
-        }
+.photo-column img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 0;  /* Sharp corners */
+  margin-bottom: 8px;
+}
 
-        .nav-link.active {
-            color: rgba(60, 60, 67, 0.6);
-            /* Removed opacity: 1; */
-            pointer-events: none; /* Keep disabling hover effect for active link */
-        }
+.photo-caption {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
 
-        .content {
-            width: 550px;
-            margin: 30px auto;
-            padding: 0 10px;
-        }
-
-        .about-title {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
-
-        /* Removed .update-date class as it wasn't in the final HTML structure provided */
-
-        .profile-section {
-            display: flex;
-            flex-direction: row;
-            gap: 24px;
-            margin-bottom: 16px;
-        }
-
-        .profile-image-container {
-            flex-shrink: 0;
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 250px;
-            object-fit: cover;
-            margin-bottom: 8px;
-            object-position: center 85%;
-            /* Removed border-radius: 8px; */
-            display: block; /* Prevents potential bottom space */
-            /* Removed transition */
-        }
-        /* Removed optional image hover effect */
-
-        .image-caption {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-            text-align: left;
-            width: 200px; /* Restored original width */
-        }
-
-        .about-content {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.25; /* Reduced line height */
-            color: #1A1A1A;
-            flex-grow: 1;
-        }
-
-        .about-content ul {
-            list-style-type: none; /* Already set */
-        }
-
-        .about-content li {
-            margin-bottom: 0.8em; /* Reduced margin for less space between list items */
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-            font-size: 16px;
-        }
-
-        .about-content a {
-            color: #007AFF;
-            text-decoration: none;
-            /* Removed transition and hover opacity/underline styles */
-        }
-        /* Removed .about-content a:hover */
-
-
-        /* Footer and social links */
-        .footer {
-            width: 550px;
-            margin: 50px auto 20px;
-            padding: 10px 10px 0; 
-            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
-        }
-        
-        #email-display {
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-        
-        #email-display:hover {
-            color: #007AFF;
-        }
-        
-        .social-link {
-            color: rgba(60, 60, 67, 0.6);
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .social-link:hover {
-            color: #007AFF;
-        }
-
-        /* Text link styles */
-        .text-link {
-            color: #007AFF;
-            font-weight: 600;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .text-link:hover {
-            color: #0055b3;
-            text-decoration: underline;
-        }
-
-        /* Bio styles (both brief and full) */
-        .brief-bio, .full-bio {
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-size: 16px;
-            line-height: 1.35; /* Reduced line height */
-        }
-        
-        .brief-bio p, .full-bio p {
-            margin-bottom: 10px;
-        }
-
-        /* Hide content using this class */
-        .hidden {
-            display: none;
-        }
-
-        /* Reverted mobile styles closer to original intent where applicable */
-        @media (max-width: 600px) {
-            .nav-container,
-            .content,
-            .footer {
-                width: 100%;
-                padding: 0 16px; /* Keep consistent padding */
-            }
-
-            .profile-section {
-                display: block; /* Keep stacking */
-            }
-
-            .profile-image-container {
-                margin-bottom: 16px;
-                /* Removed centering styles */
-                /* Removed max-width */
-            }
-
-            .profile-image {
-                width: 100%; /* Keep full width */
-                max-width: 100%; /* Keep max-width */
-                height: auto; /* Keep auto height */
-            }
-
-            .image-caption {
-                 width: 200px; /* Restore fixed width even on mobile as per original desktop */
-                 text-align: left; /* Restore left align */
-            }
-
-             .about-title {
-                 font-size: 28px; /* Restore original desktop size */
-             }
-        }
-    </style>
+/* Media queries for responsive design */
+@media (max-width: 650px) {
+  .content-with-photo {
+    flex-direction: column;
+  }
+  
+  .photo-column {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-column img {
+    max-width: 180px;
+  }
+}
+</style>	
 </head>
+
+<div>
+    <h1 class="section-title">Charan Pushpanathan</h1>
+    <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
+        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+            charanp2@illinois.edu
+        </a>
+    </p>
+
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Research]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
+    </div>
+</div>
+
 <body>
-    <div class="container">
+<div id="maincontent" style="margin-top:10px">
 
-        <nav class="nav-container">
-            <div class="title-separator">
-                <h1 class="section-title">Charan Pushpanathan</h1>
-            </div>
-            <div class="nav-links">
-                <a href="../charan.github.io/index.html" class="nav-link active">About</a>
-                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-                <a href="/files/Resume.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-                <a href="/research.html" class="nav-link">Research</a>
-                <a href="/assorted.html" class="nav-link">Assorted</a>
-            </div>
-        </nav>
+<p>I'm Charan Pushpanathan Prabavathi; In-short <b>Charan;</b> <img src="/api/placeholder/36/36" alt="Charan" class="profile-thumbnail" id="profile-thumbnail"></p>
 
-        <main class="content">
-            <h2 class="about-title">About</h2>
-            
-            <!-- Profile section with minimalist info -->
-            <div class="profile-section">
-                <div class="profile-image-container">
-                    <img src="/img/1551EDF9-4DAE-4D08-B7AB-4364BA4A7E69_1_201_a.webp"
-                         alt="Profile Image of Charan Pushpanathan"
-                         class="profile-image"
-                         onerror="this.onerror=null; this.src='https://placehold.co/180x250/EFEFEF/AAAAAA?text=Charan';">
-                    <p class="image-caption">Visited Princeton University for Richard Feynman</p> 
-                </div>
-                <div class="about-content">
-                    <!-- Brief bio content - initially visible -->
-                    <div id="briefBio" class="brief-bio">
-                        <p>I'm <strong>Charan Pushpanathan</strong>, an incoming Ph.D. student in Information Sciences at <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a> in the School of Information Sciences, advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. Go Illini! 🧡</p>
-                        <p style="margin-top: 10px;">As of Spring 2025, Currently finishing my M.S. in Informatics at Penn State University with a focus on Human-Computer Interaction, working in the Collaboration Innovation Lab under <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Dr. John M. Carroll</a>.</p>
-                        <p style="margin-top: 10px;">Prior to my graduate studies, I worked in user testing, research, and interface design at several companies. I completed my Bachelor's in Computer Science and Engineering at Kumaraguru College of Technology.</p>
-                        <p style="margin-top: 20px;"><a href="#" id="bioToggleBtn" class="text-link">Show Full Bio</a></p>
-                    </div>
-                    
-                    <!-- Full bio content - initially hidden -->
-                    <div id="fullProfile" class="full-bio hidden">
-                        <ul>
-                            <li>I'm a Incoming Ph.D. student in Information Sciences at <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">School of Information Sciences</a> at <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a>, where I'm lucky to be advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. I will be mainly researching on Human-Computer Interaction:
-                                <ol style="list-style-type: decimal; margin-left: 20px; margin-top: 5px;">
-                                    <li style="margin-bottom: 0.5em;">Learning to Use: Learning theories and Training user</li>
-                                    <li style="margin-bottom: 0.5em;">Novel interfaces with minimal informations</li>
-                                    <li style="margin-bottom: 0.5em;">Collaborative environments</li>
-                                    <li style="margin-bottom: 0.5em;">Making intelligence in the sciences of artificial.</li>
-                                </ol>
-                            </li>
-                            <li>Currently a graduate student at Penn State University's College of Information Sciences and Technology, pursuing a Master of Science in Informatics with a focus on Human-Computer Interaction. I am a graduate researcher in the Collaboration Innovation Lab, working under <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Dr. John M. Carroll</a> as his advisee (His insights left a lasting imprint on how I conceive of HCI and the philosophical currents that flow beneath technological design.). My research explores human-computer interaction, cooperative activity, synergies, learning to use, and interface design.</li>
-                            <li>Also, at Penn State, I worked with and took classes taught by <a href="https://www.frankritter.com/ritter-bio.html" target="_blank" rel="noopener noreferrer">Frank Ritter</a>, <a href="https://zhang.ist.psu.edu" target="_blank" rel="noopener noreferrer">Luke Zhang</a>, <a href="https://crowd.ist.psu.edu" target="_blank" rel="noopener noreferrer">Kenneth Huang</a>, and others.</li>
-                            <li>Graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering.</li>
-                            <li>Previous roles involved user testing, research, and interface design at <a href="https://g.co/kgs/mx4kXAJ" target="_blank" rel="noopener noreferrer">HDFC Bank</a>, <a href="https://www.freecharge.in" target="_blank" rel="noopener noreferrer">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac" target="_blank" rel="noopener noreferrer">Axis Bank</a>), and as a founding member/designer at an angel-backed capital markets startup (now closed).</li>
-                            <li>Living in State College, PA (thin crust life), soon moving to Champaign, IL ready for that deep dish dive.</li>
-                        </ul>
-                        <p style="margin-top: 20px;"><a href="#" id="bioHideBtn" class="text-link">Hide Full Bio</a></p>
-                    </div>
-                </div>
-            </div>
-        </main>
+<div class="content-with-photo">
+  <div class="content-column">
+    <p>I'm an incoming Ph.D. student in Information Sciences at the <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">School of Information Sciences</a> at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a>, where I'm fortunate to be advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. My research will focus on Human-Computer Interaction, including:</p>
+    <ol style="list-style-type: decimal; margin-left: 20px; margin-top: 5px;">
+      <li style="margin-bottom: 0.2em;">Learning to Use: learning theories and training users</li>
+      <li style="margin-bottom: 0.2em;">Novel interfaces with minimal information</li>
+      <li style="margin-bottom: 0.2em;">Collaborative environments</li>
+      <li style="margin-bottom: 0.2em;">Making intelligence in the sciences of artificial</li>
+    </ol>
+  </div>
+  <div class="photo-column" id="photo-column">
+    <img src="/api/placeholder/200/200" alt="Charan Pushpanathan">
+    <p class="photo-caption">Charan Pushpanathan</p>
+  </div>
+</div>
+<p>I was a graduate student at Penn State University's College of Information Sciences and Technology, where I pursued a Master of Science in Informatics with a focus on Human-Computer Interaction. I was a graduate researcher in the Collaboration Innovation Lab, I was fortunate to study under <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Dr. John M. Carroll</a> as his advisee. His insights left a lasting imprint on how I conceived of HCI and the philosophical currents that flowed beneath technological design. My research explored human-computer interaction, cooperative activity, synergies, learning to use, and interface design.</p>
+<p>At Penn State, I witnessed with some pretty sharp minds. <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Jack Carroll</a> (aka John M. Carroll; my advisor), <a href="https://www.frankritter.com/ritter-bio.html" target="_blank" rel="noopener noreferrer">Ritter</a>, <a href="https://zhang.ist.psu.edu" target="_blank" rel="noopener noreferrer">Zhang</a>, <a href="https://crowd.ist.psu.edu" target="_blank" rel="noopener noreferrer">Huang</a> I got to see how these folks actually work, not just read their papers.</p>
+<p>I graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering.</p>
+<p>Previously, I held roles involving user testing, research, and interface design at <a href="https://g.co/kgs/mx4kXAJ" target="_blank" rel="noopener noreferrer">HDFC Bank</a>, <a href="https://www.freecharge.in" target="_blank" rel="noopener noreferrer">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac" target="_blank" rel="noopener noreferrer">Axis Bank</a>), and was a founding member/designer at an angel-backed capital markets startup (now closed).</p>
+<p>I'm currently living in State College, PA (thin crust life), and will soon be moving to Champaign, IL, ready for that deep dish dive.</p>
 
-        <footer class="footer">
-            <p>© 2025 Charan Pushpanathan</p>
-            <div style="margin-top: 12px; display: flex; align-items: center;">
-                <p id="email-display" style="margin-right: 8px;">Email: charanp2@illinois.edu</p>
-                <span id="copy-status" style="display: none; font-size: 12px; color: #007AFF;">Copied!</span>
-            </div>
-            <div style="margin-top: 12px; display: flex; gap: 16px;">
-                <a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer" class="social-link">LinkedIn</a>
-                <a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer" class="social-link">Twitter</a>
-            </div>
-        </footer>
+    <div class="columns-container" style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 30px;
+    ">
+        <div class="technical-column">
+            <h3 style="margin-bottom:20px;"><a href="#">Sometimes, I Write (Recent)</a></h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px;">
+                  <a href="https://jina.ai/news/text-embeddings-fail-to-capture-word-order-and-how-to-fix-it" style="text-decoration: none; color: #333;">
+                      Reflections & Learnings of 2024
+                  </a>
+                </li>
+                <li style="margin-bottom: 12px;">
+                  <a href="https://jina.ai/news/beyond-clip-how-jina-clip-advances-multimodal-search/" style="text-decoration: none; color: #333;">
+                      Vision as a Cat Toy: Why Great Ideas Should Never Be Caught
+                  </a>
+                </li>
+                <li style="margin-bottom: 12px;">
+                  <a href="https://jina.ai/news/bridging-language-gaps-in-multilingual-embeddings-via-contrastive-learning" style="text-decoration: none; color: #333;">
+                      Reflections & Learnings of 2023
+                  </a>
+                </li>
+                <li style="margin-bottom: 12px;">
+                    <a href="https://jina.ai/news/the-what-and-why-of-text-image-modality-gap-in-clip-models" style="text-decoration: none; color: #333;">
+                        Hard Truths - Short notes
+                    </a>
+                </li>
+            </ul>
+        </div>
 
+        <div class="management-column">
+            <h3 style="margin-bottom:20px;"><a href="#">Notions</a></h3>
+            <ul style="list-style-type: none; padding: 0;">
+                <li style="margin-bottom: 12px;">
+                    <a href="https://bwanglzu.github.io/" style="text-decoration: none; color: #333;">
+                        Xerox PARC
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <!-- JavaScript for toggle functionality and copy email -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Bio toggle functionality
-            const showBtn = document.getElementById('bioToggleBtn');
-            const hideBtn = document.getElementById('bioHideBtn');
-            const briefBio = document.getElementById('briefBio');
-            const fullProfile = document.getElementById('fullProfile');
+<footer>
+    <p>© 2025 Charan Pushpanathan</p>
+    <p>September 24, 2024</p>
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
+    <p style="margin: 0;"><a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
+    </div>
+</footer>
 
-            // Show full bio
-            showBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                briefBio.classList.add('hidden');
-                fullProfile.classList.remove('hidden');
-            });
-            
-            // Hide full bio
-            hideBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                briefBio.classList.remove('hidden');
-                fullProfile.classList.add('hidden');
-            });
+</div>
 
-            // Email copy functionality
-            const emailDisplay = document.getElementById('email-display');
-            const copyStatus = document.getElementById('copy-status');
-            
-            emailDisplay.addEventListener('click', function() {
-                // Get the email text (removing the "Email: " prefix)
-                const emailText = emailDisplay.textContent.replace('Email: ', '');
-                
-                // Copy to clipboard
-                navigator.clipboard.writeText(emailText).then(function() {
-                    // Show "Copied!" message
-                    copyStatus.style.display = 'inline';
-                    
-                    // Hide after 2 seconds
-                    setTimeout(function() {
-                        copyStatus.style.display = 'none';
-                    }, 2000);
-                }).catch(function(err) {
-                    console.error('Failed to copy: ', err);
-                });
-            });
-            
-            // Add cursor pointer to email
-            emailDisplay.style.cursor = 'pointer';
-        });
-    </script>
-</body>
-</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const thumbnail = document.getElementById('profile-thumbnail');
+    const photoColumn = document.getElementById('photo-column');
+    
+    // Toggle photo visibility on click
+    thumbnail.addEventListener('click', function(e) {
+        e.preventDefault();
+        photoColumn.classList.toggle('visible');
+    });
+});
+</script>
+</body></html>

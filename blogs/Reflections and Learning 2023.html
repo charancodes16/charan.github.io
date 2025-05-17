@@ -1,265 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reflections and Learning 2023 - Charan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <title>Reflections & Learnings of 2023 - Charan Pushpanathan</title>
+  <meta name="description" content="Reflections & Learnings of 2023 - Charan Pushpanathan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.5;
-            letter-spacing: -0.48px;
-            /* Animation properties added */
-            opacity: 0; /* Start body hidden for fade-in effect */
-            animation: bodyFadeIn 0.5s ease-out forwards; /* Body fade-in */
-        }
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://charanpushpanathan.com/reflections-2023">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Reflections & Learnings of 2023">
+  <meta property="og:description" content="Personal insights and learnings from 2023">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
+  
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@charanpushpanathan">
+  <meta property="twitter:domain" content="Charan Pushpanathan">
+  <meta property="twitter:url" content="https://charanpushpanathan.com/reflections-2023">
+  <meta name="twitter:title" content="Reflections & Learnings of 2023">
+  <meta name="twitter:description" content="Personal insights and learnings from 2023">
+  <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
 
-        /* --- Animation Setup --- */
-        /* Keyframes for overall body fade-in */
-        @keyframes bodyFadeIn {
-            to {
-                opacity: 1;
-            }
-        }
+  <style>
+body { 
+  line-height: 1.4;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 50px auto;
+  max-width: 650px;
+}
 
-        /* Keyframes for fade-in and slide-up effect */
-        @keyframes fadeInSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(15px); /* Start slightly lower */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* End at normal position */
-            }
-        }
+#maincontent {
+  max-width: 42em;
+  margin: 15px auto;
+}
 
-        /* Base style for elements that will animate in */
-        .nav-container,
-        .content,
-        .footer {
-            opacity: 0; /* Start hidden */
-            /* Apply animation - 'forwards' keeps the end state */
-            animation: fadeInSlideUp 0.6s ease-out forwards;
-        }
+.title-separator {
+  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+  margin-bottom: 16px;
+}
 
-        /* Stagger the animations */
-        .nav-container {
-            animation-delay: 0.2s; /* Nav appears first */
-        }
-        .content {
-            animation-delay: 0.4s; /* Main content appears next */
-        }
-        .footer {
-            animation-delay: 0.6s; /* Footer appears last */
-        }
-        /* --- End Animation Setup --- */
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(60, 60, 67, 0.6);
+}
 
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+/* Profile photo styles */
+.profile-thumbnail {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;  /* Less rounded corners */
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: text-bottom;  /* Align with the bottom of the text */
+  margin-left: 2px;  /* Reduced gap */
+  margin-bottom: 4px;  /* Adjust downward */
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s ease;
+}
 
-        .nav-container {
-            width: 550px;
-            margin: 50px auto 0;
-            padding: 0 10px;
-        }
+.profile-thumbnail:hover {
+  border-color: #1a0dab;
+}
 
-        .title-separator {
-            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-            margin-bottom: 16px;
-        }
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;  /* Reduced from 20px to 10px */
+  margin-bottom: 10px;  /* Reduced from 20px to 10px */
+}
 
-        .section-title {
-            font-weight: 400;
-            font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
-        }
+/* Adjust paragraph margins to reduce vertical spacing */
+#maincontent p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 10px;
-        }
+/* Adjust list margins to reduce vertical spacing */
+#maincontent ol, #maincontent ul {
+  margin-top: 3px;
+  margin-bottom: 8px;
+  list-style-type: none;
+  padding-left: 0;
+}
 
-        .nav-link {
-            font-weight: 700;
-            font-size: 16px;
-            color: #1A1A1A;
-            text-decoration: none;
-            /* Added transition for color hover effect */
-            transition: color 0.3s ease-out;
-        }
+#maincontent li {
+  margin-bottom: 12px;
+}
 
-        .nav-link:hover {
-             /* Added hover color */
-             color: #007AFF;
-        }
+.content-column {
+  flex: 1;
+}
 
-        .nav-link.active {
-            color: rgba(60, 60, 67, 0.6);
-             /* Added pointer-events to prevent hover on active link */
-            pointer-events: none;
-        }
+.photo-column {
+  display: none;
+  width: 200px;
+  text-align: center;
+}
 
-        .content {
-            width: 550px;
-            margin: 30px auto;
-            padding: 0 10px;
-        }
+.photo-column.visible {
+  display: block;
+}
 
-        .about-title {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
+.photo-column img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 0;  /* Sharp corners */
+  margin-bottom: 8px;
+}
 
-        .update-date {
-            font-weight: 700;
-            font-size: 12px;
-            color: rgba(60, 60, 67, 0.6);
-            margin-bottom: 16px;
-        }
+.photo-caption {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
 
-        .about-content {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 1.4;
-            color: #1A1A1A;
-        }
+.article-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
 
-        .about-content ul {
-            list-style-type: none;
-            margin-bottom: 20px;
-        }
+.update-date {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(60, 60, 67, 0.6);
+  margin-bottom: 16px;
+  font-style: italic;
+}
 
-        .about-content li {
-            margin-bottom: 1em;
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-            /* Add subtle animation for list items */
-            opacity: 0;
-            animation: fadeInSlideUp 0.5s ease-out forwards;
-        }
-
-        /* Stagger the list item animations */
-        .about-content li:nth-child(1) { animation-delay: 0.5s; }
-        .about-content li:nth-child(2) { animation-delay: 0.55s; }
-        .about-content li:nth-child(3) { animation-delay: 0.6s; }
-        .about-content li:nth-child(4) { animation-delay: 0.65s; }
-        .about-content li:nth-child(5) { animation-delay: 0.7s; }
-        .about-content li:nth-child(6) { animation-delay: 0.75s; }
-        .about-content li:nth-child(7) { animation-delay: 0.8s; }
-        .about-content li:nth-child(8) { animation-delay: 0.85s; }
-        .about-content li:nth-child(9) { animation-delay: 0.9s; }
-        .about-content li:nth-child(10) { animation-delay: 0.95s; }
-        .about-content li:nth-child(11) { animation-delay: 1s; }
-        .about-content li:nth-child(12) { animation-delay: 1.05s; }
-        .about-content li:nth-child(13) { animation-delay: 1.1s; }
-        .about-content li:nth-child(14) { animation-delay: 1.15s; }
-        .about-content li:nth-child(15) { animation-delay: 1.2s; }
-        .about-content li:nth-child(16) { animation-delay: 1.25s; }
-
-        .about-content a {
-            color: inherit;
-            text-decoration: underline;
-            /* Added transition for link hover */
-            transition: color 0.3s ease-out, opacity 0.3s ease-out;
-        }
-
-        .about-content a:hover {
-            color: #007AFF;
-            opacity: 0.8;
-        }
-
-        .author-email {
-            margin-top: 20px;
-            font-size: 14px;
-            color: rgba(60, 60, 67, 0.8);
-            /* Add subtle animation */
-            opacity: 0;
-            animation: fadeInSlideUp 0.5s ease-out forwards;
-            animation-delay: 1.3s;
-        }
-
-        .footer {
-            width: 550px;
-            margin: 50px auto 20px;
-            padding: 10px 10px 0;
-            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
-        }
-
-        @media (max-width: 600px) {
-            .nav-container,
-            .content,
-            .footer {
-                width: 100%;
-                padding: 0 16px;
-            }
-        }
-    </style>
+/* Media queries for responsive design */
+@media (max-width: 650px) {
+  .content-with-photo {
+    flex-direction: column;
+  }
+  
+  .photo-column {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-column img {
+    max-width: 180px;
+  }
+}
+</style>	
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-container">
-            <div class="title-separator">
-                <h1 class="section-title">Charan Pushpanathan</h1>
-            </div>
-            <div class="nav-links">
-                <a href="../index.html" class="nav-link">About</a>
-                <a href="../Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-                <a href="../files/Academic_Charan.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-                <a href="/research.html" class="nav-link">Research</a>
-                <a href="/assorted.html" class="nav-link">Assorted</a>
-            </div>
-        </nav>
+<div>
+    <a href="index.html">
+        <h1 class="section-title">Charan Pushpanathan</h1>
+    </a>
+    <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
+        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+            charanp2@illinois.edu
+        </a>
+    </p>
 
-        <main class="content">
-            <h2 class="about-title">Reflections & Learnings of 2023</h2>
-            <p class="update-date">Written 02 December 2023; by Charan Pushpanathan</p>
-            <div class="about-content">
-                <ul>
-                    <li>Find a place where you can drop the notions of good and bad, and where it brings you peace.</li>
-                    <li>What seeks you is seeking you.</li>
-                    <li>At one point, life gives you a signal about whether a commitment is working out for you or not.</li>
-                    <li>Connection has power and branches; sometimes you should consider it.</li>
-                    <li>Always schedule your phase and plan it properly. Don't break it or else you're leaving something behind. Scheduling makes miracles.</li>
-                    <li>Be attentive, disciplined, and punctual to schedules and plans when you think it's important.</li>
-                    <li>Time is precious. It's all about how you take things—whether to move forward, hold, or reach an endpoint.</li>
-                    <li>Observe people and learn from them. You can gain something that you can add to your plan or existing process.</li>
-                    <li>A good or a bad plan is better than no plan [learned from Peter Thiel].</li>
-                    <li>Sometimes, people's perspectives and nonsense can derail your plans. Analyze and make better decisions to avoid these threats.</li>
-                    <li>Aim for the long term; the short term is like a dopamine rush—try to avoid it.</li>
-                    <li>Questioning yourself will help align the process.</li>
-                    <li>Tailor-made days.</li>
-                    <li>It's always ok to say "I don't know" or "No".</li>
-                    <li>Mankind is great. Talk to people, make commitments, and respect them.</li>
-                    <li>Execution establishes the plan because plans are 5%; execution is 95%.</li>
-                </ul>
-
-                <p class="author-email">For emailing: charanpp1603@gmail.com</p>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>© 2025 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603@gmail.com</p>
-        </footer>
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
+    <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
+    <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
+    <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
     </div>
+</div>
+
+<div id="maincontent" style="margin-top:10px">
+
+<h2 class="article-title">Reflections & Learnings of 2023</h2>
+<p class="update-date">Written 02 December 2023; by Charan Pushpanathan</p>
+
+<ul>
+    <li>Find a place where you can drop the notions of good and bad, and where it brings you peace.</li>
+    <li>What seeks you is seeking you.</li>
+    <li>At one point, life gives you a signal about whether a commitment is working out for you or not.</li>
+    <li>Connection has power and branches; sometimes you should consider it.</li>
+    <li>Always schedule your phase and plan it properly. Don't break it or else you're leaving something behind. Scheduling makes miracles.</li>
+    <li>Be attentive, disciplined, and punctual to schedules and plans when you think it's important.</li>
+    <li>Time is precious. It's all about how you take things—whether to move forward, hold, or reach an endpoint.</li>
+    <li>Observe people and learn from them. You can gain something that you can add to your plan or existing process.</li>
+    <li>A good or a bad plan is better than no plan [learned from Peter Thiel].</li>
+    <li>Sometimes, people's perspectives and nonsense can derail your plans. Analyze and make better decisions to avoid these threats.</li>
+    <li>Aim for the long term; the short term is like a dopamine rush—try to avoid it.</li>
+    <li>Questioning yourself will help align the process.</li>
+    <li>Tailor-made days.</li>
+    <li>It's always ok to say "I don't know" or "No".</li>
+    <li>Mankind is great. Talk to people, make commitments, and respect them.</li>
+    <li>Execution establishes the plan because plans are 5%; execution is 95%.</li>
+</ul>
+
+<footer>
+    <p>© 2025 Charan Pushpanathan</p>
+    <p>Last updated: May 16, 2025</p>
+    <div style="margin: 20px 0;">
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
+    <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
+    <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
+    <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
+    </div>
+</footer>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add any JavaScript functionality here if needed
+});
+</script>
 </body>
 </html>

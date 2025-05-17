@@ -1,162 +1,157 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assorted - Charan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<html><head>
+  <meta charset="UTF-8">
+  <title>Assorted</title>
+  <meta name="description" content="Bo's website">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            background: #FFFFFF;
-            color: #1A1A1A;
-            line-height: 1.5;
-            letter-spacing: -0.48px;
-        }
+  <style>
+body { 
+  line-height: 1.4;
+  font-size: 16px;
+  padding: 0 10px;
+  margin: 50px auto;
+  max-width: 650px;
+}
 
-        .container {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+#maincontent {
+  max-width: 42em;
+  margin: 15px auto;
+}
 
-        .nav-container {
-            width: 550px;
-            margin: 50px auto 0;
-            padding: 0 10px;
-        }
+.title-separator {
+  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+  margin-bottom: 16px;
+}
 
-        .title-separator {
-            border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-            margin-bottom: 16px;
-        }
+.section-title {
+  font-weight: 400;
+  font-size: 20px;
+  color: rgba(60, 60, 67, 0.6);
+}
 
-        .section-title {
-            font-weight: 400;
-            font-size: 20px;
-            color: rgba(60, 60, 67, 0.6);
-        }
+/* Profile photo styles */
+.profile-thumbnail {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;  /* Less rounded corners */
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: text-bottom;  /* Align with the bottom of the text */
+  margin-left: 2px;  /* Reduced gap */
+  margin-bottom: 4px;  /* Adjust downward */
+  cursor: pointer;
+  border: 2px solid #f0f0f0;
+  transition: border-color 0.2s ease;
+}
 
-        .nav-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 10px;
-        }
+.profile-thumbnail:hover {
+  border-color: #1a0dab;
+}
 
-        .nav-link {
-            font-weight: 700;
-            font-size: 16px;
-            color: #1A1A1A;
-            text-decoration: none;
-        }
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;  /* Reduced from 20px to 10px */
+  margin-bottom: 10px;  /* Reduced from 20px to 10px */
+}
 
-        .nav-link.active {
-            color: rgba(60, 60, 67, 0.6);
-        }
+/* Adjust paragraph margins to reduce vertical spacing */
+#maincontent p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 
-        .content {
-            width: 550px;
-            margin: 30px auto;
-            padding: 0 10px;
-        }
+/* Adjust list margins to reduce vertical spacing */
+#maincontent ol {
+  margin-top: 3px;
+  margin-bottom: 8px;
+}
 
-        .about-title {
-            font-weight: 700;
-            font-size: 28px;
-            margin-bottom: 16px;
-        }
+.content-column {
+  flex: 1;
+}
 
-        .intro-text {
-            font-weight: 400;
-            font-size: 15px;
-            line-height: 1.4;
-            color: #1A1A1A;
-            margin-bottom: 30px;
-            text-align: justify;
-            text-justify: inter-word;
-            hyphens: auto;
-        }
+/* Media queries for responsive design */
+@media (max-width: 650px) {
+  .content-with-photo {
+    flex-direction: column;
+  }
+  
+  .photo-column {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-column img {
+    max-width: 180px;
+  }
+}
 
-        .about-content {
-            margin-top: 20px;
-        }
+/* Blog List styles */
+    .blog-list h3 {
+      margin-top: 15px;
+      margin-bottom: 4px;
+    }
+    
+    .blog-list a {
+      font-weight: 200;
+      font-size: 15px;
+      color: #333;
+      text-decoration: none;
+    }
+    
+    .update-date {
+      font-size: 14px;
+      color: rgba(60, 60, 67, 0.6); /* Apple gray */
+      margin-bottom: 16px;
+      display: block;
+    }
 
-        .content-item {
-            margin-bottom: 20px;
-        }
-
-        .content-item h3 {
-            font-weight: 700;
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .content-item a {
-            color: #1A1A1A;
-            text-decoration: none;
-        }
-
-        .content-item a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            width: 550px;
-            margin: 50px auto 20px;
-            padding: 10px 10px 0;
-            border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-            font-size: 16px;
-            color: rgba(60, 60, 67, 0.6);
-        }
-
-        @media (max-width: 600px) {
-            .nav-container,
-            .content,
-            .footer {
-                width: 100%;
-                padding: 0 16px;
-            }
-        }
-    </style>
+</style>	
 </head>
-<body>
-    <div class="container">
-        <nav class="nav-container">
-            <div class="title-separator">
-                <h1 class="section-title">Charan Pushpanathan</h1>
-            </div>
-            <div class="nav-links">
-                <a href="/index.html" class="nav-link">About</a>
-                <a href="/Sometimes, I Write.html" class="nav-link">Sometimes, I Write</a>
-                <a href="/files/Resume.pdf" class="nav-link">Resume</a>
-                <a href="#" class="nav-link">Scholar</a>
-                <a href="/research.html" class="nav-link">Research</a>
-                <a href="/assorted.html" class="nav-link active">Assorted</a>
-            </div>
-        </nav>
 
-        <main class="content">
-            <h2 class="about-title">Assorted</h2>
-            <p class="intro-text">This page is a little dump, not categorized... well, stuff about people or something interesting. Bits and pieces from my life, collected along the way. Honestly, I just wanted a space to share all the quirky, random things. Feel free to play around, Get Psyched!</p>
-            
-            <div class="about-content">
-                <div class="content-item">
-                    <h3><a href="/dump/xeroxparc.html">Xerox PARC</a></h3>
-                </div>
-                <!-- Add more content items as needed -->
-            </div>
-        </main>
+<div>
+    <a href="index.html">
+        <h1 class="section-title">Charan Pushpanathan</h1>
+    </a>
+    <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
+        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+            charanp2@illinois.edu
+        </a>
+    </p>
 
-        <footer class="footer">
-            <p>© 2025 Charan Pushpanathan</p>
-            <p style="margin-top: 8px;">For emailing: charanpp1603@gmail.com</p>
-        </footer>
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
+    <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
+    <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
+    <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
     </div>
+</div>
+
+<body>
+  <div id="maincontent" style="margin-top:20px">
+    <h1 class="header-title">Assorted</h1>
+    <p>This page is a little dump, not categorized... well, stuff about people or something interesting. Bits and pieces from my life, collected along the way. Honestly, I just wanted a space to share all the quirky, random things. Feel free to play around, Get Psyched!</p>
+    <!-- Blog List -->
+    <div>
+      <h3><a href="/dump/xeroxparc.html">Xerox PARC</a></h3>
+      <time class="update-date">25 December 2024; by Charan Pushpanathan</time>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Charan Pushpanathan</p>
+    <p>May 16, 2025</p>
+    <div style="display: flex; align-items: center; gap: 16px;">
+    <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
+    <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
+    <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
+    <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
+    </div>
+</footer>
+
 </body>
 </html>
