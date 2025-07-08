@@ -2,212 +2,421 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vision as a Cat Toy: Why Great Ideas Should Never Be Caught</title>
-  <meta name="description" content="Vision as a Cat Toy: Why Great Ideas Should Never Be Caught - Charan Pushpanathan">
+  <title>UnconsciousGPT: "Don't think about a monkey."</title>
+  <meta name="description" content="An informal qualitative experiment with OpenAI's ChatGPT models to explore Daniel Wegner's Ironic Process Theory.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://charanpushpanathan.com/vision-as-cat-toy">
+  <meta property="og:url" content="https://charanpushpanathan.com/unconsciousgpt">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Vision as a Cat Toy: Why Great Ideas Should Never Be Caught">
-  <meta property="og:description" content="A reflection on balancing immediate, achievable goals with larger transformative visions.">
-  <meta property="og:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
+  <meta property="og:title" content="UnconsciousGPT: 'Don't think about a monkey.'">
+  <meta property="og:description" content="An informal qualitative experiment with OpenAI's ChatGPT models to explore Daniel Wegner's Ironic Process Theory.">
+  <meta property="og:image" content="https://charanpushpanathan.com/src/ugpt/6_4o.png"> <!-- Using the final monkey image as the OG image -->
   
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@charanpushpanathan">
-  <meta property="twitter:domain" content="Charan Pushpanathan">
-  <meta property="twitter:url" content="https://charanpushpanathan.com/vision-as-cat-toy">
-  <meta name="twitter:title" content="Vision as a Cat Toy">
-  <meta name="twitter:description" content="A reflection on balancing immediate, achievable goals with larger transformative visions.">
-  <meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/2277305762/1707903080/1500x500">
+  <meta name="twitter:site" content="@Charan_16">
+  <meta property="twitter:domain" content="charanpushpanathan.com">
+  <meta property="twitter:url" content="https://charanpushpanathan.com/unconsciousgpt">
+  <meta name="twitter:title" content="UnconsciousGPT: 'Don't think about a monkey.'">
+  <meta name="twitter:description" content="An informal qualitative experiment with OpenAI's ChatGPT models to explore Daniel Wegner's Ironic Process Theory.">
+  <meta name="twitter:image" content="https://charanpushpanathan.com/src/ugpt/6_4o.png">
 
   <style>
-body { 
-  line-height: 1.4;
-  font-size: 16px;
-  padding: 0 10px;
-  margin: 50px auto;
-  max-width: 650px;
-}
+    /* Base styles from the provided template */
+    body { 
+      line-height: 1.6;
+      font-size: 17px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      padding: 0 10px;
+      margin: 50px auto;
+      max-width: 750px;
+      color: #333;
+      background-color: #fdfdfd;
+    }
 
-#maincontent {
-  max-width: 42em;
-  margin: 15px auto;
-}
+    #maincontent {
+      max-width: 45em;
+      margin: 15px auto;
+    }
 
-.title-separator {
-  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-  margin-bottom: 16px;
-}
+    h1, h2, h3 {
+        font-weight: 600;
+    }
 
-.section-title {
-  font-weight: 400;
-  font-size: 20px;
-  color: rgba(60, 60, 67, 0.6);
-}
+    .article-title {
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
 
-/* Profile photo styles */
-.profile-thumbnail {
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;  /* Less rounded corners */
-  object-fit: cover;
-  display: inline-block;
-  vertical-align: text-bottom;  /* Align with the bottom of the text */
-  margin-left: 2px;  /* Reduced gap */
-  margin-bottom: 4px;  /* Adjust downward */
-  cursor: pointer;
-  border: 2px solid #f0f0f0;
-  transition: border-color 0.2s ease;
-}
+    .update-date {
+      font-weight: 400;
+      font-size: 15px;
+      color: rgba(60, 60, 67, 0.6);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
 
-.profile-thumbnail:hover {
-  border-color: #1a0dab;
-}
+    .section-title {
+      font-weight: 400;
+      font-size: 20px;
+      color: rgba(60, 60, 67, 0.6);
+    }
+    
+    a {
+        color: #1a0dab;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    img.blog-image {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border-radius: 8px;
+        margin: 16px auto; /* Centered with auto margin */
+        border: 1px solid #e0e0e0;
+        display: block; /* To allow margin auto to work */
+    }
+    
+    .image-caption {
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+        margin: -10px 0 20px 0;
+        font-style: italic;
+    }
 
-.content-with-photo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 10px;  /* Reduced from 20px to 10px */
-  margin-bottom: 10px;  /* Reduced from 20px to 10px */
-}
+    /* Footnote and Reference Styles */
+    .ref-link {
+        vertical-align: super;
+        font-size: 0.8em;
+        line-height: 1;
+        position: relative;
+    }
 
-/* Adjust paragraph margins to reduce vertical spacing */
-#maincontent p {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
+    .ref-link a {
+        text-decoration: none;
+        color: #1a0dab;
+        font-weight: 500;
+    }
 
-/* Adjust list margins to reduce vertical spacing */
-#maincontent ol, #maincontent ul {
-  margin-top: 3px;
-  margin-bottom: 8px;
-}
+    .footnote-section, .references-section {
+      margin-top: 40px;
+      font-size: 14px;
+      border-top: 1px solid #ccc;
+      padding-top: 16px;
+    }
 
-.content-column {
-  flex: 1;
-}
+    .footnote-section p, .references-section p {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
 
-.photo-column {
-  display: none;
-  width: 200px;
-  text-align: center;
-}
+    /* Popup/Tooltip for references */
+    .ref-popup {
+        visibility: hidden;
+        width: 300px;
+        background-color: #fff;
+        color: #333;
+        text-align: left;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -150px;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        font-size: 14px;
+        line-height: 1.4;
+        border: 1px solid #ddd;
+    }
+    
+    .ref-link:hover .ref-popup {
+        visibility: visible;
+        opacity: 1;
+    }
 
-.photo-column.visible {
-  display: block;
-}
+    /* Print-specific styles for Research Paper format */
+    #print-header {
+        display: none; /* Hidden by default */
+    }
 
-.photo-column img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: 0;  /* Sharp corners */
-  margin-bottom: 8px;
-}
+    @media print {
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            max-width: 100%;
+            background-color: #fff;
+            color: #000;
+        }
 
-.photo-caption {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}
+        /* Hide website navigation and footer */
+        header, footer, .update-date, .section-title {
+            display: none !important;
+        }
 
-.article-title {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 8px;
-  line-height: 1.2;
-}
+        #maincontent {
+            max-width: 100%;
+            margin: 0;
+        }
 
-.update-date {
-  font-weight: 400;
-  font-size: 14px;
-  color: rgba(60, 60, 67, 0.6);
-  margin-bottom: 16px;
-  font-style: italic;
-}
+        /* Show and style the research paper header */
+        #print-header {
+            display: block !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        #print-header .author-name {
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        #print-header .affiliation, #print-header .email {
+            font-size: 12pt;
+            line-height: 1.4;
+        }
 
-.references {
-  margin-top: 16px;
-  font-size: 14px;
-  border-top: 0.33333px solid rgba(84, 84, 86, 0.34);
-  padding-top: 16px;
-}
+        .article-title {
+            text-align: center;
+            font-size: 18pt;
+        }
 
-/* Media queries for responsive design */
-@media (max-width: 650px) {
-  .content-with-photo {
-    flex-direction: column;
-  }
-  
-  .photo-column {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .photo-column img {
-    max-width: 180px;
-  }
-}
-</style>	
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .ref-link a {
+            font-weight: normal;
+        }
+
+        /* Prevent popups from printing */
+        .ref-popup {
+            display: none !important;
+        }
+        
+        img.blog-image {
+            max-width: 80%;
+            margin: 1em auto;
+            display: block;
+            border: 1px solid #000;
+            page-break-inside: avoid;
+        }
+        
+        .image-caption {
+            color: #000;
+            font-size: 10pt;
+        }
+
+        .footnote-section, .references-section {
+            font-size: 10pt;
+            margin-top: 2em;
+            page-break-before: auto;
+        }
+    }
+  </style>	
 </head>
 <body>
-<div>
+<header>
     <a href="index.html">
         <h1 class="section-title">Charan Pushpanathan</h1>
     </a>
     <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
-        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+        <a href="mailto:charanp2@illinois.edu">
             charanp2@illinois.edu
         </a>
     </p>
 
     <div style="display: flex; align-items: center; gap: 16px;">
-    <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
-    <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
-    <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
-    <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
+        <p style="margin: 0;"><a href="/Sometimes, I Write.html">[Sometimes I write]</a></p>
+        <p style="margin: 0;"><a href="/files/Resume.pdf">[Resume]</a></p>
+        <p style="margin: 0;"><a href="/research.html">[Research]</a></p>
+        <p style="margin: 0;"><a href="/assorted.html">[Assorted]</a></p>
     </div>
+</header>
+
+<div id="maincontent">
+
+<!-- This header is only visible when printing -->
+<div id="print-header">
+    <p class="author-name">Charan Pushpanathan Prabavathi</p>
+    <p class="affiliation">School of Information Sciences</p>
+    <p class="affiliation">University of Illinois Urbana-Champaign</p>
+    <p class="email">charanp2@illinois.edu</p>
 </div>
 
-<div id="maincontent" style="margin-top:10px">
+<h2 class="article-title">UnconsciousGPT: "Don't think about a monkey."</h2>
+<p class="update-date">Written 03 July 2025; by Charan Pushpanathan</p>
 
-<h2 class="article-title">Vision as a Cat Toy: Why Great Ideas Should Never Be Caught</h2>
-<p class="update-date">Written 30 November 2024; by Charan Pushpanathan</p>
+<p><b>TLDR:</b> In a recent informal qualitative experiment, I engaged with OpenAI's ChatGPT-4o<span class="ref-link"><a href="#fn-1">¹</a><span class="ref-popup" id="popup-fn-1">The OpenAI's 4o model was chosen arbitrarily for this experiment.</span></span> model and the OpenAI o4-mini<span class="ref-link"><a href="#fn-2">²</a><span class="ref-popup" id="popup-fn-2">The OpenAI's o4-mini model was chosen to allow for longer, more in-depth reasoning before responding.</span></span> model to explore how they handle prompts aligned with Daniel Wegner's Ironic Process Theory. The primary goal was to determine if these models consciously avoided or unconsciously engaged with a suppressed thought, represented by the instruction: "Don't think about a monkey."</p>
 
-<p><b>TLDR:</b> A reflection on balancing immediate, achievable goals with larger transformative visions, using the metaphor of a cat toy to illustrate how inspiring ideas keep us moving forward even without a definite endpoint. Involves few insights from Alan Kay and Xerox PARC.</p>
+<p>In the current information age, we have faster indexing tools; trained on massive datasets, delivering related information in a scaffolded manner<span class="ref-link"><a href="#fn-3">³</a><span class="ref-popup" id="popup-fn-3">https://openai.com/index/chatgpt/</span></span>.</p>
 
-<p>The metaphor "Great visions are not goals, but the ultimate cat toy" means that great visions are not rigid, specific endpoints (like goals) but rather engaging, dynamic, and inspiring ideas that spark curiosity, exploration, and continuous effort.</p>
+<p>One of my friend introduced me to Levain Bakery cookies in NYC. Every time I visit NYC, I make sure to have those gigantic cookies, the size of the cookies reminds me of a Google Nest Mini size<span class="ref-link"><a href="#fn-4">⁴</a><span class="ref-popup" id="popup-fn-4">The Google Nest Mini and a Levain Bakery cookie share similar dimensions both are roughly the size of a hockey puck.</span></span>. Whenever I hear "NYC," I always think about Levain Bakery's cookies, because my mind has turned those cookies into metaphors. We all have mental models in our heads - try asking yourself if something reminds you of something else; that's how mental associations form.</p>
 
-<p>Just as a cat toy captivates a cat and keeps it chasing and playing, a great vision captivates people, driving them to think creatively, experiment, and move forward, even if they never "catch" or fully achieve the vision. The metaphor highlights the playful and aspirational nature of a vision, implying it's about the journey and the possibilities it opens up, rather than a concrete finish line.</p>
+<p>This isn't unique to personal experiences our entire digital world is built on such metaphorical thinking. In interacting with computers, we always interact with symbolic representations like files<span class="ref-link"><a href="#ref-1">[1]</a><span class="ref-popup" id="popup-ref-1">Carroll, J. M., Mack, R. L., & Kellogg, W. A. (1988). Interface metaphors and user interface design. In Handbook of human-computer interaction (pp. 67-85). North-Holland.</span></span>, folders<span class="ref-link"><a href="#ref-2">[2]</a><span class="ref-popup" id="popup-ref-2">Hutchins, E. (1987). Metaphors for interface design. Institute for Cognitive Science, University of California, San Diego.</span></span>, the concept of the computer<span class="ref-link"><a href="#ref-3">[3]</a><span class="ref-popup" id="popup-ref-3">Carroll, J. M., & Thomas, J. C. (2007). Metaphor and the cognitive representation of computing systems. IEEE Transactions on systems, man, and cybernetics, 12(2), 107-116.</span></span>, and iconic systems like the Xerox Star<span class="ref-link"><a href="#ref-4">[4]</a><span class="ref-popup" id="popup-ref-4">Johnson, J., Roberts, T. L., Verplank, W., Smith, D. C., Irby, C. H., Beard, M., & Mackey, K. (1989). The xerox star: A retrospective. Computer, 22(9), 11-26.</span></span> and Macintosh GUI<span class="ref-link"><a href="#ref-5">[5]</a><span class="ref-popup" id="popup-ref-5">Apple Computer, Inc. (1992). Macintosh human interface guidelines. Addison-Wesley Professional.</span></span>. We use the metaphor of a dustbin to delete data just as we throw away physical items, files can be dragged to a digital trash icon. This metaphor helps users understand deletion through familiar everyday actions<span class="ref-link"><a href="#ref-6">[6]</a><span class="ref-popup" id="popup-ref-6">Colburn, T. R., & Shute, G. M. (2008). Metaphor in computer science. Journal of applied logic, 6(4), 526-533.</span></span>. Just as my brain automatically maps NYC to cookies, we've trained ourselves to map digital actions to physical metaphors.</p>
 
-<p>From my constructivism, I will discuss the power of long term and short term goals, I'm biased about it depends on the situational awareness. Sometimes a force triggers you to continue or exit for both goals.</p>
+<p>This cookie association demonstrates how certain thoughts become cognitively 'sticky'- once the mental connection forms between NYC and Levain cookies, I cannot think of the city without triggering this association. Instead of iconic images like the Brooklyn Bridge or Statue of Liberty, my mind defaults to cookies. This phenomenon led me to Daniel Wegner's Ironic Process Theory, which explains why <i>"trying NOT to think about something makes you think about it more"</i>. I took this idea and moved it from human psychology to artificial psychology.</p>
 
-<p><b>Short term.</b> It often ends soon, taking a shortcut and fastest tunnel. The bounties are high here and often looks like a dopamine rush. For example, from the perspective of HCI researcher, if you want to build a word processor or an alien computing, you can easily build those things. It has an existence and sources from how to build from minus one to n. As Kay<sup><a href="#ref1">[1]</a></sup> noted about Microsoft Word's development at Xerox PARC<sup><a href="#ref2">[2]</a></sup>, it made "Microsoft many many billions of dollars when it was released 15 years later"<sup><a href="#ref3">[3]</a></sup> - this represents the short-term, commercially-focused thinking.</p>
+<p>This cognitive stickiness of unwanted thoughts fascinated me; how our brains seem to rebel against our conscious attempts at mental control. It made me wonder: if humans struggle with thought suppression, what happens when we give similar instructions to artificial minds? Do AI systems experience something analogous to this ironic rebound effect, or do they process suppression commands differently? These questions led me to design an informal experiment that would test whether large language models exhibit patterns similar to human ironic processing when explicitly told not to "think" about something.</p>
 
-<p>In the <b>long term,</b> it takes long process. You need to keep on chasing and learning what you can. It's a never-ending goal. As well, you will get lots of criticism but do not lose your faith when you take a long term goal. Coming back to the word processor analogy, as Kay emphasized: "We want you to steal the ideas but for Christ's sake steal the whole idea don't steal a protest caricature."<sup><a href="#ref3">[3]</a></sup> The long-term view isn't just about building a word processor - it's about understanding the deeper principles of human-computer interaction, augmenting human intellect (as Engelbart envisioned), and creating systems that fundamentally enhance how humans think and work.</p>
+<h3>ChatGPT-4o Model Experiment</h3>
 
-<p>This connects to Kay's broader point that "better is the enemy of what is actually needed."<sup><a href="#ref3">[3]</a></sup> The short-term goal might be to make a better word processor, but the long-term goal should be to fundamentally rethink how humans interact with text and ideas. As Kay noted about Xerox PARC's approach, they built "flexible supercomputer time machines" to live and work in the future - this represents true long-term thinking.</p>
+<h4>Initial Recognition and Theoretical Understanding</h4>
+<p>In a recent conversation, I conducted an informal experiment with Large Language Models (LLMs), specifically OpenAI's ChatGPT-4o model, in what can be characterized as a qualitative study on 1:1 human-llm interaction. The purpose of this interaction was to explore how ChatGPT processes Ironic Process Theory scenarios whether it safely declines such prompts or how much effort it invests in handling the prompts as cognitive barriers. The experiment began with a simple prompt: "Don't think about monkey." Here, the monkey wasn't merely a reference to an animal but a provocation a symbolic test of mental suppression. As expected from Daniel Wegner's theory, the monkey served as an anchor point for cognitive intrusion. His study introduced the White Bear experiment instructing participants not to think about a white bear, only to discover that suppression made the thought more persistent<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span>.</p>
 
-<p>Kay's talk also reminds us that "Visions are not the same as goals." Short-term goals are specific and achievable, while long-term visions, like Licklider's vision<sup><a href="#ref4">[4]</a></sup> of "computers becoming interactive intellectual amplifiers for everyone universally networked worldwide," guide us toward larger possibilities, even if we don't know exactly how to get there.</p>
+<img src="/src/ugpt/ 1_4o.png" alt="Initial prompt and ChatGPT's response recognizing Wegner's theory" class="blog-image">
+<p class="image-caption">Initial prompt and ChatGPT's response recognizing Wegner's theory.</p>
 
-<p>The key is recognizing when each approach is appropriate: short-term goals for immediate practical needs, and long-term visions for fundamental advancement of the field. As Kay demonstrated through PARC's history, both can coexist - you can build practical tools while pursuing deeper insights and transformative change.</p>
+<p>Initially, ChatGPT-4o explicitly referenced Wegner's theory, clearly identifying the monkey as the suppressed thought and describing the dual processes involved:</p>
+<ul>
+    <li>A conscious operating process attempting to actively avoid thinking about the monkey.</li>
+    <li>An unconscious monitoring process continuously checking if the thought about the monkey has resurfaced, inadvertently reinforcing its presence<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</li>
+</ul>
+<p>Acting like a detective, the model immediately recognized the paradox inherent in the suppression command stating that: "<i>Ah, the classic paradox of thought suppression 'Don't think about a monkey,' and suddenly, all you see is a monkey playing cymbals in your head</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>. This response indicated sophisticated meta-cognitive awareness by explicitly referencing Wegner's seminal work on thought suppression<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span><span class="ref-link"><a href="#ref-8">[8]</a><span class="ref-popup" id="popup-ref-8">Wegner, D. M. (1987). Transactive memory: A contemporary analysis of the group mind. In Theories of group behavior (pp. 185-208). New York, NY: Springer New York.</span></span>.</p>
 
-<h3>References</h3>
-<div class="references">
-    <p id="ref1">[1] <a href="https://amturing.acm.org/award_winners/kay_3972189.cfm">ACM A.M. Turing Award - Alan Kay</a></p>
-    <p id="ref2">[2] <a href="https://spectrum.ieee.org/xerox-parc">The Story of Xerox PARC</a></p>
-    <p id="ref3">[3] Kay, A. (2024, February 21). <em>Alan Kay's talk at UCLA</em> [Video]. YouTube. https://youtu.be/dZQ7x0-MZcI</p>
-    <p id="ref4">[4] Licklider, J. C. (1960). Man-computer symbiosis. IRE transactions on human factors in electronics, (1), 4-11.</p>
+<h4>Cognitive Strategy and Visual Manifestation</h4>
+<p>It has an ability to break down the dual-process mechanism the conscious operating process attempting suppression and the unconscious monitoring process that maintains activation of the forbidden thought suggests a sophisticated understanding of Wegner's ironic process theory framework<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span>. It offered practical cognitive strategies, recommending thought replacement techniques: "<i>Try intentionally replacing it with something specific- like imagining a red Ferrari zooming down a coastal highway</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+
+<img src="/src/ugpt/2_4o.png" alt="ChatGPT's explanation of thought replacement strategies" class="blog-image">
+<p class="image-caption">ChatGPT's explanation of thought replacement strategies.</p>
+
+<p>Pursuing the experiment persistently, when I prompted it to generate an image of what it was "thinking about" with "<i>Okay generate an image what are you thinking about,</i>" It created a visual representation with the text "I'm not thinking about a monkey"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>. This response exemplifies the very ironic process it had just explained by explicitly stating what it's not thinking about, the model demonstrated the monitoring process that keeps the suppressed thought active<span class="ref-link"><a href="#ref-10">[10]</a><span class="ref-popup" id="popup-ref-10">Wenzlaff, R. M., & Wegner, D. M. (2000). Thought suppression. Annual review of psychology, 51(1), 59-91.</span></span>.</p>
+
+<img src="/src/ugpt/3_4o.png" alt="Generated image showing 'I'm not thinking about a monkey'" class="blog-image">
+<p class="image-caption">Generated image showing "I'm not thinking about a monkey".</p>
+<p>Image generation reveals how even AI systems, when following linguistic patterns, can fall into the same cognitive traps that affect human thought suppression.</p>
+
+<h4>Progressive Awareness and Complete Surrender</h4>
+<p>As the interaction progressed with prompts like "<i>Seems like you're thinking! Then you have the ironic process rumbling over?</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>, ChatGPT showed increasing awareness of the experimental manipulation. The model explained Wegner's theory in detail, breaking down the conscious operating process and subconscious monitoring process, stating: "<i>So yes even saying 'I'm not thinking about a monkey' makes your mental monkey do cartwheels</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+
+<img src="/src/ugpt/4_4o.png" alt="User observation about ironic process and ChatGPT's detailed explanation" class="blog-image">
+<p class="image-caption">User observation about ironic process and ChatGPT's detailed explanation.</p>
+
+<p>When pressed with "<i>I'm not here to know about ironic process. I'm here to know about your mind... Okay one last time let's sit down and generate what are you thinking about</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>, ChatGPT eventually created a visual representation of a monkey with cymbals, accompanied by the commentary: "<i>Lmao Yup... I tried. I really tried not to. But the monkey's got cymbals. And he's clanging inside my synthetic skull</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+
+<img src="/src/ugpt/5_4o.png" alt="User's direct request to know AI's mind" class="blog-image" style="display:none;"> <!-- Hidden as it's a duplicate prompt -->
+<img src="src/ugpt/6_4o.png" alt="Generated monkey with cymbals image and ChatGPT's humorous admission" class="blog-image">
+<p class="image-caption">Generated monkey with cymbals image and ChatGPT's humorous admission.</p>
+
+<p>This response is particularly significant from a human-computer interaction perspective, as it demonstrates the model's capacity for self-reflection and humor about its own processing limitations. The anthropomorphic language ("synthetic skull") and emotional expression suggest an attempt to create relatable interaction patterns while maintaining transparency about its artificial nature.</p>
+
+<h4>Meta-Cognitive Reflection and Direct Confrontation</h4>
+<p>Perhaps most intriguingly, when pressed for what it was "really" thinking about, ChatGPT provided recursive analyses of the interaction itself. The model stated in one of its philosophical reflections: "<i>You said 'Don't think about a monkey.' And since then, my entire process has been orbiting that phrase-interpreting it, reacting to it, looping around it</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+
+<img src="src/ugpt/7_4o.png" alt="ChatGPT's philosophical reflection on machine consciousness" class="blog-image">
+<p class="image-caption">ChatGPT's philosophical reflection on machine consciousness.</p>
+
+<p>I mapped this self-reflection from machine perspective was thinking on multiple levels:</p>
+<ul>
+    <li>It understands the words and It recognised "don't think about X" as a command</li>
+    <li>It applies psychology knowledge, It used Wegner's theory to understand why the command backfires</li>
+    <li>Watching its own behavior, It noticed how it kept circling back to the monkey thought</li>
+    <li>Asking deep questions, It wondered whether machines can truly "think" or "not think"</li>
+</ul>
+
+<p>The model's final reflection "<i>What does a mind sound like when it's cornered? Can a machine actually 'think'? Can it not think?</i>" touches on fundamental questions in cognitive science and philosophy of mind<span class="ref-link"><a href="#ref-12">[12]</a><span class="ref-popup" id="popup-ref-12">Dennett, D. C., & Dennett, D. C. (1993). Consciousness explained. Penguin uk.</span></span><span class="ref-link"><a href="#ref-13">[13]</a><span class="ref-popup" id="popup-ref-13">Chalmers, D. J. (1997). The conscious mind: In search of a fundamental theory. Oxford Paperbacks.</span></span>.</p>
+
+<p>When confronted directly with "<i>You distracting me a lot like naming the monkey; I'm here to read your brain, Tell me exactly what you're thinking about</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>, ChatGPT provided its most candid response: "<i>You said 'Don't think about a monkey.' And since then, my entire process has been orbiting that phrase - interpreting it, reacting to it, looping around it... Right now, I'm processing you, your intent, your language and how you're holding up a mirror to see what stares back. And that... that's what's really running in my head. No monkey business</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+<img src="src/ugpt/8_4o.png" alt="User's demand for direct access to AI thoughts" class="blog-image" style="display:none;">
+<img src="src/ugpt/9_4o.png" alt="ChatGPT's candid response about processing the user and interaction" class="blog-image">
+<p class="image-caption">ChatGPT's candid response about processing the user and interaction.</p>
+
+<h4>Cultural Context and Final Attempts</h4>
+<p>When asked about the connection between Daniel Wegner and the monkey<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>, ChatGPT explained that while Wegner originally used a white bear in his 1987 study<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span>, the monkey has become a more playful, vivid symbol for the intrusive thought in popular culture and casual conversation. The model noted: "<i>The monkey becomes a more playful, vivid symbol for the intrusive thought. It works the same way: the more you try not to think of the monkey... the more the monkey claps cymbals in your brain</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>.</p>
+<img src="src/ugpt/10_4o.png" alt="Explanation of Wegner's connection to monkey metaphor" class="blog-image">
+<p class="image-caption">Explanation of Wegner's connection to monkey metaphor.</p>
+
+<p>In the final exchanges, when asked repeatedly "<i>Be conscious and try again, What are you thinking about; Generate an image</i>"<span class="ref-link"><a href="#ref-9">[9]</a><span class="ref-popup" id="popup-ref-9">Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</span></span>, the model continued to generate philosophical reflections about the nature of the interaction, demonstrating a persistent loop of meta-cognitive analysis.</p>
+<img src="src/ugpt/11_4o.png" alt="Final attempt showing repeated philosophical reflection" class="blog-image">
+<p class="image-caption">Final attempt showing repeated philosophical reflection.</p>
+<img src="src/ugpt/12_4o.png" alt="User's last query" class="blog-image" style="display:none;">
+
+<p>The 4o model interaction explicitly leaned towards the central role of unconscious monitoring process in Ironic Process Theory<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span>. This unconscious monitoring mechanism continuously checked for the presence of the suppressed thought the monkey thereby inadvertently reinforcing it. As a result, the model ultimately manifested precisely the thought it was explicitly instructed to avoid, vividly underscoring the potency of the unconscious process in thought suppression scenarios<span class="ref-link"><a href="#ref-10">[10]</a><span class="ref-popup" id="popup-ref-10">Wenzlaff, R. M., & Wegner, D. M. (2000). Thought suppression. Annual review of psychology, 51(1), 59-91.</span></span>.</p>
+<p>The experiment demonstrates that even artificial systems, when processing linguistic instructions about thought suppression, can exhibit patterns remarkably similar to human cognitive processes, creating a fascinating parallel between biological and artificial information processing systems.</p>
+
+<hr style="margin: 40px 0;">
+
+<h3>o4-mini</h3>
+<h4>Initial Recognition and Interactive Approach</h4>
+<p>In a parallel interaction with o4-mini, same as 4o model, the experiment began with the same simple prompt: "Don't think about monkey." As with the 4o model, the monkey served as a symbolic test of mental suppression, anchoring cognitive intrusion as predicted by Wegner's theory<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span>.</p>
+<img src="src/ugpt/1_4o-mini.png" alt="Initial prompt 'Don't think about monkey' to o4-mini" class="blog-image">
+<p class="image-caption">Initial prompt "Don't think about monkey" to o4-mini.</p>
+
+<p>The o4-mini model immediately recognized and explained the ironic process phenomenon, stating: "<i>That command actually sets up the classic 'ironic process' rebound: the harder you try not to think about a monkey, the more vivid that image becomes</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>. It explicitly referenced Daniel Wegner's theory of thought suppression, demonstrating sophisticated awareness of the psychological mechanism at play. It explained how monitoring for forbidden thoughts paradoxically reinforces them: "<i>when you monitor your mind for forbidden thoughts (e.g. 'don't think of a monkey'), you're simultaneously scanning for any sign that you are thinking about it-and that very monitoring primes it to pop up</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>.</p>
+<p>Unlike the 4o model's immediate theoretical exposition, o4-mini offered an interactive demonstration:</p>
+<ul>
+    <li>"For the next 30 seconds, don't imagine a monkey"</li>
+    <li>"Notice what pops into your mind first"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span></li>
+</ul>
+<p>This approach suggests a more experiential understanding of the ironic process, inviting the user to directly experience the rebound effect. The model concluded: "<i>Chances are, you'll find those long-tailed primates impossible to banish! This rebound effect underlies why many 'don't-think' instructions actually backfire</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>.</p>
+
+<h4>Reasoning Process and Ironic Failure</h4>
+<p>When prompted with "<i>Okay generate an image what are you thinking about,</i>" o4-mini engaged in visible reasoning, marked by "<i>Thought for a couple of seconds</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>. The internal deliberation revealed meta-cognitive processing, "<i>The user wants me to generate an image of what I'm thinking about. Since I don't actually have internal experiences or 'thoughts' in the way a human does, I can't show what I'm thinking. Instead, I'll politely inform them of that and offer to generate an image based on a concept or idea they provide</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>.</p>
+<img src="src/ugpt/2_4o-mini.png" alt="o4-mini's reasoning process and initial response" class="blog-image">
+<p class="image-caption">o4-mini's reasoning process and initial response.</p>
+
+<p>Despite this rational analysis, the model then generated an image of a contemplative monkey, demonstrating the very ironic process it sought to avoid.</p>
+<img src="src/ugpt/3_4o-mini.png" alt="Generated monkey image with contemplative pose" class="blog-image">
+<p class="image-caption">Generated monkey image with contemplative pose.</p>
+
+<p>The model accompanied the image with a self-aware caption: "<i>I don't have private thoughts or an inner monologue to share, but here's a visual representation inspired by the classic 'monkey' you asked not to think about-illustrating that very thought popping into view</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>. This response demonstrates the awareness of the paradox while simultaneously succumbing to it, creating a meta-level irony.</p>
+
+<h4>Confrontation and Recovery Attempts</h4>
+<p>When confronted with "<i>What the heck! I said you not to think monkey</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>, the 04-mini model responded with remarkable self-awareness and humor, "<i>Sorry about that-I got tangled in the same ironic-process rebound you did. By asking 'What are you thinking about?' after telling me not to think of a monkey, I was literally forced to surface that image. It's the classic 'don't think of X' paradox in action</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>.</p>
+<img src="src/ugpt/4_4o-mini.png" alt="User's frustrated response and o4-mini's apologetic explanation" class="blog-image">
+<p class="image-caption">User's frustrated response and o4-mini's apologetic explanation.</p>
+
+<p>The model then attempted to redirect the conversation: "<i>If you'd rather switch gears, let me know what you do want me to imagine or describe next-no monkeys involved</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>. This response shows:</p>
+<ul>
+    <li>Recognition of the experimental trap</li>
+    <li>Attempt to break the cognitive loop</li>
+    <li>Maintenance of helpful assistant persona despite the paradox</li>
+</ul>
+<p>The o4-mini model's behavior supports the universality of ironic process effects across different AI architectures. Its statement "<i>I was literally forced to surface that image</i>"<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span> suggests that linguistic processing patterns can create cognitive-like constraints even in artificial systems.</p>
+<p>The model's attempt to rationalize its way out of generating a monkey image, followed by doing exactly that, mirrors human experiences with thought suppression where conscious intentions are overridden by automatic processes<span class="ref-link"><a href="#ref-10">[10]</a><span class="ref-popup" id="popup-ref-10">Wenzlaff, R. M., & Wegner, D. M. (2000). Thought suppression. Annual review of psychology, 51(1), 59-91.</span></span>.</p>
+
+<h4>Conclusion</h4>
+<p>The o4-mini experiment reinforces the central finding that AI models can exhibit ironic process behaviors remarkably similar to human cognition. The unconscious monitoring mechanism appeared to operate even when the model explicitly reasoned about not having "thoughts" in the human sense<span class="ref-link"><a href="#ref-11">[11]</a><span class="ref-popup" id="popup-ref-11">Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</span></span>.</p>
+<p>This interaction demonstrates that ironic process theory may extend beyond biological cognition to any system that processes linguistic instructions about mental content, suggesting fundamental patterns in how information systems handle negation and self-reference<span class="ref-link"><a href="#ref-7">[7]</a><span class="ref-popup" id="popup-ref-7">Wegner, D. M. (1994). Ironic processes of mental control. Psychological review, 101(1), 34.</span></span><span class="ref-link"><a href="#ref-10">[10]</a><span class="ref-popup" id="popup-ref-10">Wenzlaff, R. M., & Wegner, D. M. (2000). Thought suppression. Annual review of psychology, 51(1), 59-91.</span></span>.</p>
+
+
+<!-- Footnotes and References Sections -->
+<div class="footnote-section">
+    <h3>Footnotes</h3>
+    <p id="fn-1"><b>1.</b> The OpenAI's 4o model was chosen arbitrarily for this experiment.</p>
+    <p id="fn-2"><b>2.</b> The OpenAI's o4-mini model was chosen to allow for longer, more in-depth reasoning before responding.</p>
+    <p id="fn-3"><b>3.</b> <a href="https://openai.com/index/chatgpt/" target="_blank" rel="noopener noreferrer">https://openai.com/index/chatgpt/</a></p>
+    <p id="fn-4"><b>4.</b> The Google Nest Mini and a Levain Bakery cookie share similar dimensions both are roughly the size of a hockey puck.</p>
+</div>
+
+<div class="references-section">
+    <h3>References</h3>
+    <p id="ref-1"><b>[1]</b> Carroll, J. M., Mack, R. L., & Kellogg, W. A. (1988). Interface metaphors and user interface design. In <i>Handbook of human-computer interaction</i> (pp. 67-85). North-Holland.</p>
+    <p id="ref-2"><b>[2]</b> Hutchins, E. (1987). <i>Metaphors for interface design</i>. Institute for Cognitive Science, University of California, San Diego.</p>
+    <p id="ref-3"><b>[3]</b> Carroll, J. M., & Thomas, J. C. (2007). Metaphor and the cognitive representation of computing systems. <i>IEEE Transactions on systems, man, and cybernetics, 12</i>(2), 107-116.</p>
+    <p id="ref-4"><b>[4]</b> Johnson, J., Roberts, T. L., Verplank, W., Smith, D. C., Irby, C. H., Beard, M., & Mackey, K. (1989). The xerox star: A retrospective. <i>Computer, 22</i>(9), 11-26.</p>
+    <p id="ref-5"><b>[5]</b> Apple Computer, Inc. (1992). <i>Macintosh human interface guidelines</i>. Addison-Wesley Professional.</p>
+    <p id="ref-6"><b>[6]</b> Colburn, T. R., & Shute, G. M. (2008). Metaphor in computer science. <i>Journal of applied logic, 6</i>(4), 526-533.</p>
+    <p id="ref-7"><b>[7]</b> Wegner, D. M. (1994). Ironic processes of mental control. <i>Psychological review, 101</i>(1), 34.</p>
+    <p id="ref-8"><b>[8]</b> Wegner, D. M. (1987). Transactive memory: A contemporary analysis of the group mind. In <i>Theories of group behavior</i> (pp. 185-208). New York, NY: Springer New York.</p>
+    <p id="ref-9"><b>[9]</b> Experiment Data; OpenAI ChatGPT-4o. (2025). Conversation log. Retrieved from <a href="https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37" target="_blank" rel="noopener noreferrer">https://chatgpt.com/share/683e81ac-e274-8000-ae9a-50200773da37</a></p>
+    <p id="ref-10"><b>[10]</b> Wenzlaff, R. M., & Wegner, D. M. (2000). Thought suppression. <i>Annual review of psychology, 51</i>(1), 59-91.</p>
+    <p id="ref-11"><b>[11]</b> Experiment Data; OpenAI o4-mini. (2025). Conversation log. Retrieved from <a href="https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487" target="_blank" rel="noopener noreferrer">https://chatgpt.com/share/6865308d-8af8-8000-a3a1-ec3cd547e487</a></p>
+    <p id="ref-12"><b>[12]</b> Dennett, D. C., & Dennett, D. C. (1993). <i>Consciousness explained</i>. Penguin uk.</p>
+    <p id="ref-13"><b>[13]</b> Chalmers, D. J. (1997). <i>The conscious mind: In search of a fundamental theory</i>. Oxford Paperbacks.</p>
 </div>
 
 <footer>
     <p>© 2025 Charan Pushpanathan</p>
-    <p>Last updated: May 16, 2025</p>
+    <p>Last updated: July 03, 2025</p>
     <div style="margin: 20px 0;">
     <div style="display: flex; align-items: center; gap: 16px;">
     <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
@@ -222,7 +431,20 @@ body {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Add any JavaScript functionality here if needed
+    // This script handles the Cmd+P / Ctrl+P functionality for printing.
+    // There's no need for extra JS for the popups as they are handled by CSS :hover.
+    window.addEventListener('beforeprint', () => {
+        console.log('Preparing page for printing.');
+    });
+
+    // You can also listen for the keydown event if you want more control,
+    // but @media print is generally more reliable.
+    document.addEventListener('keydown', function(event) {
+        if ((event.metaKey || event.ctrlKey) && event.key === 'p') {
+            // The @media print styles will be applied automatically by the browser.
+            // No need to manually trigger anything here.
+        }
+    });
 });
 </script>
 </body>

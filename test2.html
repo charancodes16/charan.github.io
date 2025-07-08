@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charan Pushpanathan Prabavathi's Profile | Facebook</title>
+    <style>
+        body {
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+            font-size: 11px;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #4e69a2 0%, #3b5998 50%, #314478 100%);
+            height: 30px;
+            padding: 0;
+            margin: 0;
+            border-bottom: 1px solid #133783;
+        }
+
+        .header-content {
+            width: 760px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 11px;
+            padding: 1px 3px;
+        }
+
+        .header-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .search-box {
+            background: #fff;
+            border: 1px solid #1c2e5a;
+            padding: 1px 3px;
+            font-size: 11px;
+            width: 120px;
+            margin-right: 8px;
+        }
+
+        .container {
+            width: 760px;
+            margin: 0 auto;
+            background: #fff;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .left-column {
+            width: 200px;
+        }
+
+        .main-content {
+            width: 550px;
+        }
+
+        .profile-header {
+            margin-bottom: 10px;
+        }
+
+        .profile-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #3b5998;
+            margin: 0 0 2px 0;
+        }
+
+        .profile-subtitle {
+            font-size: 11px;
+            color: #777;
+            margin: 0;
+        }
+
+        .profile-tabs {
+            margin: 10px 0;
+        }
+
+        .tab-link {
+            display: inline-block;
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 4px 8px;
+            margin-right: 2px;
+            color: #3b5998;
+            text-decoration: none;
+            font-size: 11px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tab-link.active {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+            z-index: 1;
+        }
+
+        .content-border {
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+
+        .info-section {
+            margin-bottom: 15px;
+        }
+
+        .info-header {
+            background: #6d84b4;
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+            border-bottom: 1px solid #5a6fa3;
+        }
+
+        .info-content {
+            padding: 8px;
+            background: #f7f7f7;
+            border-bottom: 1px solid #d8dfea;
+            font-size: 11px;
+            line-height: 1.3;
+        }
+
+        .info-row {
+            margin-bottom: 3px;
+            color: #333;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            width: 80px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .info-value {
+            color: #333;
+        }
+
+        .profile-pic-section {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border: 1px solid #ccc;
+            background: #3b5998;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            margin: 0 auto 5px;
+        }
+
+        .pic-caption {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .main-section {
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .section-header {
+            background: #6d84b4;
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .section-content {
+            padding: 10px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .wall-post {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 8px 0;
+            margin-bottom: 8px;
+        }
+
+        .wall-post:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .post-header {
+            font-weight: bold;
+            color: #3b5998;
+            margin-bottom: 3px;
+        }
+
+        .post-content {
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .post-time {
+            font-size: 10px;
+            color: #777;
+        }
+
+        .link {
+            color: #3b5998;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 1px 2px;
+        }
+
+        .action-links {
+            background: #f7f7f7;
+            border: 1px solid #d8dfea;
+            padding: 6px 8px;
+            margin-bottom: 10px;
+        }
+
+        .action-links a {
+            color: #3b5998;
+            text-decoration: none;
+            font-size: 11px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .action-links a:hover {
+            text-decoration: underline;
+        }
+
+        .education-entry {
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .education-entry:last-child {
+            border-bottom: none;
+        }
+
+        .school-name {
+            font-weight: bold;
+            color: #3b5998;
+        }
+
+        .degree-info {
+            color: #666;
+            font-size: 10px;
+            margin-top: 1px;
+        }
+
+        .research-list {
+            margin: 5px 0;
+        }
+
+        .research-item {
+            margin-bottom: 2px;
+            padding-left: 10px;
+            position: relative;
+            font-size: 10px;
+        }
+
+        .research-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3b5998;
+        }
+
+        .status-update {
+            background: #ffffcc;
+            border: 1px solid #e6e6b8;
+            padding: 6px;
+            margin-bottom: 10px;
+            font-size: 11px;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+        }
+
+        .note-footer {
+            background: #f7f7f7;
+            border: 1px solid #d8dfea;
+            border-top: 2px solid #6d84b4;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .copyright {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .carroll-quote {
+            color: #555;
+            font-style: italic;
+            border-left: 3px solid #6d84b4;
+            padding-left: 8px;
+            margin-top: 8px;
+        }
+
+        .quote-author {
+            color: #3b5998;
+            font-weight: bold;
+            margin-top: 4px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                width: 100%;
+                flex-direction: column;
+                padding: 5px;
+            }
+            
+            .left-column, .main-content {
+                width: 100%;
+            }
+            
+            .header-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="header-left-box">
+                <a href="#" class="logo">facebook</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <!-- Profile Picture -->
+            <div class="profile-pic-section">
+                <div class="s">CP</div>
+                <div class="pic-caption">View Photos of Charan (1)</div>
+            </div>
+
+            <!-- Actions -->
+            <div class="action-links">
+                <a href="#">Send Charan a Message</a>
+                <a href="#">Add Charan as a Friend</a>
+                <a href="#">Add to Favorites</a>
+            </div>
+
+            <!-- Basic Info -->
+            <div class="info-section">
+                <div class="info-header">Basic Info</div>
+                <div class="info-content">
+                    <div class="info-row">
+                        <span class="info-label">Networks:</span>
+                        <span class="info-value">UIUC, iSchool</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value">PhD Student</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Last Update:</span>
+                        <span class="info-value">June 23, 2025</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="info-section">
+                <div class="info-header">Contact Info</div>
+                <div class="info-content">
+                    <div class="info-row">
+                        <span class="info-value"><a href="mailto:charanp2@illinois.edu" class="link">charanp2@illinois.edu</a></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-value"><a href="charanpushpanathan.com" class="link">charanpushpanathan.com</a></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Info -->
+            <div class="info-section">
+                <div class="info-header">Education Info</div>
+                <div class="info-content">
+                    <div class="education-entry">
+                        <div class="school-name">University of Illinois Urbana-Champaign</div>
+                        <div class="degree-info">PhD Information Sciences</div>
+                        <div class="degree-info">Not sure, When I graduate (Long run)</div>
+                    </div>
+                    <div class="education-entry">
+                        <div class="school-name">Pennsylvania State University</div>
+                        <div class="degree-info">MS Informatics (HCI)</div>
+                        <div class="degree-info">Class of 2025</div>
+                    </div>
+                    <div class="education-entry">
+                        <div class="school-name">Kumaraguru College of Technology</div>
+                        <div class="degree-info">B.Tech Computer Science</div>
+                        <div class="degree-info">Class of 2023</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <h1 class="profile-name">Charan Pushpanathan Prabavathi</h1>
+                <p class="profile-subtitle">University of Illinois Urbana-Champaign</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="profile-tabs">
+                <a href="#" class="tab-link active" data-tab="future">Future</a>
+                <a href="#" class="tab-link" data-tab="present">Present</a>
+                <a href="#" class="tab-link" data-tab="past">Past</a>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Future Tab -->
+                <div id="future-content" class="tab-pane active">
+                    <!-- Status Update -->
+                    <div class="status-update">
+                        <strong>Charan</strong> is excited to start his PhD journey at UIUC this fall!
+                        <div style="font-size: 10px; color: #777; margin-top: 3px;">Today at 3:42pm</div>
+                    </div>
+                    <div class="main-section">
+                        <div class="section-header">Future Research Plans</div>
+                        <div class="section-content">
+                            I'm an incoming Ph.D. student in Information Sciences at the <a href="https://ischool.illinois.edu/" class="link">School of Information Sciences</a> at the <a href="https://illinois.edu/" class="link">University of Illinois Urbana-Champaign</a>, where I'm fortunate to be advised by <a href="https://michaeltwidale.com/" class="link">Dr. Michael Twidale</a>.
+                            <br><br>
+                            My research lies at the intersection of <span class="highlight">AI and HCI</span>, guided by the scientific vision of <span class="highlight">"Augmenting human intellect using machine intelligence."</span>
+                            <br><br>
+                            My research will focus on Human-Computer Interaction, including:
+                            <div class="research-list">
+                                <div class="research-item">Learning to Use: learning theories and training users</div>
+                                <div class="research-item">Novel interfaces with minimal information</div>
+                                <div class="research-item">Collaborative environments and social computing systems involving agents, simulations, and humans</div>
+                                <div class="research-item">Making intelligence in the sciences of artificial (a bit AI/ML)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Note Footer -->
+                    <div class="note-footer">
+                        <div class="copyright">© 2025 Charan Pushpanathan Prabavathi. All rights reserved.</div>
+                        I love facebook, this design is inspired by early days of facebook's profile page. And good way to scaffold information.
+                        <div class="carroll-quote">
+                            "Scaffolding is a temporary framework used to support a building or structure under construction. In HCI, scaffolding refers to the support structures that help users learn and accomplish tasks, which can be gradually removed as users become more proficient."
+                            <div class="quote-author">— John M. Carroll, HCI Pioneer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Present Tab -->
+                <div id="present-content" class="tab-pane">
+                    <div class="main-section">
+                        <div class="section-header">Current Status</div>
+                        <div class="section-content">
+                            <div class="wall-post">
+                                <div class="post-header">Current Activities</div>
+                                <div class="post-content">
+                                    The first rule of Fight Club is you DO NOT talk about Fight Club. The second rule of Fight Club is you DO NOT talk about Fight Club.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Note Footer -->
+                    <div class="note-footer">
+                        <div class="copyright">© 2025 Charan Pushpanathan Prabavathi. All rights reserved.</div>
+                        I love facebook, this design is inspired by early days of facebook's profile page. And good way to scaffold information.
+                        <div class="carroll-quote">
+                            "Scaffolding is a temporary framework used to support a building or structure under construction. In HCI, scaffolding refers to the support structures that help users learn and accomplish tasks, which can be gradually removed as users become more proficient."
+                            <div class="quote-author">— John M. Carroll, HCI Pioneer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Tab -->
+                <div id="past-content" class="tab-pane">
+                    <div class="main-section">
+                        <div class="section-header">Past</div>
+                        <div class="section-content">
+                            <div class="wall-post">
+                                <div class="post-header">Master's Degree Completed</div>
+                                <div class="post-content">
+                                    I was a Master's student in Informatics (with a focus on Human-Computer Interaction) at the College of Information Sciences and Technology, Pennsylvania State University, University Park (Class of 2025). I was advised by <span class="highlight">Dr. John M. Carroll</span>—fondly known as "Jack Carroll," one of the founding fathers of HCI. I also had the opportunity to meet and work with Dr. Frank Ritter (an Allen Newell student), Luke Zhang, Kenneth Huang, among others at the College of IST. As a graduate researcher in the Collaboration Innovation Laboratory under Jack Carroll, I conducted studies in human-computer interaction, cooperative activity, synergies, and interface design. My work was in progress and has yet to be published in HCI venues like DIS and MobileHCI.
+                                </div>
+                                <div class="post-time">2023-2025</div>
+                            </div>
+                            
+                            <div class="wall-post">
+                                <div class="post-header">Undergraduate Education</div>
+                                <div class="post-content">
+                                    Prior to Penn State, I earned my Bachelor's degree in Computer Science and Engineering from Kumaraguru College of Technology (Class of 2023).
+                                    <div>
+                                    I've also gained industry experience through internships at HDFC Bank and Freecharge (backed by Axis Bank), and as a founding member and designer of an angel-backed startup in capital markets (now closed). My work during these stints focused on user testing, research, and interface design.
+                                    </div>
+                                    <div class="post-time">2019-2023</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Note Footer -->
+                    <div class="note-footer">
+                        <div class="copyright">© 2025 Charan Pushpanathan Prabavathi. All rights reserved.</div>
+                        I love facebook, this design is inspired by early days of facebook's profile page. And good way to scaffold information.
+                        <div class="carroll-quote">
+                            "Scaffolding is a temporary framework used to support a building or structure under construction. In HCI, scaffolding refers to the support structures that help users learn and accomplish tasks, which can be gradually removed as users become more proficient."
+                            <div class="quote-author">— John M. Carroll, HCI Pioneer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabLinks = document.querySelectorAll('.tab-link');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabLinks.forEach(function(tabLink) {
+                tabLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all tabs and panes
+                    tabLinks.forEach(function(link) {
+                        link.classList.remove('active');
+                    });
+                    
+                    tabPanes.forEach(function(pane) {
+                        pane.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = this.getAttribute('data-tab');
+                    const targetPane = document.getElementById(tabId + '-content');
+                    if (targetPane) {
+                        targetPane.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
