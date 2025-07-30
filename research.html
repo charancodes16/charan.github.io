@@ -33,12 +33,12 @@ body {
 .profile-thumbnail {
   width: 36px;
   height: 36px;
-  border-radius: 6px;  /* Less rounded corners */
+  border-radius: 6px;
   object-fit: cover;
   display: inline-block;
-  vertical-align: text-bottom;  /* Align with the bottom of the text */
-  margin-left: 2px;  /* Reduced gap */
-  margin-bottom: 4px;  /* Adjust downward */
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  margin-bottom: 4px;
   cursor: pointer;
   border: 2px solid #f0f0f0;
   transition: border-color 0.2s ease;
@@ -53,19 +53,13 @@ body {
   flex-direction: row;
   align-items: flex-start;
   gap: 20px;
-  margin-top: 10px;  /* Reduced from 20px to 10px */
-  margin-bottom: 10px;  /* Reduced from 20px to 10px */
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* Adjust paragraph margins to reduce vertical spacing */
 #maincontent p {
   margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-/* Adjust list margins to reduce vertical spacing */
-#maincontent ol {
-  margin-top: 3px;
   margin-bottom: 8px;
 }
 
@@ -91,24 +85,123 @@ body {
 }
 
 /* Blog List styles */
-    .blog-list h3 {
-      margin-top: 15px;
-      margin-bottom: 4px;
-    }
+.blog-list h3 {
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
 
-    .blog-list a {
-      font-weight: 200;
-      font-size: 15px;
-      color: #333;
-      text-decoration: none;
-    }
+.blog-list a {
+  font-weight: 200;
+  font-size: 15px;
+  color: #333;
+  text-decoration: none;
+}
 
-    .update-date {
-      font-size: 14px;
-      color: rgba(60, 60, 67, 0.6); /* Apple gray */
-      margin-bottom: 16px;
-      display: block;
-    }
+.update-date {
+  font-size: 14px;
+  color: rgba(60, 60, 67, 0.6);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* NEW: Clean paper listing styles */
+.research-section {
+  margin-bottom: 35px;
+}
+
+.paper {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.paper-image {
+  width: 120px;
+  height: 90px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+}
+
+.paper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.paper-content {
+  flex: 1;
+}
+
+.paper-title {
+  font-weight: 500;
+  font-size: 16px;
+  color: #1a0dab;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.paper-authors {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.paper-venue {
+  font-style: italic;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.paper-link {
+  font-size: 14px;
+  color: #d73027;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
+}
+
+.paper-status {
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+/* Highlight author name */
+.author-highlight {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Mobile responsive */
+@media (max-width: 650px) {
+  .paper {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .paper-image {
+    width: 100%;
+    height: 120px;
+  }
+}
 
 </style>
 </head>
@@ -135,26 +228,82 @@ body {
   <div id="maincontent" style="margin-top:20px">
     <h1 class="header-title">Research</h1>
 
-    <h4>CSCW</h4>
-    <ol>
-      <li>
-        Ya-Fang Lin, Xiaotian Li, Wan-Hsuan Huang, <b>Charan Pushpanathan Prabavathi</b>, Jie Cai, and John M. Carroll. (2025). Parental Collaboration and Closeness: Envisioning with New Couple Parents. <i>In Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS '25)</i>. Association for Computing Machinery, New York, NY, USA, 2637–2651. 
-        <a href="https://doi.org/10.1145/3715336.3735837" target="_blank" rel="noopener noreferrer" style="font-family: 'Courier New', Courier, monospace; color: #1a0dab; text-decoration: none;">
-          https://doi.org/10.1145/3715336.3735837
-        </a>
-      </li>
-      <li><b>Pushpanathan Prabavathi, Charan</b>, Lin, Y.-F., & Carroll, J. M. (2025). A collaborative system to augment co-parenting closeness. <i>Manuscript in preparation</i>.</li>
-    </ol>
+    <div class="research-section">
+      <div class="paper">
+        <div class="paper-image">
+          <!-- Add your paper image here -->
+          <span>Paper Image</span>
+        </div>
+        <div class="paper-content">
+          <div class="paper-title">
+            Parental Collaboration and Closeness: Envisioning with New Couple Parents
+          </div>
+          <div class="paper-authors">
+            Ya-Fang Lin, Xiaotian Li, Wan-Hsuan Huang, <span class="author-highlight">Charan Pushpanathan Prabavathi</span>, Jie Cai, and John M. Carroll
+          </div>
+          <div class="paper-venue">
+            Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS '25), 2025
+          </div>
+          <a href="https://doi.org/10.1145/3715336.3735837" target="_blank" rel="noopener noreferrer" class="paper-link">
+            [Code/Models]
+          </a>
+        </div>
+      </div>
 
-    <h4>Explainable AI - XAI</h4>
-    <ol>
-      <li>Chona, H., Zhou, Y., Xu, P., Schulman, J. S. Jr., Wu, T. Y., Weng, C., Wu, S., <b>Pushpanathan Prabavathi, Charan</b> (2025). Trust and decision-making with explainable AI in immersive technologies: A systematic literature review. <i>Unpublished manuscript</i>.</li>
-    </ol>
+      <div class="paper">
+        <div class="paper-image">
+          <!-- Add your paper image here -->
+          <span>Paper Image</span>
+        </div>
+        <div class="paper-content">
+          <div class="paper-title">
+            A collaborative system to augment co-parenting closeness
+          </div>
+          <div class="paper-authors">
+            <span class="author-highlight">Pushpanathan Prabavathi, Charan</span>, Lin, Y.-F., & Carroll, J. M.
+          </div>
+          <div class="paper-status">
+            Manuscript in preparation, 2025
+          </div>
+        </div>
+      </div>
 
-    <h4>Undergraduate Research</h4>
-    <ol>
-      <li>Persuasive Design here, <b>Pushpanathan Prabavathi, Charan</b> (2022)</li>
-    </ol>
+      <div class="paper">
+        <div class="paper-image">
+          <!-- Add your paper image here -->
+          <span>Paper Image</span>
+        </div>
+        <div class="paper-content">
+          <div class="paper-title">
+            Trust and decision-making with explainable AI in immersive technologies: A systematic literature review
+          </div>
+          <div class="paper-authors">
+            Chona, H., Zhou, Y., Xu, P., Schulman, J. S. Jr., Wu, T. Y., Weng, C., Wu, S., <span class="author-highlight">Pushpanathan Prabavathi, Charan</span>
+          </div>
+          <div class="paper-status">
+            Unpublished manuscript, 2025
+          </div>
+        </div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-image">
+          <!-- Add your paper image here -->
+          <span>Paper Image</span>
+        </div>
+        <div class="paper-content">
+          <div class="paper-title">
+            Persuasive Design here
+          </div>
+          <div class="paper-authors">
+            <span class="author-highlight">Pushpanathan Prabavathi, Charan</span>
+          </div>
+          <div class="paper-status">
+            2022
+          </div>
+        </div>
+      </div>
+    </div>
 
   <footer>
     <p>© 2025 Charan Pushpanathan</p>
