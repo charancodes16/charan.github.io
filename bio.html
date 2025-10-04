@@ -1,276 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Charan Pushpanathan Prabavathi - PhD Student in Information Sciences"/>
-    <title>Charan Pushpanathan Prabavathi</title>
-    <style>
-        body { 
-            line-height: 1.4;
-            font-size: 16px;
-            padding: 0 10px;
-            margin: 50px auto;
-            max-width: 650px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        #maincontent {
-            max-width: 42em;
-            margin: 15px auto;
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .contact-links {
-            margin: 15px 0 25px 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .contact-links a {
-            color: #2600ff;
-            text-decoration: none;
-            font-size: 14px;
-            padding: 5px 10px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            transition: all 0.2s ease;
-        }
-
-        .contact-links a:hover {
-            background-color: #f5f5f5;
-            border-color: #2600ff;
-        }
-
-        ul {
-            margin-bottom: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        a {
-            color: #2600ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .highlight {
-            background: #fff3cd;
-            padding: 1px 3px;
-        }
-
-        .quote {
-            font-style: italic;
-            color: #666;
-            border-left: 3px solid #ddd;
-            padding-left: 15px;
-            margin: 20px 0;
-        }
-
-        .quote-author {
-            font-weight: bold;
-            color: #333;
-            margin-top: 8px;
-        }
-
-        .profile-photo {
-            text-align: left;
-            margin: 10px 0;
-        }
-
-        .profile-photo img {
-            max-width: 150px;
-            width: 100%;
-            height: auto;
-        }
-
-        .photo-caption {
-            font-size: 14px;
-            color: #666;
-            font-style: italic;
-            margin-top: 8px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                font-size: 16px;
-                margin: 20px auto;
-                padding: 0 15px;
-            }
-
-            #maincontent {
-                margin: 10px auto;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-                margin-bottom: 15px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .profile-photo {
-                text-align: center;
-            }
-
-            .profile-photo img {
-                max-width: 120px;
-            }
-
-            ul {
-                padding-left: 20px;
-            }
-
-            li {
-                margin-bottom: 8px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                font-size: 16px;
-                margin: 15px auto;
-                padding: 0 10px;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-            }
-
-            .profile-photo img {
-                max-width: 100px;
-            }
-
-            .photo-caption {
-                font-size: 16px;
-            }
-
-            ul {
-                padding-left: 15px;
-            }
-        }
-
-        @media (max-width: 320px) {
-            body {
-                font-size: 15px;
-                padding: 0 8px;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Charan Pushpanathan Prabavathi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Charan Pushpanathan Prabavathi - PhD Student in Information Sciences"/>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+    @font-face {
+      font-family: 'SF Pro';
+      src: local('SF Pro Display'), local('SF Pro'), local('San Francisco'), local('SFProDisplay-Regular');
+      font-display: swap;
+    }
+    body {
+      font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 16px;
+      color: #222;
+      background: #fff;
+      margin: 0;
+      padding: 0 10px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .bio-container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 32px;
+      justify-content: flex-start;
+      margin: 50px 0;
+    }
+    .bio-image-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 160px;
+      max-width: 180px;
+      flex-shrink: 0;
+    }
+    .bio-image-block img {
+      width: 150px;
+      height: auto;
+      margin-bottom: 18px;
+      margin-top: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      background: #f4f4f4;
+      object-fit: cover;
+    }
+    .bio-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .bio-contact a {
+      color: #0000ff;
+      font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+      font-size: 12px;
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .bio-contact a:hover {
+      text-decoration: underline;
+    }
+    .bio-main {
+      flex: 1;
+      min-width: 0;
+      text-align: left;
+    }
+    .bio-name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      margin-top: 0;
+      color: #111;
+      letter-spacing: -1px;
+    }
+    .bio-subtitle {
+      color: #86868b;
+      font-size: 16px;
+      margin-bottom: 18px;
+      margin-top: 12px;
+      font-weight: 400;
+    }
+    .bio-body {
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+    .bio-body a {
+      color: #0000ff;
+      text-decoration: none;
+      font-weight: 400;
+    }
+    .bio-body a:hover {
+      text-decoration: underline;
+    }
+    .bio-section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      color: #222;
+    }
+    .inline-logo {
+      vertical-align: middle;
+      margin-left: 4px;
+      margin-right: 2px;
+      height: 1.1em;
+      width: auto;
+      display: inline-block;
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      background: #fff;
+    }
+    @media (max-width: 900px) {
+      body {
+        max-width: 98vw;
+      }
+      .bio-container {
+        gap: 18px;
+      }
+      .bio-image-block img {
+        width: 120px;
+      }
+    }
+    @media (max-width: 600px) {
+      .bio-container {
+        flex-direction: column;
+        gap: 18px;
+        align-items: flex-start;
+        margin: 24px 0;
+      }
+      .bio-image-block {
+        align-items: flex-start;
+        margin-top: 0;
+      }
+      .bio-contact {
+        align-items: flex-start;
+      }
+      .bio-image-block img {
+        width: 100px;
+      }
+      .bio-main {
+        width: 100%;
+      }
+    }
+  </style>
+  <!-- PWA support -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
+  </script>
 </head>
 <body>
-    <div id="maincontent" style="margin-top:70px">
-        <h2>Charan Pushpanathan Prabavathi</h2>
-        <div style="font-size: 15px; color: #555; margin-bottom: 18px;">
-            Incoming PhD Student at School of Information Sciences, UIUC
-        </div>
-
-        <div class="contact-links" style="--system-blue: #2600ff;">
-            <a href="/index.html" style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; border: none; background: none; padding: 0; color: var(--system-blue);">Home</a>
-            <a href="mailto:charanp2@illinois.edu" style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; border: none; background: none; padding: 0; color: var(--system-blue);">Email</a>
-            <a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; border: none; background: none; padding: 0; color: var(--system-blue);">LinkedIn</a>
-            <a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" style="font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace; border: none; background: none; padding: 0; color: var(--system-blue);">Google Scholar</a>
-        </div>
-
-        <div class="profile-photo">
-            <img src="/src/pitts.webp" alt="Charan Pushpanathan Prabavathi graduation photo">
-            <div class="photo-caption">Me at Pittsburgh, PA</div>
-        </div>
-        
-        A bit about my journey:
-        <ul>
-            <li>I'm an incoming PhD student in Information Sciences at the <a href="https://illinois.edu/">University of Illinois Urbana-Champaign</a>, where I'm fortunate to be advised by <a href="https://michaeltwidale.com/">Dr. Michael Twidale</a> at the <a href="https://ischool.illinois.edu/">School of Information Sciences</a></li>
-            <li>I recently completed my MS in Informatics (HCI) from the College of Information Sciences and Technology at <a href="https://ist.psu.edu/">Penn State University</a> (Class of 2025), where I had the incredible opportunity to work with <a href="https://www.ist.psu.edu/directory/faculty/jcarroll">Dr. John M. Carroll</a> fondly known as "Jack Carroll" one of the founding fathers of HCI</li>
-            <ul>
-                <li>As a graduate researcher in the Collaboration Innovation Laboratory, I dove deep into studies on human-computer interaction, cooperative activity, synergies, and interface design</li>
-                <li>I was privileged to meet and collaborate with Dr. Frank Ritter (an Allen Newell student), Luke Zhang, Kenneth Huang, and many other brilliant minds at the College of IST</li>
-                <li>Some of my work has found its way to ACM's HCI venues like DIS and MobileHCI</li>
-            </ul>
-            <li>My academic foundation was built during my when I got introduced to macintosh and bits and pieces of B.Tech in Computer Science at Kumaraguru College of Technology (Class of 2023)</li>
-            <li>Before diving fully into academia, I gained valuable industry experience at HDFC Bank and Freecharge (backed by Axis Bank)</li>
-            <ul>
-                <li>I was also a founding member and designer of an angel-backed startup in capital markets (now closed), which taught me invaluable lessons about translating research into practice</li>
-                <li>Throughout these experiences, I focused on user testing, research, and interface design skills that now inform my academic work</li>
-            </ul>
-        </ul>
-
-        What drives my research:
-        <ul>
-            <li>I'm interested about research at the intersection of <span class="highlight">AI and HCI</span></li>
-            <li>Under a scientific vision that has captivated me: <span class="highlight">"Augmenting human intellect using machine intelligence"</span></li>
-            <li>This vision manifests in several focus areas I'm exploring:</li>
-            <ul>
-                <li>Learning to Use: I'm fascinated by learning theories and how we can better train users to interact with complex systems</li>
-                <li>Novel interfaces with minimal information: How can we convey maximum meaning with minimal cognitive load?</li>
-                <li>Collaborative environments and social computing systems where agents, simulations, and humans work together seamlessly</li>
-                <li>Making intelligence in the sciences of artificial bridging the gap between AI research and practical applications</li>
-            </ul>
-        </ul>
-
-        What I've come to believe about HCI:
-        <ul>
-            <li>Scaffolding is everything when it comes to learning</li>
-            <ul>
-                <li>I've seen how well-designed support structures help users learn and accomplish tasks that seemed impossible at first</li>
-                <li>The beauty is in how these supports can be gradually removed as users become more proficient</li>
-                <li>This principle is absolutely critical for human-AI collaboration we need to scaffold the relationship</li>
-            </ul>
-            <li>I believe interfaces should augment, never replace, human intelligence</li>
-            <ul>
-                <li>Technology should amplify what humans do best, not try to substitute our unique capabilities</li>
-                <li>The goal I'm working toward is true symbiosis between humans and machines</li>
-                <li>Still finding the meaning of "intelligence" in this context</li>
-                <li>It's important to recognize that statistical mimicry is not the same as genuine intelligence or comprehension</li>
-            </ul>
-            <li>Artificial psychology is a field that deserves more attention</li>
-            <ul>
-                <li>I've learned that AI systems need psychological models to interact naturally with humans</li>
-                <li>Understanding how humans think about AI behavior is crucial for successful design</li>
-                <li>Users inevitably form theories about how systems work I believe we should intentionally design those theories</li>
-            </ul>
-            <li>Computer supported cooperative work</li>
-            <ul>
-                <li>I'm excited about multi-agent systems that seamlessly integrate humans and AI</li>
-                <li>Understanding cooperative activity and synergies has become central to my research</li>
-                <li>Social computing systems design fascinates me how do we create environments where different types of intelligence work together?</li>
-                <li>I envision environments where agents, simulations, and humans collaborate as equal partners</li>
-            </ul>
-        </ul>
-
-        What I'm up to now:
-        <ul>
-            <li>The first rule of Fight Club is you DO NOT talk about Fight Club</li>
-            <li>The second rule of Fight Club is you DO NOT talk about Fight Club</li>
-            <ul>
-                <li>(But seriously, I'm in that exciting transition phase from Master's to PhD work)</li>
-                <li>I'm focusing on research preparation and methodology laying the groundwork for what's to come</li>
-            </ul>
-        </ul>
-
-        <div style="margin-top: 30px; font-size: 14px; color: #666; font-style: italic;">
-            © 2025 Charan Pushpanathan Prabavathi. All rights reserved.<br>
-            Thanks for reading.
-        </div>
+  <div class="bio-container">
+    <div class="bio-image-block">
+      <img src="/src/pitts.webp" alt="Charan Pushpanathan Prabavathi">
+      <div class="bio-contact">
+        <a href="mailto:charanp2@illinois.edu">charanp2@illinois.edu</a>
+        <a href="https://charanpushpanathan.com" target="_blank">charanpushpanathan.com</a>
+        <a href="/files/Charan_CV.pdf" target="_blank">Curriculam Vitae</a>
+      </div>
     </div>
+    <div class="bio-main">
+      <h1 class="bio-name">Charan Pushpanathan Prabavathi</h1>
+      <div class="bio-subtitle">First year PhD student at University of Illinois Urbana-Champaign.</div>
+      <div class="bio-body">
+        I am a first-year PhD student in the 
+        <a href="https://ischool.illinois.edu/" target="_blank">School of Information Sciences</a> at 
+        <a href="https://illinois.edu/" target="_blank">University of Illinois Urbana-Champaign</a>
+        <img src="https://logos-world.net/wp-content/uploads/2020/07/Illinois-Fighting-Illini-Logo.png" alt="Illinois Logo" class="inline-logo">
+        , advised by 
+        <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank">Prof. Michael B. Twidale</a>. Before my PhD, I did my Master's in informatics (Human-Computer Interaction) at 
+        <a href="https://ist.psu.edu/" target="_blank">College of Information Sciences and Technology</a> at 
+        <a href="https://psu.edu/" target="_blank">Penn State University</a>
+        <img src="https://edit.greaterallegheny.psu.edu/sites/greaterallegheny/files/styles/photo_gallery_large/public/penn-state-shield.jpg?itok=ZH2aOWpD" alt="Penn State Logo" class="inline-logo">
+        advised by 
+        <a href="https://jcarroll.ist.psu.edu" target="_blank">Prof. John M. Carroll</a>.
+
+        <p>Before that, I completed my Bachelor's in Computer Science and Engineering at Kumaraguru College of Technology.</p>
+      </div>
+      <div class="bio-section-title">Research</div>
+      <div class="bio-body">
+        My research advances human–AI interaction to create active learning environments, collaborative systems, and novel interfaces that augment human intellect and bridge the gap between expert and novice users. I work at the intersection of HCI, AI, and learning sciences.
+      </div> 
+    </div>
+  </div>
 </body>
 </html>
