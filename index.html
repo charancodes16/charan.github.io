@@ -29,34 +29,6 @@ body {
   color: rgba(60, 60, 67, 0.6);
 }
 
-/* Profile photo styles */
-.profile-thumbnail {
-  width: 36px;
-  height: 36px;
-  border-radius: 6px;  /* Less rounded corners */
-  object-fit: cover;
-  display: inline-block;
-  vertical-align: text-bottom;  /* Align with the bottom of the text */
-  margin-left: 2px;  /* Reduced gap */
-  margin-bottom: 4px;  /* Adjust downward */
-  cursor: pointer;
-  border: 2px solid #f0f0f0;
-  transition: border-color 0.2s ease;
-}
-
-.profile-thumbnail:hover {
-  border-color: #1a0dab;
-}
-
-.content-with-photo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 10px;  /* Reduced from 20px to 10px */
-  margin-bottom: 10px;  /* Reduced from 20px to 10px */
-}
-
 /* Adjust paragraph margins to reduce vertical spacing */
 #maincontent p {
   margin-top: 8px;
@@ -69,25 +41,42 @@ body {
   margin-bottom: 8px;
 }
 
+.content-with-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .content-column {
   flex: 1;
 }
 
-.photo-column {
-  display: none;
-  width: 200px;
-  text-align: center;
+.inline-logo {
+  vertical-align: middle;
+  margin-left: 4px;
+  margin-right: 2px;
+  height: 1.1em;
+  width: auto;
+  display: inline-block;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  background: #fff;
 }
 
-.photo-column.visible {
+.photo-column {
   display: block;
+  width: 200px;
+  text-align: center;
 }
 
 .photo-column img {
   width: 100%;
   max-width: 200px;
   height: auto;
-  border-radius: 0;  /* Sharp corners */
+  border-radius: 0;
   margin-bottom: 8px;
 }
 
@@ -144,79 +133,86 @@ body {
 <body>
 <div id="maincontent" style="margin-top:10px">
 
-<p>I'm Charan Pushpanathan Prabavathi; In-short <b>Charan;</b> <img src="/src/charan.webp" class="profile-thumbnail" id="profile-thumbnail"></p>
+<p>I'm Charan Pushpanathan Prabavathi; In-short <b>Charan;</b></p>
 
 <div class="content-with-photo">
   <div class="content-column">
-    <p>I’m a first-year Ph.D. student in Information Sciences at the <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">School of Information Sciences</a> at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a>, where I am advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. My research will focus on Human-Computer Interaction, including:</p>
+    <p>I'm a first-year Ph.D. student in Information Sciences at the <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">School of Information Sciences</a> at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a> <img src="https://logos-world.net/wp-content/uploads/2020/07/Illinois-Fighting-Illini-Logo.png" alt="Illinois Logo" class="inline-logo">, where I am advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. My research will focus on Human-Computer Interaction, including:</p>
     <ol style="list-style-type: decimal; margin-left: 20px; margin-top: 5px;">
       <li style="margin-bottom: 0.2em;">Learning to Use: learning theories and training users</li>
       <li style="margin-bottom: 0.2em;">Novel interfaces with minimal information</li>
       <li style="margin-bottom: 0.2em;">Collaborative environments</li>
       <li style="margin-bottom: 0.2em;">Making intelligence in the sciences of artificial</li>
     </ol>
+    <p>Current research interests on human–AI interaction to create active learning environments, collaborative systems, and novel interfaces that augment human intellect and bridge the gap between expert and novice users. I work at the intersection of HCI, Design Research, CSCW, AI, and learning sciences.</p>
   </div>
-  <div class="photo-column" id="photo-column">
+  <div class="photo-column">
     <img src="/src/charan.webp" alt="Charan Pushpanathan">
     <p class="photo-caption">Graduated from Penn State.</p>
   </div>
 </div>
+
 <p>
   I completed a Master of Science in Informatics with a focus on Human-Computer Interaction at 
   <a href="https://www.psu.edu" target="_blank" rel="noopener noreferrer">Penn State University</a>'s 
-  <a href="https://ist.psu.edu" target="_blank" rel="noopener noreferrer">College of Information Sciences and Technology</a>, 
+  <a href="https://ist.psu.edu" target="_blank" rel="noopener noreferrer">College of Information Sciences and Technology</a> <img src="https://edit.greaterallegheny.psu.edu/sites/greaterallegheny/files/styles/photo_gallery_large/public/penn-state-shield.jpg?itok=ZH2aOWpD" alt="Penn State Logo" class="inline-logo">, 
   where I was a graduate researcher in the <a href="https://cil.ist.psu.edu/" target="_blank" rel="noopener noreferrer">Collaboration Innovation Lab </a> advised by 
   <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Dr. John M. Carroll</a>. 
   His insights left a lasting imprint on how I conceived of HCI and the philosophical currents beneath technological design, 
   and my research there explored human-computer interaction, cooperative activity, synergies, learning to use, and interface design.
 </p>
-<p>At Penn State, I witnessed with some pretty sharp minds. <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Jack Carroll</a> (aka John M. Carroll; my advisor), <a href="https://www.frankritter.com/ritter-bio.html" target="_blank" rel="noopener noreferrer">Ritter</a>, <a href="https://zhang.ist.psu.edu" target="_blank" rel="noopener noreferrer">Zhang</a>, <a href="https://crowd.ist.psu.edu" target="_blank" rel="noopener noreferrer">Huang</a> I got to see how these folks actually work, not just read their papers.</p>
-<p>I graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering.</p>
-<p>Previously, I held roles involving user testing, research, and interface design at <a href="https://g.co/kgs/mx4kXAJ" target="_blank" rel="noopener noreferrer">HDFC Bank</a>, <a href="https://www.freecharge.in" target="_blank" rel="noopener noreferrer">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac" target="_blank" rel="noopener noreferrer">Axis Bank</a>), and was a founding member/designer at an angel-backed capital markets startup (now closed).</p>
-<p>I am currently living in Champaign, Illinois.</p>
-    <div class="columns-container" style="
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        margin-top: 30px;
-    ">
-        <div class="technical-column">
-            <h3 style="margin-bottom:20px;"><a href="/Sometimes, I Write.html">Sometimes, I Write (Recent)</a></h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li style="margin-bottom: 12px;">
-                  <a href="/blogs/Reflections and Learning 2024.html" style="text-decoration: none; color: #333;">
-                      Reflections & Learnings of 2024
-                  </a>
-                </li>
-                <li style="margin-bottom: 12px;">
-                  <a href="/blogs/vision as a cat toy.html" style="text-decoration: none; color: #333;">
-                      Vision as a Cat Toy: Why Great Ideas Should Never Be Caught
-                  </a>
-                </li>
-                <li style="margin-bottom: 12px;">
-                  <a href="/blogs/Reflections and Learning 2023.html" style="text-decoration: none; color: #333;">
-                      Reflections & Learnings of 2023
-                  </a>
-                </li>
-                <li style="margin-bottom: 12px;">
-                    <a href="/blogs/Hard Truths.html" style="text-decoration: none; color: #333;">
-                        Hard Truths - Short notes
-                    </a>
-                </li>
-            </ul>
-        </div>
 
-        <div class="management-column">
-            <h3 style="margin-bottom:20px;"><a href="/assorted.html">Notions</a></h3>
-            <ul style="list-style-type: none; padding: 0;">
-                <li style="margin-bottom: 12px;">
-                    <a href="/dump/xeroxparc.html" style="text-decoration: none; color: #333;">
-                        Xerox PARC
-                    </a>
-                </li>
-            </ul>
-        </div>
+<p>At Penn State, I witnessed with some pretty sharp minds. <a href="https://jcarroll.ist.psu.edu" target="_blank" rel="noopener noreferrer">Jack Carroll</a> (aka John M. Carroll; my advisor), <a href="https://www.frankritter.com/ritter-bio.html" target="_blank" rel="noopener noreferrer">Ritter</a>, <a href="https://zhang.ist.psu.edu" target="_blank" rel="noopener noreferrer">Zhang</a>, <a href="https://crowd.ist.psu.edu" target="_blank" rel="noopener noreferrer">Huang</a> I got to see how these folks actually work, not just read their papers.</p>
+
+<p>I graduated from Kumaraguru College of Technology with a Bachelor's in Computer Science and Engineering.</p>
+
+<p>Previously, I held roles involving user testing, research, and interface design at <a href="https://g.co/kgs/mx4kXAJ" target="_blank" rel="noopener noreferrer">HDFC Bank</a>, <a href="https://www.freecharge.in" target="_blank" rel="noopener noreferrer">Freecharge</a> (backed by <a href="https://g.co/kgs/JX2Biac" target="_blank" rel="noopener noreferrer">Axis Bank</a>), and was a founding member/designer at an angel-backed capital markets startup (now closed).</p>
+
+<p>I am currently living in Champaign, Illinois.</p>
+
+<div class="columns-container" style="
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 30px;
+">
+    <div class="technical-column">
+        <h3 style="margin-bottom:20px;"><a href="/Sometimes, I Write.html">Sometimes, I Write (Recent)</a></h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+              <a href="/blogs/Reflections and Learning 2024.html" style="text-decoration: none; color: #333;">
+                  Reflections & Learnings of 2024
+              </a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/blogs/vision as a cat toy.html" style="text-decoration: none; color: #333;">
+                  Vision as a Cat Toy: Why Great Ideas Should Never Be Caught
+              </a>
+            </li>
+            <li style="margin-bottom: 12px;">
+              <a href="/blogs/Reflections and Learning 2023.html" style="text-decoration: none; color: #333;">
+                  Reflections & Learnings of 2023
+              </a>
+            </li>
+            <li style="margin-bottom: 12px;">
+                <a href="/blogs/Hard Truths.html" style="text-decoration: none; color: #333;">
+                    Hard Truths - Short notes
+                </a>
+            </li>
+        </ul>
     </div>
+
+    <div class="management-column">
+        <h3 style="margin-bottom:20px;"><a href="/assorted.html">Notions</a></h3>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 12px;">
+                <a href="/dump/xeroxparc.html" style="text-decoration: none; color: #333;">
+                    Xerox PARC
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <footer>
     <p>© 2025 Charan Pushpanathan</p>
@@ -224,17 +220,4 @@ body {
 </footer>
 
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const thumbnail = document.getElementById('profile-thumbnail');
-    const photoColumn = document.getElementById('photo-column');
-    
-    // Toggle photo visibility on click
-    thumbnail.addEventListener('click', function(e) {
-        e.preventDefault();
-        photoColumn.classList.toggle('visible');
-    });
-});
-</script>
 </body></html>
