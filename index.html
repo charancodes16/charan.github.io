@@ -5,141 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-body { 
-  line-height: 1.4;
-  font-size: 16px;
-  padding: 0 10px;
-  margin: 50px auto;
-  max-width: 650px;
-}
+  body {
+    line-height: 1.4;
+    font-size: 16px;
+    padding: 0 10px;
+    margin: 50px auto;
+    max-width: 650px;
+  }
 
-#maincontent {
-  max-width: 42em;
-  margin: 15px auto;
-}
+  #maincontent {
+    max-width: 42em;
+    margin: 15px auto;
+  }
 
-.title-separator {
-  border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
-  margin-bottom: 16px;
-}
+  .title-separator {
+    border-bottom: 0.33333px solid rgba(84, 84, 86, 0.34);
+    margin-bottom: 16px;
+  }
 
-.section-title {
-  font-weight: 400;
-  font-size: 20px;
-  color: rgba(60, 60, 67, 0.6);
-}
+  .section-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(60, 60, 67, 0.6);
+  }
 
-/* Adjust paragraph margins to reduce vertical spacing */
-#maincontent p {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
+  /* Adjust paragraph margins to reduce vertical spacing */
+  #maincontent p {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
 
-/* Adjust list margins to reduce vertical spacing */
-#maincontent ol {
-  margin-top: 3px;
-  margin-bottom: 8px;
-}
+  /* Adjust list margins to reduce vertical spacing */
+  #maincontent ol {
+    margin-top: 3px;
+    margin-bottom: 8px;
+  }
 
-.content-with-photo {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.content-column {
-  flex: 1;
-}
-
-.inline-logo {
-  vertical-align: middle;
-  margin-left: 4px;
-  margin-right: 2px;
-  height: 1.1em;
-  width: auto;
-  display: inline-block;
-  border-radius: 2px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
-  background: #fff;
-}
-
-.photo-column {
-  display: block;
-  width: 200px;
-  text-align: center;
-}
-
-.photo-column img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
-  border-radius: 0;
-  margin-bottom: 8px;
-}
-
-.photo-caption {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-}
-
-/* Media queries for responsive design */
-@media (max-width: 650px) {
   .content-with-photo {
-    flex-direction: column;
-  }
-  
-  .photo-column {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
-  
-  .photo-column img {
-    max-width: 180px;
-  }
-}
 
-/* Header layout: title on left, address on right */
-.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-.site-identity {
-  min-width: 0;
-}
-.site-address {
-  text-align: right;
-  font-style: normal;
-  line-height: 1.2;
-  font-size: 15px;
-  color: #222;
-}
-@media (max-width: 650px) {
+  .content-column {
+    flex: 1;
+  }
+
+  .inline-logo {
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-right: 2px;
+    height: 1.1em;
+    width: auto;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    background: #fff;
+  }
+
+  .photo-column {
+    display: block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .photo-column img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 8px;
+  }
+
+  .photo-caption {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Media queries for responsive design */
+  @media (max-width: 650px) {
+    .content-with-photo {
+      flex-direction: column;
+    }
+    .photo-column {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    .photo-column img {
+      max-width: 180px;
+    }
+  }
+
+  /* Header layout: title on left, address on right */
   .site-header {
-    flex-direction: column;
-    gap: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .site-identity {
+    min-width: 0;
   }
   .site-address {
-    text-align: left;
-    margin-top: 6px;
+    text-align: right;
+    font-style: normal;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #222;
   }
-}
-</style>	
-</head>
+  @media (max-width: 650px) {
+    .site-header {
+      flex-direction: column;
+      gap: 6px;
+    }
+    .site-address {
+      text-align: left;
+      margin-top: 6px;
+    }
+  }
+
+  /* Logo above the address (right-aligned on wide screens, left on small) */
+  .site-logo {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 8px;
+    max-width: 24px;
+    height: 24px;
+  }
+  @media (max-width: 150px) {
+    .site-logo {
+      margin-left: 0;
+    }
+  }
+  </style>	
 
 <header class="site-header">
   <div class="site-identity">
     <a href="index.html"><h1 class="section-title" style="margin:0;">Charan Pushpanathan</h1></a>
     <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
-      <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
-        charanp2@illinois.edu
-      </a>
+      <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">charanp2@illinois.edu</a>
     </p>
 
     <div style="display: flex; align-items: center; gap: 16px;">
@@ -158,6 +167,7 @@ body {
   </div>
 
   <address class="site-address">
+    <img src="src/UIUC.png" alt="UIUC logo" class="site-logo">
     <div>School of Information Sciences</div>
     <div>Library and Information Science Building</div>
     <div><a href="https://maps.app.goo.gl/7fjHxz2UemNHD7JT6" target="_blank" rel="noopener noreferrer">501 E Daniel St</a></div>
