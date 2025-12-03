@@ -204,9 +204,27 @@ body {
 <!-- END CONTENT SECTION -->
 
 <footer>
-    <p>© 2025 Charan Pushpanathan</p>
-    <p>Last updated: [UPDATE DATE]</p>
+    <p id="copyright"></p>
+    <p id="last-updated"></p>
 </footer>
+
+  <script>
+    // ---- COPYRIGHT ----
+    const startYear = 2023; // Change this once
+    const currentYear = new Date().getFullYear();
+
+    const copyrightText = 
+      startYear === currentYear
+        ? `© ${currentYear} Charan Pushpanathan`
+        : `© ${startYear}–${currentYear} Charan Pushpanathan`;
+
+    document.getElementById("copyright").textContent = copyrightText;
+
+    // ---- LAST UPDATED ----
+    const lastUpdated = "December 2025";  // Change only when you push an update
+    document.getElementById("last-updated").textContent =
+      `Last updated: ${lastUpdated}`;
+  </script>
 
 </div>
 

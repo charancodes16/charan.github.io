@@ -722,85 +722,95 @@ sup {
 </div>
 
 <footer>
-    <p>© 2025 Charan Pushpanathan</p>
-    <p>Last updated: December 1, 2024</p>
-    <div style="margin: 20px 0;">
-    <div style="display: flex; align-items: center; gap: 16px;">
-    <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
-    <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
-    <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
-    <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
-    </div>
-</div>
+  <p id="copyright"></p>
+  <p id="last-updated"></p>
 </footer>
+
+  <script>
+  // ---- COPYRIGHT ----
+  const startYear = 2023; // Change this once
+  const currentYear = new Date().getFullYear();
+
+  const copyrightText = 
+    startYear === currentYear
+    ? `© ${currentYear} Charan Pushpanathan`
+    : `© ${startYear}–${currentYear} Charan Pushpanathan`;
+
+  document.getElementById("copyright").textContent = copyrightText;
+
+  // ---- LAST UPDATED ----
+  const lastUpdated = "December 2025";  // Change only when you push an update
+  document.getElementById("last-updated").textContent =
+    `Last updated: ${lastUpdated}`;
+  </script>
 
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Enhanced tooltip positioning and behavior
-    const citations = document.querySelectorAll('.citation');
-    citations.forEach(citation => {
-        const tooltip = citation.querySelector('.tooltip');
+  // Enhanced tooltip positioning and behavior
+  const citations = document.querySelectorAll('.citation');
+  citations.forEach(citation => {
+    const tooltip = citation.querySelector('.tooltip');
         
-        citation.addEventListener('mouseenter', function(e) {
-            if (tooltip) {
-                // Position tooltip near mouse cursor
-                const rect = citation.getBoundingClientRect();
-                const tooltipRect = tooltip.getBoundingClientRect();
+    citation.addEventListener('mouseenter', function(e) {
+      if (tooltip) {
+        // Position tooltip near mouse cursor
+        const rect = citation.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
                 
-                // Position above the citation with some offset
-                tooltip.style.left = Math.max(10, rect.left - 20) + 'px';
-                tooltip.style.top = Math.max(10, rect.top - tooltipRect.height - 10) + 'px';
+        // Position above the citation with some offset
+        tooltip.style.left = Math.max(10, rect.left - 20) + 'px';
+        tooltip.style.top = Math.max(10, rect.top - tooltipRect.height - 10) + 'px';
                 
-                // If tooltip would go off screen top, position below instead
-                if (rect.top - tooltipRect.height - 10 < 10) {
-                    tooltip.style.top = (rect.bottom + 10) + 'px';
-                    // Adjust arrow position for bottom placement
-                    tooltip.style.setProperty('--arrow-position', 'top');
-                } else {
-                    tooltip.style.setProperty('--arrow-position', 'bottom');
-                }
-            }
-        });
-        
-        citation.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-                // Highlight the target reference temporarily
-                targetElement.style.backgroundColor = '#ffffcc';
-                setTimeout(() => {
-                    targetElement.style.backgroundColor = '';
-                }, 2000);
-            }
-        });
-    });
-
-    // Handle keyboard shortcuts
-    document.addEventListener('keydown', function(e) {
-        // Cmd+P (Mac) or Ctrl+P (Windows/Linux) for print formatting
-        if 
-        ((e.metaKey || e.ctrlKey) && e.key === 'p') {
-            // The print styles will automatically apply when printing
-            // No additional JavaScript needed as CSS handles the formatting
+        // If tooltip would go off screen top, position below instead
+        if (rect.top - tooltipRect.height - 10 < 10) {
+          tooltip.style.top = (rect.bottom + 10) + 'px';
+          // Adjust arrow position for bottom placement
+          tooltip.style.setProperty('--arrow-position', 'top');
+        } else {
+          tooltip.style.setProperty('--arrow-position', 'bottom');
         }
+      }
     });
+        
+    citation.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        // Highlight the target reference temporarily
+        targetElement.style.backgroundColor = '#ffffcc';
+        setTimeout(() => {
+          targetElement.style.backgroundColor = '';
+        }, 2000);
+      }
+    });
+  });
 
-    // Add smooth scrolling for all internal links
-    const internalLinks = document.querySelectorAll('a[href^="#"]');
-    internalLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
+  // Handle keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // Cmd+P (Mac) or Ctrl+P (Windows/Linux) for print formatting
+    if 
+    ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+      // The print styles will automatically apply when printing
+      // No additional JavaScript needed as CSS handles the formatting
+    }
+  });
+
+  // Add smooth scrolling for all internal links
+  const internalLinks = document.querySelectorAll('a[href^="#"]');
+  internalLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     });
+  });
 });
 </script>
 </body>

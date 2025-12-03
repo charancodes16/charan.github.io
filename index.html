@@ -102,33 +102,68 @@ body {
     max-width: 180px;
   }
 }
+
+/* Header layout: title on left, address on right */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+.site-identity {
+  min-width: 0;
+}
+.site-address {
+  text-align: right;
+  font-style: normal;
+  line-height: 1.2;
+  font-size: 15px;
+  color: #222;
+}
+@media (max-width: 650px) {
+  .site-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .site-address {
+    text-align: left;
+    margin-top: 6px;
+  }
+}
 </style>	
 </head>
 
-<div>
-    <a href="index.html">
-        <h1 class="section-title">Charan Pushpanathan</h1>
-    </a>
+<header class="site-header">
+  <div class="site-identity">
+    <a href="index.html"><h1 class="section-title" style="margin:0;">Charan Pushpanathan</h1></a>
     <p style="font-family: 'Courier New', Courier, monospace; font-size: 16px; margin: 8px 0;">
-        <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
-            charanp2@illinois.edu
-        </a>
+      <a href="mailto:charanp2@illinois.edu" style="color: #1a0dab; text-decoration: none;">
+        charanp2@illinois.edu
+      </a>
     </p>
 
     <div style="display: flex; align-items: center; gap: 16px;">
-    <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
-    <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
-    <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
-    <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
+      <p style="margin: 0;"><a href="/Sometimes, I Write.html" target="_blank" rel="noopener noreferrer">[Sometimes I write]</a></p>
+      <p style="margin: 0;"><a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">[Resume]</a></p>
+      <p style="margin: 0;"><a href="/research.html" target="_blank" rel="noopener noreferrer">[Research]</a></p>
+      <p style="margin: 0;"><a href="/assorted.html" target="_blank" rel="noopener noreferrer">[Assorted]</a></p>
     </div>
 
-    <div style="display: flex; align-items: center; gap: 16px;">
-    <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
-    <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
-    <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
-    <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
+    <div style="display: flex; align-items: center; gap: 16px; margin-top:6px;">
+      <p style="margin: 0;"><a href="https://scholar.google.com/citations?user=NkGKrNYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">[Google scholar]</a></p>
+      <p style="margin: 0;"><a href="https://orcid.org/0009-0009-8889-235X" target="_blank" rel="noopener noreferrer">[Orchid ID]</a></p>
+      <p style="margin: 0;"><a href="https://www.linkedin.com/in/connectwithcharanpp/" target="_blank" rel="noopener noreferrer">[LinkedIn]</a></p>
+      <p style="margin: 0;"><a href="https://x.com/Charan_16" target="_blank" rel="noopener noreferrer">[Twitter]</a></p>
     </div>
-</div>
+  </div>
+
+  <address class="site-address">
+    <div>School of Information Sciences</div>
+    <div>Library and Information Science Building</div>
+    <div><a href="https://maps.app.goo.gl/7fjHxz2UemNHD7JT6" target="_blank" rel="noopener noreferrer">501 E Daniel St</a></div>
+    <div>Champaign, IL 61820</div>
+  </address>
+</header>
 
 <body>
 <div id="maincontent" style="margin-top:10px">
@@ -138,11 +173,11 @@ body {
 <div class="content-with-photo">
   <div class="content-column">
     <p>I'm a first-year Ph.D. student in Information Sciences at the <a href="https://ischool.illinois.edu/" target="_blank" rel="noopener noreferrer">School of Information Sciences</a> at the <a href="https://illinois.edu/" target="_blank" rel="noopener noreferrer">University of Illinois Urbana-Champaign</a> <img src="https://logos-world.net/wp-content/uploads/2020/07/Illinois-Fighting-Illini-Logo.png" alt="Illinois Logo" class="inline-logo">, where I am advised by <a href="https://ischool.illinois.edu/people/michael-twidale" target="_blank" rel="noopener noreferrer">Dr. Michael Twidale</a>. My research will focus on Human-Computer Interaction, including:</p>
-    <ol style="list-style-type: decimal; margin-left: 20px; margin-top: 5px;">
-      <li style="margin-bottom: 0.2em;">Learning to Use: learning theories and training users</li>
-      <li style="margin-bottom: 0.2em;">Novel interfaces with minimal information</li>
-      <li style="margin-bottom: 0.2em;">Collaborative environments</li>
-      <li style="margin-bottom: 0.2em;">Making intelligence in the sciences of artificial</li>
+    <ol style="list-style-type: decimal; margin-left: 20px; margin-top: 1px;">
+      <li style="margin-bottom: 0.1em;">Learning to Use: learning theories and training users</li>
+      <li style="margin-bottom: 0.1em;">Novel interfaces with minimal information</li>
+      <li style="margin-bottom: 0.1em;">Collaborative environments</li>
+      <li style="margin-bottom: 0.1em;">Making intelligence in the sciences of artificial</li>
     </ol>
     <p>Current research interests on human–AI interaction to create active learning environments, collaborative systems, and novel interfaces that augment human intellect and bridge the gap between expert and novice users. I work at the intersection of HCI, Design Research, CSCW, AI, and learning sciences.</p>
   </div>
@@ -215,9 +250,26 @@ body {
 </div>
 
 <footer>
-    <p>© 2025 Charan Pushpanathan</p>
-    <p>Sept 2025</p>
+  <p id="copyright"></p>
+  <p id="last-updated"></p>
 </footer>
 
-</div>
-</body></html>
+<script>
+  // ---- COPYRIGHT ----
+  const startYear = 2023; // Change this once
+  const currentYear = new Date().getFullYear();
+
+  const copyrightText = 
+    startYear === currentYear
+      ? `© ${currentYear} Charan Pushpanathan`
+      : `© ${startYear}–${currentYear} Charan Pushpanathan`;
+
+  document.getElementById("copyright").textContent = copyrightText;
+
+  // ---- LAST UPDATED ----
+  const lastUpdated = "December 2025";  // Change only when you push an update
+  document.getElementById("last-updated").textContent =
+    `Last updated: ${lastUpdated}`;
+</script>
+</body>
+</html>
