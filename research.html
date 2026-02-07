@@ -123,6 +123,35 @@ body {
   .paper-venue { font-size: 13px; }
 }
 
+/* grid / tabular paper list */
+.paper-table {
+  margin: 18px 0 40px 0;
+}
+.paper-row {
+  display: grid;
+  grid-template-columns: 84px 1fr 84px;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+.paper-year {
+  color: rgba(60,60,67,0.6);
+  font-size: 15px;
+  text-align: left;
+}
+.paper-publication {
+  color: rgba(60,60,67,0.6);
+  font-size: 14px;
+  text-align: right;
+}
+.paper-main { }
+@media (max-width:650px) {
+  .paper-row { grid-template-columns: 64px 1fr 72px; }
+  .paper-year { font-size: 14px; }
+  .paper-publication { font-size: 13px; }
+}
+
 </style>
 </head>
 
@@ -155,31 +184,57 @@ body {
   <div id="maincontent" style="margin-top:20px">
     <h1 class="header-title">Research</h1>
 
-    <ul class="paper-list">
-      <li>
-        <span class="paper-title">Parental Collaboration and Closeness: Envisioning with New Couple Parents</span>
-        <div class="paper-authors">Ya‑Fang Lin, Xiaotian Li, Wan‑Hsuan Huang, <strong>Charan Pushpanathan Prabavathi</strong>, Jie Cai, John M. Carroll</div>
-        <div class="paper-venue">Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS '25)</div>
-      </li>
+    <div class="paper-table">
+      <div class="paper-row">
+        <div class="paper-year">2026</div>
+        <div class="paper-main">
+          <span class="paper-title">Research on writing systems</span>
+          <div class="paper-authors"><strong>Charan Pushpanathan Prabavathi</strong>, Phaang Joy, Michael B. Twidale</div>
+          <div class="paper-venue">Research in Progress (2026)</div>
+        </div>
+        <div class="paper-publication">review</div>
+      </div>
 
-      <li>
-        <span class="paper-title">A collaborative system to augment co‑parenting closeness</span>
-        <div class="paper-authors"><strong>Pushpanathan Prabavathi, Charan</strong>, Ya‑Fang Lin, John M. Carroll</div>
-        <div class="paper-venue">Manuscript in preparation (2025)</div>
-      </li>
+      <div class="paper-row">
+        <div class="paper-year">2025</div>
+        <div class="paper-main">
+          <span class="paper-title">Parental Collaboration and Closeness: Envisioning with New Couple Parents</span>
+          <div class="paper-authors">Ya‑Fang Lin, Xiaotian Li, Wan‑Hsuan Huang, <strong>Charan Pushpanathan Prabavathi</strong>, Jie Cai, John M. Carroll</div>
+          <div class="paper-venue">Proceedings of the 2025 ACM Designing Interactive Systems Conference (DIS '25)</div>
+        </div>
+        <div class="paper-publication">ACM DIS</div>
+      </div>
 
-      <li>
-        <span class="paper-title">Trust and decision‑making with explainable AI in immersive technologies: A systematic literature review</span>
-        <div class="paper-authors">Chona Hillmer, Yihao Zhou, Ping Xu, Jeffrey S. Schulman Jr (remembering), Ting Yu Wu, Chenglin Weng, Siyu Wu, <strong>Charan Pushpanathan Prabavathi</strong></div>
-        <div class="paper-venue">Unpublished manuscript (2025)</div>
-      </li>
+      <div class="paper-row">
+        <div class="paper-year">2025</div>
+        <div class="paper-main">
+          <span class="paper-title">A collaborative system to augment co‑parenting closeness</span>
+          <div class="paper-authors"><strong>Pushpanathan Prabavathi, Charan</strong>, Ya‑Fang Lin, John M. Carroll</div>
+          <div class="paper-venue">Manuscript in preparation (2025)</div>
+        </div>
+        <div class="paper-publication">2025</div>
+      </div>
 
-      <li>
-        <span class="paper-title">Persuasive Design</span>
-        <div class="paper-authors"><strong>Charan Pushpanathan Prabavathi</strong></div>
-        <div class="paper-venue">Undergraduate work; Awareness Presentation (2022)</div>
-      </li>
-    </ul>
+      <div class="paper-row">
+        <div class="paper-year">2025</div>
+        <div class="paper-main">
+          <span class="paper-title">Trust and decision‑making with explainable AI in immersive technologies: A systematic literature review</span>
+          <div class="paper-authors">Chona Hillmer, Yihao Zhou, Ping Xu, Jeffrey S. Schulman Jr (remembering), Ting Yu Wu, Chenglin Weng, Siyu Wu, <strong>Charan Pushpanathan Prabavathi</strong></div>
+          <div class="paper-venue">Unpublished manuscript (2025)</div>
+        </div>
+        <div class="paper-publication">2025</div>
+      </div>
+
+      <div class="paper-row">
+        <div class="paper-year">2022</div>
+        <div class="paper-main">
+          <span class="paper-title">Persuasive Design</span>
+          <div class="paper-authors"><strong>Charan Pushpanathan Prabavathi</strong></div>
+          <div class="paper-venue">Undergraduate work; Awareness Presentation (2022)</div>
+        </div>
+        <div class="paper-publication">2022</div>
+      </div>
+    </div>
 
 <footer>
   <p id="copyright"></p>
